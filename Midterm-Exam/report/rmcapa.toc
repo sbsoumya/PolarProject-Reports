@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}
+\contentsline {section}{\numberline {2}Preliminaries}{3}{section.2}
+\contentsline {paragraph}{Indirect Recovery}{4}{definition.1}
+\contentsline {section}{\numberline {3}Main Result}{7}{section.3}
+\contentsline {section}{\numberline {4}Applications}{8}{section.4}
+\contentsline {section}{\numberline {5}Conclusion}{9}{section.5}
