@@ -1,0 +1,9 @@
+\contentsline {chapter}{\bf Abstract}{i}
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Pseudo-random phase precoding}{1}
+\contentsline {section}{\numberline {1.2}Spatial modulation}{2}
+\contentsline {chapter}{\numberline {2}Proposed PRPP-SM system}{6}
+\contentsline {section}{\numberline {2.1}System model}{6}
+\contentsline {section}{\numberline {2.2}Proposed detection algorithm}{8}
+\contentsline {section}{\numberline {2.3}Simulation results}{10}
+\contentsline {chapter}{\numberline {3}Conclusions and future work}{14}

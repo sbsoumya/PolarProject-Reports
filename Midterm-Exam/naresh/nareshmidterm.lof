@@ -1,0 +1,11 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces PRPP transmitter.\relax }}{2}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Performance of PRPP on SISO fading channels.\relax }}{3}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces SM transmitter.\relax }}{3}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Proposed PRPP-SM transmitter.\relax }}{7}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Performance comparison between PRPP-SM system $(N_t=4, N_r=1$, BPSK) with ML detection and SM system without PRPP with ML detection. 3 bpcu.\relax }}{11}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Performance comparison between PRPP-SM system $(N_t=4, N_r=1$, BPSK) with ML detection and PRPP without SM $(N_t=1, N_r=1$, 8-QAM) with ML detection. 3 bpcu.\relax }}{12}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Performance comparison between PRPP-SM $(N_t=2, N_r=4,$ BPSK) with LSD detection and SM system without PRPP using ML detection. 2 bpcu.\relax }}{12}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Performance comparison between PRPP-SM system $(N_t=4, N_r=8$, BPSK) with LSD detection and PRPP without SM $(N_t=1,N_r=8$, 8-QAM) with LSD detection. 3 bpcu.\relax }}{13}
+\addvspace {10\p@ }

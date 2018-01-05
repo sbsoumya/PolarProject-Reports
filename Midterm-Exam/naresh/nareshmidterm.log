@@ -1,0 +1,917 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2014.1.8)  23 JAN 2014 21:56
+entering extended mode
+**nareshmidterm.tex
+("C:\Documents and Settings\naresh\Desktop\naresh\nareshmidterm.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\underlin\underlin.sty"
+Package: underlin 1997/02/16 v1.01 underlined running head (RmS)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\algorithms\algorithmic.sty"
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+\c@ALC@unique=\count88
+\c@ALC@line=\count89
+\c@ALC@rem=\count90
+\c@ALC@depth=\count91
+\ALC@tlm=\skip43
+\algorithmicindent=\skip44
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\algorithms\algorithm.sty"
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count92
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
+)
+\@float@every@algorithm=\toks17
+\c@algorithm=\count93
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen103
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip45
+\subfigcapskip=\skip46
+\subfigcaptopadj=\dimen104
+\subfigbottomskip=\skip47
+\subfigcapmargin=\dimen105
+\subfiglabelskip=\skip48
+\c@subfigure=\count94
+\c@lofdepth=\count95
+\c@subtable=\count96
+\c@lotdepth=\count97
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("C:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.cfg")
+\subfig@top=\skip49
+\subfig@bottom=\skip50
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\cite\cite.sty"
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latexsym.sty"
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks18
+\verbatim@line=\toks19
+\verbatim@in@stream=\read1
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2009/06/22 v3.00
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks20
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+\c@thm=\count98
+\c@lem=\count99
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count100
+))
+\Gin@req@height=\dimen106
+\Gin@req@width=\dimen107
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\epsf\epsf.sty"
+This is `epsf.tex' v2.7.4 <14 February 2011>
+\epsffilein=\read2
+\epsfframemargin=\dimen108
+\epsfframethickness=\dimen109
+\epsfrsize=\dimen110
+\epsftmp=\dimen111
+\epsftsize=\dimen112
+\epsfxsize=\dimen113
+\epsfysize=\dimen114
+\pspoints=\dimen115
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen116
+\epsfysize=\dimen117
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks21
+\ex@=\dimen118
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen119
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count101
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count102
+\leftroot@=\count103
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count104
+\DOTSCASE@=\count105
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen120
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count106
+\c@MaxMatrixCols=\count107
+\dotsspace@=\muskip10
+\c@parentequation=\count108
+\dspbrk@lvl=\count109
+\tag@help=\toks22
+\row@=\count110
+\column@=\count111
+\maxfields@=\count112
+\andhelp@=\toks23
+\eqnshift@=\dimen121
+\alignsep@=\dimen122
+\tagshift@=\dimen123
+\tagwidth@=\dimen124
+\totwidth@=\dimen125
+\lineht@=\dimen126
+\@envbody=\toks24
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
+\wrapoverhang=\dimen127
+\WF@size=\dimen128
+\c@WF@wrappedlines=\count113
+\WF@box=\box30
+\WF@everypar=\toks26
+Package: wrapfig 2003/01/31  v 3.6
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty"
+Package: lipsum 2011/04/14 v1.2 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count114
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\glossary\glossary.sty"
+Package: glossary 2006/07/20 2.4 (NLCT)
+\gls@cols=\count115
+
+No configuration file glossary.cfg found
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip54
+\LTright=\skip55
+\LTpre=\skip56
+\LTpost=\skip57
+\LTchunksize=\count116
+\LTcapwidth=\dimen129
+\LT@head=\box31
+\LT@firsthead=\box32
+\LT@foot=\box33
+\LT@lastfoot=\box34
+\LT@cols=\count117
+\LT@rows=\count118
+\c@LT@tables=\count119
+\c@LT@chunks=\count120
+\LT@p@ftn=\toks27
+)
+\descriptionwidth=\skip58
+\istfile=\write3
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\arydshln\arydshln.sty"
+Package: arydshln 2004/08/31 v1.71 
+\dashlinedash=\dimen130
+\dashlinegap=\dimen131
+\adl@box=\box35
+\adl@height=\dimen132
+\adl@heightsave=\dimen133
+\adl@depth=\dimen134
+\adl@depthsave=\dimen135
+\adl@finaldepth=\dimen136
+\adl@columns=\count121
+\adl@ncol=\count122
+\adl@currentcolumn=\count123
+\adl@currentcolumnsave=\count124
+\adl@totalheight=\count125
+\adl@totalheightsave=\count126
+\adl@dash=\count127
+\adl@gap=\count128
+\adl@cla=\count129
+\adl@clb=\count130
+\adl@everyvbox=\toks28
+\adl@LTpagetotal=\dimen137
+)
+\@input{psfig.sty.aux}
+No file psfig.sty.tex.
+("C:\Program Files\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+\c@r@tfl@t=\count131
+\rotFPtop=\skip59
+\rotFPbot=\skip60
+\rot@float@box=\box36
+\rot@mess@toks=\toks29
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2010/01/09 v3.1m Customizing captions (AR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2010/01/14 v3.1m caption3 kernel (AR)
+\captionmargin=\dimen138
+\captionmargin@=\dimen139
+\captionwidth=\dimen140
+\caption@indent=\dimen141
+\caption@parindent=\dimen142
+\caption@hangindent=\dimen143
+)
+\c@ContinuedFloat=\count132
+Package caption Info: float package is loaded.
+Package caption Info: longtable package is loaded.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
+Package: ltcaption 2008/03/28 v1.2 longtable captions (AR)
+)
+Package caption Info: rotating package is loaded.
+Package caption Info: subfigure package is loaded.
+Package caption Info: wrapfig package is loaded.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+\fancy@headwidth=\skip61
+\f@ncyO@elh=\skip62
+\f@ncyO@erh=\skip63
+\f@ncyO@olh=\skip64
+\f@ncyO@orh=\skip65
+\f@ncyO@elf=\skip66
+\f@ncyO@erf=\skip67
+\f@ncyO@olf=\skip68
+\f@ncyO@orf=\skip69
+)
+("C:\Documents and Settings\naresh\Desktop\naresh\psfig.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\classes\amsthm.sty"
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks30
+\thm@bodyfont=\toks31
+\thm@headfont=\toks32
+\thm@notefont=\toks33
+\thm@headpunct=\toks34
+\thm@preskip=\skip70
+\thm@postskip=\skip71
+\thm@headsep=\skip72
+\dth@everypar=\toks35
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\pstricks\pstricks.sty"
+Package: pstricks 2011/04/23 v0.50 LaTeX wrapper for `PSTricks' (RN,HV)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pstricks\pstricks.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\pst-xkey.tex"
+File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+\XKV@toks=\toks36
+\XKV@tempa@toks=\toks37
+\XKV@depth=\count133
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+)))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pstricks\pst-fp.tex"
+`pst-fp' v0.05, 2010/01/17 (hv)
+\pstFP@xs=\count134
+\pstFP@xia=\count135
+\pstFP@xib=\count136
+\pstFP@xfa=\count137
+\pstFP@xfb=\count138
+\pstFP@rega=\count139
+\pstFP@regb=\count140
+\pstFP@regs=\count141
+\pstFP@times=\count142
+)
+\psLoopIndex=\count143
+
+`PSTricks' v2.21  <2011/06/07> (tvz)
+\pst@dima=\dimen144
+\pst@dimb=\dimen145
+\pst@dimc=\dimen146
+\pst@dimd=\dimen147
+\pst@dimg=\dimen148
+\pst@dimh=\dimen149
+\pst@dimm=\dimen150
+\pst@dimn=\dimen151
+\pst@dimo=\dimen152
+\pst@dimp=\dimen153
+\pst@hbox=\box37
+\pst@ibox=\box38
+\pst@boxg=\box39
+\pst@cnta=\count144
+\pst@cntb=\count145
+\pst@cntc=\count146
+\pst@cntd=\count147
+\pst@cntg=\count148
+\pst@cnth=\count149
+\pst@cntm=\count150
+\pst@cntn=\count151
+\pst@cnto=\count152
+\pst@cntp=\count153
+\@zero=\count154
+\pst@toks=\toks38
+("C:\Program Files\MiKTeX 2.9\tex\generic\pstricks\pstricks.con")
+\psunit=\dimen154
+\psxunit=\dimen155
+\psyunit=\dimen156
+\pst@C@@rType=\count155
+\pslinewidth=\dimen157
+\psk@startLW=\dimen158
+\psk@endLW=\dimen159
+\pst@customdefs=\toks39
+\pslinearc=\dimen160
+\pst@symbolStep=\dimen161
+\pst@symbolWidth=\dimen162
+\everypsbox=\toks40
+\psframesep=\dimen163
+\pslabelsep=\dimen164
+\pst@shift=\dimen165
+\theoverlaybox=\box40
+)
+File: pstricks.tex 2011/06/07 v2.21 `PSTricks' (tvz,hv)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pstricks\pst-fp.tex")
+File: pst-fp.tex 2011/06/07 v2.21 `PST-fp' (hv)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Package option `usenames' ignored on input line 216.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def"
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)))
+("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
+
+Package: `setspace' 6.7 <2000/12/01>
+) ("C:\Documents and Settings\naresh\Desktop\naresh\nareshmidterm.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 100.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 100.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 100.
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count156
+\scratchdimen=\dimen166
+\scratchbox=\box41
+\nofMPsegments=\count157
+\nofMParguments=\count158
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count159
+\MPscratchDim=\dimen167
+\MPnumerator=\count160
+\makeMPintoPDFobject=\count161
+\everyMPtoPDFconversion=\toks42
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+
+! LaTeX Error: You have run the document with pdflatex, but PSTricks
+               requires latex->dvips->ps2pdf or alternatively the use
+               of the package `auto-pst-pdf'. Then you can run
+                 `pdflatex -shell-escape <file>' (TeX Live) 
+               or
+                 `pdflatex -enable-write18 <file>' (MikTeX).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.100 \begin{document}
+                      
+See also the PSTricks web pages http://PSTricks.tug.org
+
+Package epstopdf Info: Source file: <iisclogo.eps>
+(epstopdf)                    date: 2014-01-15 11:40:51
+(epstopdf)                    size: 594457 bytes
+(epstopdf)             Output file: <iisclogo-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-01-21 22:09:13
+(epstopdf)                    size: 44977 bytes
+(epstopdf)             Command: <epstopdf --outfile=iisclogo-eps-converted-to.p
+df iisclogo.eps>
+(epstopdf)             \includegraphics on input line 135.
+Package epstopdf Info: Output file is already uptodate.
+<iisclogo-eps-converted-to.pdf, id=1, 266.9975pt x 251.94125pt>
+File: iisclogo-eps-converted-to.pdf Graphic file (type pdf)
+
+<use iisclogo-eps-converted-to.pdf>
+Package pdftex.def Info: iisclogo-eps-converted-to.pdf used on input line 135.
+(pdftex.def)             Requested size: 113.8126pt x 113.81076pt.
+ [1
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+
+
+
+
+Non-PDF special ignored!
+Non-PDF special ignored!{C:/Documents and Settings/All Users/Application Data/M
+iKTeX/2.9/pdftex/config/pdftex.map} <C:/Documents and Settings/naresh/Desktop/n
+aresh/iisclogo-eps-converted-to.pdf>]
+LaTeX Font Info:    Try loading font information for U+lasy on input line 163.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 163.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 163.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+) [1]
+("C:\Documents and Settings\naresh\Desktop\naresh\nareshmidterm.toc")
+\tf@toc=\write4
+ [2
+
+]
+("C:\Documents and Settings\naresh\Desktop\naresh\nareshmidterm.lof")
+\tf@lof=\write5
+ [3
+
+]
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 190.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 191.
+
+Chapter 1.
+<sisoprecod.pdf, id=28, 445.665pt x 99.37125pt>
+File: sisoprecod.pdf Graphic file (type pdf)
+ <use sisoprecod.pdf>
+Package pdftex.def Info: sisoprecod.pdf used on input line 223.
+(pdftex.def)             Requested size: 445.66391pt x 99.371pt.
+ [1
+
+]
+Package epstopdf Info: Source file: <rameshfig.eps>
+(epstopdf)                    date: 2014-01-23 15:05:57
+(epstopdf)                    size: 19059 bytes
+(epstopdf)             Output file: <rameshfig-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-01-23 15:07:22
+(epstopdf)                    size: 6483 bytes
+(epstopdf)             Command: <epstopdf --outfile=rameshfig-eps-converted-to.
+pdf rameshfig.eps>
+(epstopdf)             \includegraphics on input line 250.
+Package epstopdf Info: Output file is already uptodate.
+
+<rameshfig-eps-converted-to.pdf, id=39, 676.5275pt x 466.74374pt>
+File: rameshfig-eps-converted-to.pdf Graphic file (type pdf)
+
+<use rameshfig-eps-converted-to.pdf>
+Package pdftex.def Info: rameshfig-eps-converted-to.pdf used on input line 250.
+
+(pdftex.def)             Requested size: 341.44238pt x 256.08311pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.5pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2 <C:/Documents and Settings/naresh/Desktop/naresh/sisoprecod.pdf>]
+<smtransmit.pdf, id=79, 151.56625pt x 124.465pt>
+File: smtransmit.pdf Graphic file (type pdf)
+ <use smtransmit.pdf>
+Package pdftex.def Info: smtransmit.pdf used on input line 273.
+(pdftex.def)             Requested size: 151.56587pt x 124.46469pt.
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 284.
+
+
+[3 <C:/Documents and Settings/naresh/Desktop/naresh/rameshfig-eps-converted-to.
+pdf> <C:/Documents and Settings/naresh/Desktop/naresh/smtransmit.pdf>] [4]
+[5]
+Chapter 2.
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 352.
+
+
+[6
+
+]
+Overfull \hbox (13.52338pt too wide) in paragraph at lines 358--363
+\OT1/cmr/m/n/10.95 where $\OT1/cmr/bx/n/10.95 0[]$ \OT1/cmr/m/n/10.95 is a $\OM
+L/cmm/m/it/10.95 N[] \OMS/cmsy/m/n/10.95  \OT1/cmr/m/n/10.95 1$ vec-tor of ze-
+roes, and $\OT1/cmr/bx/n/10.95 a[]$ \OT1/cmr/m/n/10.95 is a $\OML/cmm/m/it/10.9
+5 N[] \OMS/cmsy/m/n/10.95  \OT1/cmr/m/n/10.95 1$ vec-tor con-structed as $[0  
+[]  0   []  0  []  0][]$,
+ []
+
+<rppsm.pdf, id=120, 562.1pt x 203.76125pt>
+File: rppsm.pdf Graphic file (type pdf)
+ <use rppsm.pdf>
+Package pdftex.def Info: rppsm.pdf used on input line 371.
+(pdftex.def)             Requested size: 449.68062pt x 163.0092pt.
+
+! Extra }, or forgotten $.
+l.396 $\frac{1}{\sqrt{p}}}
+                          e^{j\theta_{r,c}}$, where the phases
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+l.407  \end{bmatrix}\ma\pp\ms
+                             \vx_s+\vn_p \nonumber\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[7 <C:/Documents and Settings/naresh/Desktop/naresh/rppsm.pdf>]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 449.
+
+[8] [9]
+Package epstopdf Info: Source file: <prpp_sm_vs_withoutsm_ml.eps>
+(epstopdf)                    date: 2014-01-23 14:12:27
+(epstopdf)                    size: 19146 bytes
+(epstopdf)             Output file: <prpp_sm_vs_withoutsm_ml-eps-converted-to.p
+df>
+(epstopdf)                    date: 2014-01-23 14:17:45
+(epstopdf)                    size: 6537 bytes
+(epstopdf)             Command: <epstopdf --outfile=prpp_sm_vs_withoutsm_ml-eps
+-converted-to.pdf prpp_sm_vs_withoutsm_ml.eps>
+(epstopdf)             \includegraphics on input line 526.
+Package epstopdf Info: Output file is already uptodate.
+
+<prpp_sm_vs_withoutsm_ml-eps-converted-to.pdf, id=176, 676.5275pt x 466.74374pt
+>
+File: prpp_sm_vs_withoutsm_ml-eps-converted-to.pdf Graphic file (type pdf)
+ <use prpp_sm_vs_withoutsm_ml-eps-converted-to.pdf>
+Package pdftex.def Info: prpp_sm_vs_withoutsm_ml-eps-converted-to.pdf used on i
+nput line 526.
+(pdftex.def)             Requested size: 341.44238pt x 256.08311pt.
+ [10]
+Package epstopdf Info: Source file: <prppsiso_vs_sm_ml.eps>
+(epstopdf)                    date: 2014-01-23 14:16:07
+(epstopdf)                    size: 20931 bytes
+(epstopdf)             Output file: <prppsiso_vs_sm_ml-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-01-23 14:17:46
+(epstopdf)                    size: 7401 bytes
+(epstopdf)             Command: <epstopdf --outfile=prppsiso_vs_sm_ml-eps-conve
+rted-to.pdf prppsiso_vs_sm_ml.eps>
+(epstopdf)             \includegraphics on input line 535.
+Package epstopdf Info: Output file is already uptodate.
+
+<prppsiso_vs_sm_ml-eps-converted-to.pdf, id=180, 676.5275pt x 466.74374pt>
+File: prppsiso_vs_sm_ml-eps-converted-to.pdf Graphic file (type pdf)
+
+<use prppsiso_vs_sm_ml-eps-converted-to.pdf>
+Package pdftex.def Info: prppsiso_vs_sm_ml-eps-converted-to.pdf used on input l
+ine 535.
+(pdftex.def)             Requested size: 341.44238pt x 256.08311pt.
+Package epstopdf Info: Source file: <prpp_sm_vs_withoutsm_mmse_las.eps>
+(epstopdf)                    date: 2014-01-23 14:14:10
+(epstopdf)                    size: 18817 bytes
+(epstopdf)             Output file: <prpp_sm_vs_withoutsm_mmse_las-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2014-01-23 14:17:47
+(epstopdf)                    size: 6160 bytes
+(epstopdf)             Command: <epstopdf --outfile=prpp_sm_vs_withoutsm_mmse_l
+as-eps-converted-to.pdf prpp_sm_vs_withoutsm_mmse_las.eps>
+(epstopdf)             \includegraphics on input line 544.
+Package epstopdf Info: Output file is already uptodate.
+
+<prpp_sm_vs_withoutsm_mmse_las-eps-converted-to.pdf, id=181, 676.5275pt x 466.7
+4374pt>
+File: prpp_sm_vs_withoutsm_mmse_las-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use prpp_sm_vs_withoutsm_mmse_las-eps-converted-to.pdf>
+Package pdftex.def Info: prpp_sm_vs_withoutsm_mmse_las-eps-converted-to.pdf use
+d on input line 544.
+(pdftex.def)             Requested size: 341.44238pt x 256.08311pt.
+Package epstopdf Info: Source file: <prpp_sm_las.eps>
+(epstopdf)                    date: 2014-01-23 14:17:40
+(epstopdf)                    size: 20619 bytes
+(epstopdf)             Output file: <prpp_sm_las-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-01-23 14:17:47
+(epstopdf)                    size: 7026 bytes
+(epstopdf)             Command: <epstopdf --outfile=prpp_sm_las-eps-converted-t
+o.pdf prpp_sm_las.eps>
+(epstopdf)             \includegraphics on input line 552.
+Package epstopdf Info: Output file is already uptodate.
+
+<prpp_sm_las-eps-converted-to.pdf, id=182, 676.5275pt x 466.74374pt>
+File: prpp_sm_las-eps-converted-to.pdf Graphic file (type pdf)
+
+<use prpp_sm_las-eps-converted-to.pdf>
+Package pdftex.def Info: prpp_sm_las-eps-converted-to.pdf used on input line 55
+2.
+(pdftex.def)             Requested size: 341.44238pt x 256.08311pt.
+ [11 <C:/Documents and Settings/naresh/Desktop/naresh/prpp_sm_vs_withoutsm_ml-e
+ps-converted-to.pdf>] [12 <C:/Documents and Settings/naresh/Desktop/naresh/prpp
+siso_vs_sm_ml-eps-converted-to.pdf> <C:/Documents and Settings/naresh/Desktop/n
+aresh/prpp_sm_vs_withoutsm_mmse_las-eps-converted-to.pdf>] [13 <C:/Documents an
+d Settings/naresh/Desktop/naresh/prpp_sm_las-eps-converted-to.pdf>]
+Chapter 3.
+[14
+
+] [15
+
+] ("C:\Documents and Settings\naresh\Desktop\naresh\nareshmidterm.aux") ) 
+Here is how much of TeX's memory you used:
+ 7815 strings out of 494045
+ 109663 string characters out of 3148331
+ 312833 words of memory out of 3000000
+ 10905 multiletter control sequences out of 15000+200000
+ 17206 words of font info for 69 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 42i,17n,73p,720b,555s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/symbols/msbm7.pfb>
+Output written on nareshmidterm.pdf (19 pages, 414837 bytes).
+PDF statistics:
+ 297 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+
