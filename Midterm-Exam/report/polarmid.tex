@@ -73,7 +73,7 @@ BCOR5mm, % Binding correction
 \setcounter{tocdepth}{2} % Set the depth of the table of contents to show sections and subsections only
 
 \tableofcontents % Print the table of contents
-\footnote{This Project was supported by Robert Bosch Center for Cyber Physical Systems}
+\footnote0{4This Project was supported by Robert Bosch Center for Cyber Physical Systems}
 %----------------------------------------------------------------------------------------
 %	ABSTRACT
 %----------------------------------------------------------------------------------------
@@ -87,28 +87,51 @@ Efficiently decodable deterministic coding schemes which achieve channel capacit
 \newpage
 \section{Introduction}
 %----------Paper intro
-The possibility of construction of low-complexity structured codes which provably achieve channel capacity ,having deterministic construction, have been explored since the conceptualization of channel capacity in ~\cite{shannon} . Turbo codes,LDPC ,spatially coupled LDPC were practical constructions towards this end.Polar codes~\cite{arikan} were the first provably capacity achieving codes for arbitrary Binary Input Symmetric Discrete Memoryless channels (BMS) with desirable complexity and deterministic structure.
+Random correlated data (X,Y) is distributed between two parties with first observing X and second observing Y. The two parties seek to recover each others data. \emph{The Data-Exchange problem} essentially encompasses this scenario, as depicted in figure \ref{fig:dataex}. The project seeks to device a practical protocol which achieves this with minimal communication.\\
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{dataex.png}
+  \end{center}
+  \caption{The Data-Exchange Problem}
+  \label{fig:dataex}
+\end{wrapfigure}
+A working solution for this problem is r-sync protocol, as described in   \cite{rsync}.The algorithm identifies parts of the source file which are identical to some part of the destination file, and only sends those parts which cannot be matched in this way.Though this protocol is fast and low complexity, it does not exploit the correlation of the data to the best extent possible.In fact, we can view r-sync as an algorithm which uses only one guess, and thus ends up using more communication.\\
+In \cite{sw}, David Slepian and Jack Wolf had shown that the optimal solution to this problem is Slepian-Wolf compression. 
+\paragraph{Slepian-Wolf Coding Theorem:}states under joint decoding of X and Y a total rate H(X,Y) is sufficient.\\
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{swcomp.png}
+  \end{center}
+  \caption{The Slepian-Wolf Compression}
+  \label{fig:swcomp}
+\end{wrapfigure}
+Consider first the problem where X and Y are correlated discrete-alphabet memoryless sources, we have to compress X losslessly, with Y (side information) being known at the decoder and \emph{not} at the encoder. If Y were known at both ends one can compress X at a theoritical rate of $H(X|Y)$. But if Y were known only at decoder the same can be achieved by just knowing $P_{X|Y}$ at encoder without explicit information of Y, this has been depicted in figure\ref{fig:swcomp} \cite{discus}. 
+\\\\
+A practical implementation of Slepian Wolf compression faces the following difficulties.
+\begin{itemize}
+\item Search is over an exponential list in decoding.
+\item Knowledge of $P_{X|Y}$ is required.
+\end{itemize} 
 
-Interestingly ~\cite{rm2},exploits the symmetry of deterministic linear codes, and threshold phenomenon in boolean function analysis to arrive at results summarized by the following theorem for transmission over a BEC channel.It is useful to point out here capacity of BEC($p$),$r=1-p$.
+Using structured channel codes as indicated in \cite{discus}, particularly Polar Codes as shown in \cite{pslep}, alongwith \emph{recursive data exchange protocol}  mentioned in \cite{htsw} for Slepian-Wolf compression eases the aforementioned implementation. 
 
-\textbf{Theorem - } A sequence of linear codes achieves capacity on
-a memoryless erasure channel under MAP decoding if its blocklengths are strictly increasing, its code rates converge to some $r \in (0, 1)$, and the permutation group of each code is doubly transitive.\\
-The result, coupled with the fact that Reed-Muller are doubly transitive,establishes the capacity achieving nature of RM codes.It further provides an alternative prove of the same for Polar codes,without employing the inherent symmetry of the Hadamard matrix (consequently Arikan transform), from which polar codes derive their structure.
+\subsection{Suggested Approach for Solving The Data-Exchange Problem}
+In accordance with the above discussion the suggested approach towards solving \emph{the Data-Exchange Problem} may be briefed as follows.
+\begin{itemize}
+\item{Implement Slepian-Wolf Compression using Polar Codes.}
+\item{Achieve universality using \emph{Recursive Data Exchange} protocol (RDE).}
+\item{Realise RDE using Rateless Polar Codes with Physical layer Error Detection.}
+\end{itemize}
+
+The following sub-sections discuss the artefacts needed for this implementation in brief. Section \ref{propsol}, consolidates and elaborates the proposed scheme. 
 
 \subsection{Interactive Communication for Data Exchange}
-Reed-Muller codes are one of the oldest families of error correcting codes and use
-concepts from algebra for the encoding and decoding process. The idea is to look
-at the message as the coefficients of a multivariate polynomial of a suitable degree and pass 
-its evaluations.They were introduced by Muller~\cite{muller} ,later Reed~\cite{reed} proposed a majority logic decoder for these codes. A binary Reed-Muller (RM) code with parameters $m$ and $v$ (the order) is a linear code of length $2^m$, dimension ${m \choose 0}+\ldots+{m \choose v}$ and minimum distance $2^{m-v}$. Although the possibility of RM codes achieving capacity under MAP decoding has been discussed in several papers, they being able to correct \emph{almost all} erasure patterns up to the capacity limit was not clear until this work.
+The data exchange protocol is based on an interactive version of the Slepian-Wolf protocol where the length of communication is increased in steps until the second party decodes the data of the first. After each transmission second party sends ACK-NACK feedback signal, the protocol stops when ACK is recieved or a $l_{max}$ bits have been transmitted \cite{htsw}. Note, this protocol is universal as it does not rely on knowledge of the joint distribution, instead uses an iterative approach to 
+
 
 \subsection{Brief Introduction to Polar Codes}
 \emph{Here we assume the reader has prior exposure to threshold phenomenon of boolean functions.}
-\begin{figure}[h]
-\centering 
-\includegraphics[width=0.75\columnwidth]{proofskeleton} 
-\caption[]{"Achieving Capacity" from the perspective of threshold phenomenon. } % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
-\label{fig:proofskel} 
-\end{figure}
+
 
 For a sequence of binary linear codes with rate $r$ to be capacity achieving, the bit error probability,must converge to $0$ for any erasure rate below $1-r$.Towards this, 
 \begin{enumerate}
@@ -133,7 +156,7 @@ The rest of the report elaborates on (1),(2) and (3) with focus on bit error pro
 %	PROPOSED SOLUTION
 %----------------------------------------------------------------------------------------
 \newpage
-\section{Proposed implementation of Recursive Data Exchange}
+\section{Proposed implementation of Recursive Data Exchange} \label{propsol}
 
 Let $\mathcal{C}$ denote an $(N, K)$ proper binary linear code with length $N$ ,dimension $K$ ,minimum distance ($d_{min}$) atleast 2,and rate defined by $r \triangleq K/N$. We assume that a random codeword is chosen uniformly from this code and transmitted over a memoryless Binary Erasure Channel (BEC).A BEC with erasure probability $p$ is denoted by BEC($p$),or BEC($\underline{p}$) in case the erasure probability is different for each bit where $\underline{p} = (p_1 , \ldots , p_n)$ and
 $p_i$ indicates the erasure probability for bit $i$.
@@ -240,12 +263,12 @@ a) $\{\mathcal{C}_n\}$ is said to be \emph{capacity achieving} on the BEC under 
 \end{definition}
 \label{def10}
 
-\begin{figure}[h]
-\centering 
-\includegraphics[width=0.75\columnwidth]{exitfun} 
-\caption[]{The average EXIT function of the rate-$1/2$ Reed-Muller code with blocklength $N$.} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
-\label{fig:exit} 
-\end{figure}
+%\begin{figure}[h]
+%\centering 
+%\includegraphics[width=0.75\columnwidth]{exitfun} 
+%\caption[]{The average EXIT function of the rate-$1/2$ Reed-Muller code with blocklength $N$.} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
+%\label{fig:exit} 
+%\end{figure}
 
 The following theorem bridges capacity achieving codes, average EXIT functions, and the sharp transition framework that allows us to show that the transition width of certain functions goes to $0$. The average EXIT functions of some rate-$1/2$ Reed-Muller codes are shown in Figure~\ref{fig:exit}. Observe that as the blocklength increases, the transition width of the average EXIT function decreases. According to the following proposition, if this width converges to $0$, then Reed-Muller codes achieve capacity on the BEC under bit-MAP decoding.
 \begin{proposition}

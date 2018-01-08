@@ -7,35 +7,32 @@ E.~Ar{\i}kan.
 \newblock {\em IEEE Transactions on Information Theory}, 55, no. 7:3051--3073,
   July 2009.
 
-\bibitem{rm1}
-S.~Kumar and H.~D. Pfister.
-\newblock Reed-muller codes achieve capacity on erasure channels.
-\newblock {\em ArXiv}, 1505.05123v2, 2015.
+\bibitem{rsync}
+A.~Tridgell and P.~Mackerras.
+\newblock The r-sync algorithm.
+\newblock {\em Joint Computer Science and Technical Report Series},
+  TR-CS-96-05, 1996.
 
-\bibitem{shannon}
-C.~E. Shannon.
-\newblock A mathematical theory of communication.
-\newblock {\em The Bell Systems Technical Journal}, 27:379–423, 623–656,
-  July/Oct. 1948.
+\bibitem{sw}
+D.~Slepian and J.~K. Wolf.
+\newblock Noiseless coding of correlated information sources.
+\newblock {\em IEEE Transactions on Information Theory}, 1973.
 
-\bibitem{rm2}
-S.~Kudekar, M.~Mondelli, E.~\c{S}a\c{s}\u{o}glu, and R.~Urbanke.
-\newblock Reed-muller codes achieve capacity on the binary erasure channel
-  under map decoding.
-\newblock {\em ArXiv}, 1505.05831v1, 2015.
+\bibitem{discus}
+S.~Sandeep Pradhan and K.~Ramachanderan.
+\newblock Distributed source coding using syndromes (discus):design and
+  construction.
+\newblock {\em IEEE Transactions on Information Theory}, 49,No. 3, 2003.
 
-\bibitem{muller}
-D.~Muller.
-\newblock Application of boolean algebra to switching circuit design and to
-  error detection.
-\newblock {\em IRE Transactions on Electronic Computers}, EC-3, no. 3:6--12,
-  Sept 1954.
+\bibitem{pslep}
+S.~Onay.
+\newblock Polar codes for nonassymetric slepian-wolf coding.
+\newblock {\em arXiv.1208.3056v1[cs.IT]}, August 2012.
 
-\bibitem{reed}
-I.~Reed.
-\newblock A class of multiple-error-correcting codes and the decoding scheme.
-\newblock {\em IEEE Transactions on Information Theory}, 4, no. 4:38--49, Sept.
-  1954.
+\bibitem{htsw}
+H.~Tyagi and S.~Watanabe.
+\newblock Universal multiparty data exchange and secret key arrangement.
+\newblock {\em ISIT}, 2016.
 
 \bibitem{exit}
 S.~ten Brink.

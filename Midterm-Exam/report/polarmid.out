@@ -1,11 +1,12 @@
 \BOOKMARK [1][-]{section.1}{1 Introduction}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{1.1 Interactive Communication for Data Exchange}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{1.2 Brief Introduction to Polar Codes}{section.1}% 3
-\BOOKMARK [2][-]{subsection.1.3}{1.3 Implementation of SW Compression using Polar Codes}{section.1}% 4
-\BOOKMARK [2][-]{subsection.1.4}{1.4 Rateless Polar codes}{section.1}% 5
-\BOOKMARK [1][-]{section.2}{2 Proposed implementation of Recursive Data Exchange}{}% 6
-\BOOKMARK [2][-]{subsection.2.1}{2.1 Adaptation of Rateless Polar Codes for RDE}{section.2}% 7
-\BOOKMARK [2][-]{subsection.2.2}{2.2 PHY-Layer error Detection}{section.2}% 8
-\BOOKMARK [2][-]{subsection.2.3}{2.3 Proposed tests}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.4}{2.4 Performance Evaluation}{section.2}% 10
-\BOOKMARK [1][-]{section.3}{3 Conclusion and Future work}{}% 11
+\BOOKMARK [2][-]{subsection.1.1}{1.1 Suggested Approach for Solving The Data-Exchange Problem}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{1.2 Interactive Communication for Data Exchange}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{1.3 Brief Introduction to Polar Codes}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{1.4 Implementation of SW Compression using Polar Codes}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.5}{1.5 Rateless Polar codes}{section.1}% 6
+\BOOKMARK [1][-]{section.2}{2 Proposed implementation of Recursive Data Exchange}{}% 7
+\BOOKMARK [2][-]{subsection.2.1}{2.1 Adaptation of Rateless Polar Codes for RDE}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.2}{2.2 PHY-Layer error Detection}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.3}{2.3 Proposed tests}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.4}{2.4 Performance Evaluation}{section.2}% 11
+\BOOKMARK [1][-]{section.3}{3 Conclusion and Future work}{}% 12
