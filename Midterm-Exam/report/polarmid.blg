@@ -5,47 +5,47 @@ The style file: unsrt.bst
 Database file #1: polarmid.bib.bib
 Warning--I didn't find a database entry for "rm1"
 Warning--I didn't find a database entry for "vishva"
-Warning--I didn't find a database entry for "muller"
-Warning--I didn't find a database entry for "reed"
-You've used 10 entries,
+Warning--I didn't find a database entry for "talagrand"
+Warning--I didn't find a database entry for "russo"
+You've used 13 entries,
             1791 wiz_defined-function locations,
-            507 strings with 4713 characters,
-and the built_in function-call counts, 1983 in all, are:
-= -- 183
-> -- 63
-< -- 1
-+ -- 26
-- -- 16
-* -- 103
-:= -- 329
-add.period$ -- 30
-call.type$ -- 10
-change.case$ -- 10
+            518 strings with 4997 characters,
+and the built_in function-call counts, 1923 in all, are:
+= -- 165
+> -- 76
+< -- 0
++ -- 32
+- -- 19
+* -- 70
+:= -- 357
+add.period$ -- 39
+call.type$ -- 13
+change.case$ -- 13
 chr.to.int$ -- 0
-cite$ -- 10
-duplicate$ -- 96
-empty$ -- 199
-format.name$ -- 16
-if$ -- 448
+cite$ -- 13
+duplicate$ -- 105
+empty$ -- 194
+format.name$ -- 19
+if$ -- 417
 int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 10
-newline$ -- 53
-num.names$ -- 10
-pop$ -- 18
+int.to.str$ -- 13
+missing$ -- 13
+newline$ -- 68
+num.names$ -- 13
+pop$ -- 27
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 50
+skip$ -- 49
 stack$ -- 0
-substring$ -- 132
-swap$ -- 21
-text.length$ -- 1
+substring$ -- 27
+swap$ -- 13
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 16
-width$ -- 12
-write$ -- 109
+while$ -- 14
+width$ -- 15
+write$ -- 138
 (There were 4 warnings)

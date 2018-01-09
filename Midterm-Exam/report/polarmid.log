@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  8 JAN 2018 17:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  9 JAN 2018 12:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1189,63 +1189,141 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/iwona/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 
+<Figures/channelcomb.png, id=123, 895.84688pt x 678.28406pt>
+File: Figures/channelcomb.png Graphic file (type png)
 
-LaTeX Warning: Reference `fig:proofskel' on page 5 undefined on input line 142.
+<use Figures/channelcomb.png>
+Package pdftex.def Info: Figures/channelcomb.png used on input line 134.
+(pdftex.def)             Requested size: 159.99756pt x 121.13368pt.
 
 
-[5] [6]
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 173
+Package wrapfig Warning: Collision between wrapping environments on input line 
+140.
+
+<Figures/arikanfly.png, id=125, 288.3272pt x 199.49532pt>
+File: Figures/arikanfly.png Graphic file (type png)
+
+<use Figures/arikanfly.png>
+Package pdftex.def Info: Figures/arikanfly.png used on input line 142.
+(pdftex.def)             Requested size: 159.99756pt x 110.70598pt.
+
+Underfull \hbox (badness 1424) in paragraph at lines 139--146
+\T1/pplj/m/n/10.95 which can be de-scribed as fol-lows.
+ []
+
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 14
+6.
+
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 14
+7.
+
+[5 <./Figures/channelcomb.png>]
+<Figures/pchscheme.png, id=138, 636.87938pt x 299.61937pt>
+File: Figures/pchscheme.png Graphic file (type png)
+
+<use Figures/pchscheme.png>
+Package pdftex.def Info: Figures/pchscheme.png used on input line 152.
+(pdftex.def)             Requested size: 240.00244pt x 112.9056pt.
+ <Figures/fer.png, id=141, 578.16pt x 433.62pt>
+File: Figures/fer.png Graphic file (type png)
+
+<use Figures/fer.png>
+Package pdftex.def Info: Figures/fer.png used on input line 160.
+(pdftex.def)             Requested size: 240.00244pt x 180.00188pt.
+ [6 <./Figures/arikanfly.png> <./Figures/pchscheme.png> <./Figures/fer.png>] <F
+igures/pswscheme.png, id=154, 764.10469pt x 309.40594pt>
+File: Figures/pswscheme.png Graphic file (type png)
+
+<use Figures/pswscheme.png>
+Package pdftex.def Info: Figures/pswscheme.png used on input line 170.
+(pdftex.def)             Requested size: 240.00244pt x 97.18011pt.
+ <Figures/swfer.png, id=159, 578.16pt x 433.62pt>
+File: Figures/swfer.png Graphic file (type png)
+
+<use Figures/swfer.png>
+Package pdftex.def Info: Figures/swfer.png used on input line 179.
+(pdftex.def)             Requested size: 240.00244pt x 180.00188pt.
+ [7 <./Figures/pswscheme.png> <./Figures/swfer.png>]
+<Figures/relorder.png, id=178, 459.96844pt x 413.29407pt>
+File: Figures/relorder.png Graphic file (type png)
+
+<use Figures/relorder.png>
+Package pdftex.def Info: Figures/relorder.png used on input line 192.
+(pdftex.def)             Requested size: 200.0pt x 179.70578pt.
+
+Overfull \hbox (3.59314pt too wide) in paragraph at lines 198--199
+[] []\T1/iwona/m/sc/10.95/80ls nest-ing prop-erty:[] \T1/pplj/m/n/10.95 Po-lar-
+iza-tion sug-
+ []
+
+<Figures/if.png, id=181, 1244.65pt x 514.92375pt>
+File: Figures/if.png Graphic file (type png)
+ <use Figures/if.png>
+Package pdftex.def Info: Figures/if.png used on input line 204.
+(pdftex.def)             Requested size: 400.0pt x 165.4861pt.
+ [8 <./Figures/relorder.png>] [9 <./Figures/if.png>] [10]
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 236
 .
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-) [7]
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 219--220
+) [11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
 
  []
 
-[9]
+[13]
 LaTeX Font Info:    Font shape `T1/iwona/bx/sc' in size <10.95> not available
-(Font)              Font shape `T1/iwona/b/sc' tried instead on input line 250.
+(Font)              Font shape `T1/iwona/b/sc' tried instead on input line 313.
 
 
 
-LaTeX Warning: Reference `fig:exit' on page 10 undefined on input line 273.
+LaTeX Warning: Reference `fig:exit' on page 14 undefined on input line 336.
 
-[10] [11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 352--353
+[14] [15]
+
+LaTeX Warning: Citation `talagrand' on page 16 undefined on input line 407.
+
+[16]
+
+LaTeX Warning: Citation `russo' on page 17 undefined on input line 413.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 415--416
 
  []
 
-[13] (./polarmid.bbl
+[17] (./polarmid.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 28--31
 []\T1/pplj/m/n/10.95 S. Onay.  Po-lar codes for nonassy-met-ric slepian-wolf co
 d-ing.
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 369.
- [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 369.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 432.
+ [18]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 432.
  (./polarmid.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 369.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 369.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 432.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 432.
 Package rerunfilecheck Info: File `polarmid.out' has not changed.
 (rerunfilecheck)             Checksum: 462D4E227D79C8D9275A52730600346D;984.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 369.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 432.
  ) 
 Here is how much of TeX's memory you used:
- 14858 strings out of 493029
- 257905 string characters out of 6136234
+ 14932 strings out of 493029
+ 259164 string characters out of 6136234
  553263 words of memory out of 5000000
- 18041 multiletter control sequences out of 15000+600000
- 120514 words of font info for 135 fonts, out of 8000000 for 9000
+ 18088 multiletter control sequences out of 15000+600000
+ 123239 words of font info for 139 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 59i,23n,84p,786b,617s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,23n,84p,1226b,627s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/iwona/ec-iwona-sc.enc}{/usr/sh
 are/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-di
 st/fonts/enc/dvips/iwona/ec-iwona.enc}</usr/share/texlive/texmf-dist/fonts/type
@@ -1268,10 +1346,10 @@ wona/iwonab.pfb></usr/share/texlive/texmf-dist/fonts/type1/nowacki/iwona/iwonar
 share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on polarmid.pdf (14 pages, 316424 bytes).
+Output written on polarmid.pdf (18 pages, 555969 bytes).
 PDF statistics:
- 295 PDF objects out of 1000 (max. 8388607)
- 250 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 22128 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 364 PDF objects out of 1000 (max. 8388607)
+ 301 compressed objects within 4 object streams
+ 73 named destinations out of 1000 (max. 500000)
+ 22680 words of extra memory for PDF output out of 24883 (max. 10000000)
 

@@ -3,15 +3,19 @@
 \contentsline {subsection}{\numberline {1.1}Suggested Approach for Solving The Data-Exchange Problem}{5}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}Interactive Communication for Data Exchange}{5}{subsection.1.2}
 \contentsline {subsection}{\numberline {1.3}Brief Introduction to Polar Codes}{5}{subsection.1.3}
-\contentsline {subsection}{\numberline {1.4}Implementation of SW Compression using Polar Codes}{6}{subsection.1.4}
-\contentsline {subsection}{\numberline {1.5}Rateless Polar codes}{6}{subsection.1.5}
-\contentsline {subsubsection}{\numberline {1.5.1}Degradedness and Nesting Property}{6}{subsubsection.1.5.1}
-\contentsline {subsubsection}{\numberline {1.5.2}Incremental freezing}{6}{subsubsection.1.5.2}
-\contentsline {section}{\numberline {2}Proposed implementation of Recursive Data Exchange}{7}{section.2}
-\contentsline {subsection}{\numberline {2.1}Adaptation of Rateless Polar Codes for RDE}{7}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}PHY-Layer error Detection}{8}{subsection.2.2}
-\contentsline {paragraph}{Indirect Recovery}{8}{definition.1}
-\contentsline {subsubsection}{\numberline {2.2.1}The Error Detection Test }{9}{subsubsection.2.2.1}
-\contentsline {subsection}{\numberline {2.3}Proposed tests}{10}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Performance Evaluation}{11}{subsection.2.4}
-\contentsline {section}{\numberline {3}Conclusion and Future work}{12}{section.3}
+\contentsline {paragraph}{channel polarization}{5}{figure.caption.4}
+\contentsline {subsection}{\numberline {1.4}Implementation of SW Compression using Polar Codes}{7}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Rateless Polar codes}{8}{subsection.1.5}
+\contentsline {paragraph}{Rateless code:}{8}{subsection.1.5}
+\contentsline {subsubsection}{\numberline {1.5.1}Degradedness and Nesting Property}{8}{subsubsection.1.5.1}
+\contentsline {paragraph}{Degraded channels:}{8}{figure.caption.9}
+\contentsline {paragraph}{Nesting Property:}{8}{figure.caption.9}
+\contentsline {subsubsection}{\numberline {1.5.2}Incremental freezing}{9}{subsubsection.1.5.2}
+\contentsline {section}{\numberline {2}Proposed implementation of Recursive Data Exchange}{11}{section.2}
+\contentsline {subsection}{\numberline {2.1}Adaptation of Rateless Polar Codes for RDE}{11}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}PHY-Layer error Detection}{12}{subsection.2.2}
+\contentsline {paragraph}{Indirect Recovery}{12}{definition.1}
+\contentsline {subsubsection}{\numberline {2.2.1}The Error Detection Test }{13}{subsubsection.2.2.1}
+\contentsline {subsection}{\numberline {2.3}Proposed tests}{14}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Performance Evaluation}{15}{subsection.2.4}
+\contentsline {section}{\numberline {3}Conclusion and Future work}{16}{section.3}
