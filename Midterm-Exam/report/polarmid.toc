@@ -11,11 +11,18 @@
 \contentsline {paragraph}{Degraded channels:}{8}{figure.caption.9}
 \contentsline {paragraph}{Nesting Property:}{8}{figure.caption.9}
 \contentsline {subsubsection}{\numberline {1.5.2}Incremental freezing}{9}{subsubsection.1.5.2}
-\contentsline {section}{\numberline {2}Proposed implementation of Recursive Data Exchange}{11}{section.2}
-\contentsline {subsection}{\numberline {2.1}Adaptation of Rateless Polar Codes for RDE}{11}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}PHY-Layer error Detection}{12}{subsection.2.2}
-\contentsline {paragraph}{Indirect Recovery}{12}{definition.1}
-\contentsline {subsubsection}{\numberline {2.2.1}The Error Detection Test }{13}{subsubsection.2.2.1}
-\contentsline {subsection}{\numberline {2.3}Proposed tests}{14}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Performance Evaluation}{15}{subsection.2.4}
-\contentsline {section}{\numberline {3}Conclusion and Future work}{16}{section.3}
+\contentsline {subsubsection}{\numberline {1.5.3}H-ARQ for Polar codes}{10}{subsubsection.1.5.3}
+\contentsline {paragraph}{HYBRID ARQ:}{10}{subsubsection.1.5.3}
+\contentsline {paragraph}{Rate Compatible Codes:}{10}{subsubsection.1.5.3}
+\contentsline {paragraph}{H-ARQ for Polar codes with selective repetition:}{10}{figure.caption.11}
+\contentsline {paragraph}{Incremental freezing:}{11}{figure.caption.11}
+\contentsline {paragraph}{H-ARQ for Polar codes based on Subset Polar Codes:}{11}{figure.caption.11}
+\contentsline {paragraph}{Reliability Based H-ARQ:}{11}{figure.caption.11}
+\contentsline {section}{\numberline {2}Proposed implementation of Recursive Data Exchange}{12}{section.2}
+\contentsline {subsection}{\numberline {2.1}Adaptation of Rateless Polar Codes for RDE}{12}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}PHY-Layer error Detection}{13}{subsection.2.2}
+\contentsline {paragraph}{Indirect Recovery}{13}{definition.1}
+\contentsline {subsubsection}{\numberline {2.2.1}The Error Detection Test }{14}{subsubsection.2.2.1}
+\contentsline {subsection}{\numberline {2.3}Proposed tests}{15}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Performance Evaluation}{16}{subsection.2.4}
+\contentsline {section}{\numberline {3}Conclusion and Future work}{17}{section.3}

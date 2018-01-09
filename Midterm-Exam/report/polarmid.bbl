@@ -70,4 +70,15 @@ M.~Mondelli et~al.
 \newblock Capacity achieving rate compatible polar codes for general channels.
 \newblock {\em arXiv.1611.01199v2[cs.IT]}, Jan. 2017.
 
+\bibitem{harqmukhtar}
+M.~Al-Mualla H.~Mukhtar, A. Al-Dweik.
+\newblock Crc-free hybrid arq using turbo product codes.
+\newblock {\em IEEE TRANSACTIONS ON COMMUNICATIONS}, VOL. 62, NO. 12, Dec.
+  2014.
+
+\bibitem{rbharq}
+H.~Schoeneich J.~Fricke and P.~A. Hoeher.
+\newblock Reliability based retransmission criterion for harq.
+\newblock {\em IEEE TRANSACTIONS ON COMMUNICATIONS}, VOL. 57, NO. 8, Aug. 2009.
+
 \end{thebibliography}

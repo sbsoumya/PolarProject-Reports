@@ -196,7 +196,7 @@ Intuitively, a method to generate the syndrome incrementally will lead us to an 
 \end{wrapfigure}
 \paragraph{Degraded channels:}A symmetric binary input channel $W_2$ is said to be degraded with respect to a channel $W_1$ if there exists random variables X,Y,Z such that X\---Y\---Z forms a Markov chain and $W_1=P_{Y|X} , W_2=P_{Z|X}$. By Data Processing Inequality it is evident that the capacity of $W_2$ is lesser than that of $W_1$. This is denoted by $W_2 \preceq W_1$. For example, $BSC(p_1) \preceq BSC(p_2)$ if $p_1 \geq p_2$.
 \paragraph{Nesting Property:}Polarization suggests that $W_2 \preceq W_1$ will reflect as lesser number of \emph{good channels} for $W_2$. As the polarization operation preserves degradedness, the good bit indices of $W_2$ must be a subset of the good bit indices of $W_1$. This is Nesting Property. This leads to a \emph{reliability ordering} of the channels, such that a more reliable channel is always noiseless if a less reliable channel is noiseless regardless of the underlying channel.
-\subsubsection{Incremental freezing}
+\subsubsection{Incremental freezing}\label{if}
 These Rateless Polar Coding coding scheme described in \cite{chen} can be described as follows.
 Given the reliability ordering, a rateless scheme can be designed as follows. The initial transmission can be done using a high rate polar code with many information bits less frozen bits. If this transmission cannot be decoded\footnote{Decodability is checked by CRC in higher layers.} then among the informations bits sent, the ones on comparatively lesser reliable channels are retransmitted. By decoding these bits from future transmissions they effectively become frozen, allowing the rest of the information bits sent on the first transmission to be decoded. Thus, this scheme can be called \emph{incremental freezing}, as future transmissions successively freeaze more and more bits sent in earlier transmission.
 \begin{figure}[h]
@@ -207,12 +207,52 @@ Given the reliability ordering, a rateless scheme can be designed as follows. Th
   \label{fig:if}
 \end{figure}  
 \\Figure \ref{fig:if} illustrates the scheme for a set of channels with rates $\{ R=12/16, R_1= R/2,R_2= R/3,R_3= R/4\}$. Here $u_i$ are the message bits. Note that with the $4^th$ transmission  $u_4$ to $u_{12}$ has been incrementally frozen. This scheme is capacity achieving in the sense that no rate has been wasted, the final rate achieved is, $$R^*= \frac{12}{16x4}=\frac{3}{16}=R_3 $$. In case the real channel has capacity $ \geq R_3$ the scheme stops at appropriate iteration to achieve that capacity.\\
-Though this scheme is not truly rateless as it can achieve only R, R/2, R/3,...rather than a set of arbitrary rates , adding new information bits in future transmissions allow us to rectify this. In similar fashion this can be extended to parallel channels.\\
-It is useful to note taht a certain number of channels in this scheme is "\emph{always available}" guaranteeing a certain rate in each transmission. A specific application of this will be discussed in section \ref{future}.
-\subsubsection*{H-ARQ for Polar codes}
-\subsubsection*{Rate Compatible Polar Codes}
-\subsubsection*{H-ARQ schemes}
-\subsubsection*{Reliability Based H-ARQ}
+Though this scheme is not truly rateless as it can achieve only R, R/2, R/3,...rather than a set of arbitrary rates, adding new information bits in future transmissions allow us to rectify this. In similar fashion this can be extended to parallel channels.\\
+It is useful to note that a certain number of channels in this scheme is "\emph{always available}" guaranteeing a certain rate in each transmission. A specific application of this will be discussed in section \ref{future}.
+\\In \cite{chen}, The performance evaluation of the scheme establishes that $n$ iterations of the scheme is almost equivalent in performance to a $R/n$ fixed rate Polar Code.
+\\Adaptation of this scheme for RDE will be indicated in section \ref{propsol}.
+\\The following subsections briefly discuss Rateless Polar Coding from the perspective of Hybrid-ARQ.
+\subsubsection{H-ARQ for Polar codes}
+\paragraph{HYBRID ARQ:}Hybrid automatic repeat request (hybrid ARQ or HARQ) is a combination of high-rate forward error-correcting coding and ARQ error-control. In standard ARQ, redundant bits are added to data to be transmitted using an error-detecting (ED) code such as a cyclic redundancy check (CRC). Receivers detecting a corrupted message will request a new message from the sender. \\In Hybrid ARQ, the original data is encoded with a forward error correction (FEC) code, and the parity bits are either immediately sent along with the message (Type-I) or only transmitted upon request when a receiver detects an erroneous message (Type-II). The retransmission vector is also called the \emph{Redundancy Vector}(RV). \\The ED code may be omitted when a code is used that can perform both forward error correction (FEC) in addition to error detection, such as a Reed-Solomon code or  Turbo Product Code (TPC) \cite{harqmukhtar}.\\The FEC code is chosen to correct an expected subset of all errors that may occur, while the ARQ method is used as a fall-back to correct errors that are uncorrectable using only the redundancy sent in the initial transmission.\\Construction of H-ARQ requires a Rate Compatible Code and a choice of RV (retransmission scheme).
+\paragraph{Rate Compatible Codes:}
+Given a fixed number of information bits, consider a family of codes $\{C_1,C_2...C_n\}$  with rates $R_1\geq R_2\geq R_3...\geq R_n$, and block lengths $N_1 \leq N_2 \leq ... \leq N_n$.
+Then the set is rate compatible if codeword for $C_i$ can be built by removing $N_j-N_i$ bits from codewords of code $C_j$ ,$j\geq i$, \cite{mondelli}. Rate Compatible Codes can be constructed by puncturing low rate codes. 
+\\Polar codes for degraded channels is inherently rate compatible due to \emph{reliability ordering} and \emph{nesting}.
+
+\subsubsection*{H-ARQ schemes for Polar Codes}
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{selrepharq.png}
+  \end{center}
+  \caption{H-ARQ for Polar Codes with selective repetition}
+  \label{fig:selrepharq}
+\end{wrapfigure}
+In \cite{harqchen}, a H-ARQ scheme for Polar codes based on selective repetition has been studied. The incremental freezing scheme described in \cite{chen} and \cite{mondelli} can be classified as a H-ARQ scheme. In \cite{harqtav} another H-ARQ scheme based on Subset Polar Codes is described along with performance comparison with the other schemes. Here these schemes are briefly discussed. 
+\paragraph{H-ARQ for Polar codes with selective repetition:}
+As the initial transmission, an information block of K bits is fed into a polar
+encoder. The output codeword of $N_0$ bits is punctured into $N_1$
+bits and sent over the channel. If the receiver fails to decode
+the codeword, an NACK (negative acknowledgement) is sent
+to the transmitter through the feedback channel. And then,
+$N_2-N_1$ of the information bits are retransmitted. This time,
+the receiver tries to perform decoding with all the $N_2$ received
+bits. If the decoding is failed again, another $N_3-N_2$ bits
+are transmitted. This process continues until the transmitter
+receives an ACK (acknowledgement), or a maximum number
+of transmissions T is achieved. The scheme has been illustrated in figure  \ref{fig:selrepharq}. The retransmitted bits (RV) are chosen one at a time as the most unreliable of the K bits transmitted, reliability is re-calculated after choosing one bit and the process is iterated.
+\paragraph{Incremental freezing:} this scheme is an improvement over the above scheme, it uses the reliability ordering to choose the RV as discussed in \ref{if}.
+\paragraph{H-ARQ for Polar codes based on Subset Polar Codes:}
+A Subset Polar Code can be created by greedily puncturing a low-rate mother code without re-optimizing the information bits.The scheme uses equivalent subset Polar Codes as RV. In \cite{harqtav}, the author has claimed from simulation results that this scheme performs better among the ones discussed. Nevertheless, we have used incremental freezing for its simplicity.  
+\paragraph{Reliability Based H-ARQ:}
+It is to be noted that the schemes described above use CRC for checking decodability. Reliability based HARQ technique (RBHARQ) \cite{rbharq}, eliminates the use of CRC by approximating bit and word error probability from likelihood ratios (LLR).  As the magnitude of a log-likelihood value is directly
+connected to the error probability of the corresponding
+bit, it can be used to determine which bits most
+likely caused a word error. The bit error probability for the $k^{th}$ bit can be estimated form LLR ($\tilde{u}_k$) as,
+$$ P_{b,k}=P(\hat{u_k} \neq u_k) = \frac{1}{1+e^{|\tilde{u}_k|}}$$
+then word error probability becomes, $$P_w=1-e^{log\bar{P}_w}$$
+where, $$log\bar{P}_w=log\prod_{k=1}^K (1- P_{b,k})$$ 
+if the word error probability does not meet the requirements the bits with higher bit error probability may be retransmitted. This retransmission criterion results in increase of throughput, particularly evident in case of short packet lengths.
+
 
 
 %----------------------------------------------------------------------------------------
