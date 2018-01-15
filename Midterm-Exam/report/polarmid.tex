@@ -73,21 +73,21 @@ BCOR5mm, % Binding correction
 \setcounter{tocdepth}{2} % Set the depth of the table of contents to show sections and subsections only
 
 \tableofcontents % Print the table of contents
+\listoffigures
 \footnote{This Project was supported by Robert Bosch Center for Cyber Physical Systems}
 %----------------------------------------------------------------------------------------
 %	ABSTRACT
 %----------------------------------------------------------------------------------------
 \newpage
 \section*{abstract}
-Efficiently decodable deterministic coding schemes which achieve channel capacity provably have been elusive until the advent of polar codes\cite{arikan} in the last decade.Further,the recent results by Urbanke et al.\cite{rm1} show that doubly transitive codes achieve capacity on erasure channel under MAP decoding.Urbanke and his group use threshold phenomenon observed in EXIT functions (which capture the error probability) ,to prove the same.These results were applied to Reed-Muller codes \cite{rm1}.Alternative proof of the fact Polar codes achieve capacity was suggested in \cite{vishva}.This report is a comprehensive study of threshold phenomenon in EXIT function and its applications as indicated above.
 
 %----------------------------------------------------------------------------------------
 %	INTRODUCTION
 %----------------------------------------------------------------------------------------
 \newpage
-\section{Introduction}
+\section{Introduction}\label{intro}
 %----------Paper intro
-Random correlated data (X,Y) is distributed between two parties with first observing X and second observing Y. The two parties seek to recover each others data. \emph{The Data-Exchange problem} essentially encompasses this scenario, as depicted in figure \ref{fig:dataex}. The project seeks to device a practical protocol which achieves this with minimal communication.\\
+Random correlated data (X,Y) is distributed between two parties with first observing X and second observing Y. The two parties seek to recover each others data. \emph{The Data-Exchange problem} essentially encompasses this scenario, as depicted in figure \ref{fig:dataex}. This project seeks to device a practical protocol which achieves this with minimal communication under a setting where the joint distribution on X and Y is unknown.\\
 \begin{wrapfigure}{r}{0.5\textwidth}
   \begin{center}
     \includegraphics[width=0.4\textwidth]{dataex.png}
@@ -95,7 +95,7 @@ Random correlated data (X,Y) is distributed between two parties with first obser
   \caption{The Data-Exchange Problem}
   \label{fig:dataex}
 \end{wrapfigure}
-A working solution for this problem is r-sync protocol, as described in   \cite{rsync}.The algorithm identifies parts of the source file which are identical to some part of the destination file, and only sends those parts which cannot be matched in this way.Though this protocol is fast and low complexity, it does not exploit the correlation of the data to the best extent possible.In fact, we can view r-sync as an algorithm which uses only one guess, and thus ends up using more communication.\\
+A working solution for this problem is r-sync protocol, as described in   \cite{rsync}. The algorithm identifies parts of the source file which are identical to some part of the destination file, and only sends those parts which cannot be matched in this way. Though this protocol is fast and low complexity, it does not exploit the correlation of the data to the best extent possible. In fact, we can view r-sync as an algorithm which uses only one guess, and thus ends up using more communication.\\
 In \cite{sw}, David Slepian and Jack Wolf had shown that the optimal solution to this problem is Slepian-Wolf compression. 
 \paragraph{Slepian-Wolf Coding Theorem:}states under joint decoding of X and Y a total rate H(X,Y) is sufficient.\\
 \begin{wrapfigure}{r}{0.5\textwidth}
@@ -105,9 +105,9 @@ In \cite{sw}, David Slepian and Jack Wolf had shown that the optimal solution to
   \caption{The Slepian-Wolf Compression}
   \label{fig:swcomp}
 \end{wrapfigure}
-Consider first the problem where X and Y are correlated discrete-alphabet memoryless sources, we have to compress X losslessly, with Y (side information) being known at the decoder and \emph{not} at the encoder. If Y were known at both ends one can compress X at a theoritical rate of $H(X|Y)$. But if Y were known only at decoder the same can be achieved by just knowing $P_{X|Y}$ at encoder without explicit information of Y, this has been depicted in figure\ref{fig:swcomp} \cite{discus}. 
+As described in \cite{discus}, consider first the problem where X and Y are correlated discrete-alphabet memoryless sources, we have to compress X losslessly, with Y (side information) being known at the decoder and \emph{not} at the encoder. If Y were known at both ends one can compress X at a theoritical rate of $H(X|Y)$. But if Y were known only at decoder the same can be achieved by just knowing $P_{X|Y}$ at encoder without explicit information of Y, this has been depicted in figure \ref{fig:swcomp}. 
 \\\\
-A practical implementation of Slepian Wolf compression faces the following difficulties.
+A practical implementation of Slepian-Wolf compression faces the following difficulties.
 \begin{itemize}
 \item Search is over an exponential list in decoding.
 \item Knowledge of $P_{X|Y}$ is required.
@@ -115,8 +115,8 @@ A practical implementation of Slepian Wolf compression faces the following diffi
 
 Using structured channel codes as indicated in \cite{discus}, particularly Polar Codes as shown in \cite{pslep}, alongwith \emph{recursive data exchange protocol}  mentioned in \cite{htsw} for Slepian-Wolf compression eases the aforementioned implementation. 
 
-\subsection{Suggested Approach for Solving The Data-Exchange Problem}
-In accordance with the above discussion the suggested approach towards solving \emph{the Data-Exchange Problem} may be briefed as follows.
+\subsection{Suggested Approach for Solving The Data-Exchange Problem}\label{suggapp}
+In accordance with the above discussion the suggested approach towards solving \emph{The Data-Exchange Problem} may be briefed as follows.
 \begin{itemize}
 \item{Implement Slepian-Wolf Compression using Polar Codes.}
 \item{Achieve universality using \emph{Recursive Data Exchange} protocol (RDE).}
@@ -126,7 +126,7 @@ In accordance with the above discussion the suggested approach towards solving \
 The following sub-sections discuss the artefacts needed for this implementation in brief. Section \ref{propsol}, consolidates and elaborates the proposed scheme. 
 
 \subsection{Interactive Communication for Data Exchange}
-The data exchange protocol is based on an interactive version of the Slepian-Wolf protocol where the length of communication is increased in steps until the second party decodes the data of the first. After each transmission second party sends ACK-NACK feedback signal, the protocol stops when ACK is recieved or $l_{max}$ bits have been transmitted \cite{htsw}. Note, this protocol is universal as it does not rely on knowledge of the joint distribution, instead uses an iterative variable length approach to reach rate optimality universally. The decoders suggested in \cite{htsw} are theoritical constructs which use type classes to form a list of guesses for data of other parties and thus has exponential complexity.\\ In \cite{pslep}, Slepian Wolf compression is approached with structered (Polar) codes, in this work we use Rateless Polar Codes to implement RDE with a similar ideology.
+The data exchange protocol is based on an interactive version of the Slepian-Wolf protocol where the length of communication is increased in steps until the second party decodes the data of the first. After each transmission second party sends ACK-NACK feedback signal, the protocol stops when ACK is recieved or some pre-decided number of bits ($l_{max}$) have been transmitted \cite{htsw}. Note, this protocol is universal as it does not rely on knowledge of the joint distribution, instead uses an iterative variable length approach to reach rate optimality universally. The decoders suggested in \cite{htsw} are theoritical constructs which use type classes to form a list of guesses for data of other parties and thus has exponential complexity.\\ In \cite{pslep}, Slepian Wolf compression is approached with structered (Polar) codes, in this work we use Rateless Polar Codes to implement RDE with a similar ideology.
 
 \subsection{Brief Introduction to Polar Codes}
 \begin{wrapfigure}{r}{0.5\textwidth}
@@ -144,9 +144,9 @@ In 2008, E. Arikan in his paper \cite{arikan} introduced Polar Codes, which prov
   \caption{Arikan transformation butterfly}
   \label{fig:arikanfly}
 \end{wrapfigure}
-\paragraph{channel polarization}is an operation by which one manufactures out of N independent copies of a given B-DMC W, a second set of N channels $\{W^{(i)}_N : 1 \leq i \leq N \}$ that show a polarization effect in the sense that, as N becomes large,the symmetric capacity terms $I(W^{(i)}_N )$ tend towards 0 or 1,for all but a vanishing fraction of indices i. Alternatively, Bhattacharya parameter $Z(W^{(i)}_N)$ tend to 1 or 0 respectively. 
+\paragraph{channel polarization}, is an operation by which one manufactures out of N independent copies of a given B-DMC W, a second set of N channels $\{W^{(i)}_N : 1 \leq i \leq N \}$ that show a polarization effect in the sense that, as N becomes large,the symmetric capacity terms $I(W^{(i)}_N )$ tend towards $0$ or $1$,for all but a vanishing fraction of indices i. Hence, Bhattacharya parameter $Z(W^{(i)}_N)$ tend to $1$ or $0$ respectively. The channels with $Z(W^{(i)}_N)=0$ captures the capacity of $W_{vec}$.
 
-This operation consists of a channel combining and a channel splitting phase, as shown in figure \ref{fig:channelcomb}. The channel transformation for two independent channels is shown in \ref{fig:arikanfly},this is used recursively. \\The encoding process sends data on transformed channels with $Z(W^{(i)}_N)=0$  (\emph{good channels}) and treats the channels with $Z(W^{(i)}_N)=0$ as \emph{bad or frozen}, thus sending no useful data on them. This scheme of error control coding with polar codes is illustrated in figure \ref{fig:pchscheme}.
+This operation consists of a channel combining and a channel splitting phase, as shown in figure \ref{fig:channelcomb}. The channel transformation for two independent channels is shown in \ref{fig:arikanfly}, this is used recursively. \\The encoding process sends data on transformed channels with $Z(W^{(i)}_N)=0$  (\emph{good channels}) and treats the channels with $Z(W^{(i)}_N)=1$ as \emph{bad or frozen}, sending no useful data on them. This scheme of error control coding with polar codes is illustrated in figure \ref{fig:pchscheme}.
 \begin{figure}[h]
  \begin{center}
     \includegraphics[width=0.6\textwidth]{pchscheme.png}
@@ -154,7 +154,7 @@ This operation consists of a channel combining and a channel splitting phase, as
   \caption{Polar Coding}
   \label{fig:pchscheme}
 \end{figure}\\
-In figure \ref{fig:pchscheme}, $U_N$ is a uniform message vector, $T$ is a linear transform equivalent to the butterfly in figure \ref{fig:arikanfly} for a block length of N. It is useful to note here that $T=T^{-1}$.
+In figure \ref{fig:pchscheme}, $U_N$ is a uniform message vector, $T$ is a linear transform equivalent to the butterfly in figure \ref{fig:arikanfly} for a block length of N. $W_N$ is analogous to $W_{vec}$. It is useful to note here that $T=T^{-1}$.
 \begin{figure}[h]
   \begin{center}
     \includegraphics[width=0.6\textwidth]{fer.png}
@@ -164,7 +164,7 @@ In figure \ref{fig:pchscheme}, $U_N$ is a uniform message vector, $T$ is a linea
 \end{figure}\\
 For our purpose, we shall be using Succesive Cancellation (SC) decoding. Each independent channel will considered as BSC(p). The Polar Code construction indicated in \cite{zhang} has been employed for simplicity. A performance analysis of implementation of the scheme in figure \ref{fig:pchscheme} is presented in figure \ref{fig:fer}    
 
-\subsection{Implementation of SW Compression using Polar Codes}
+\subsection{Implementation of SW Compression using Polar Codes}\label{psw}
 \begin{figure}[h]
  \begin{center}
     \includegraphics[width=0.6\textwidth]{pswscheme.png}
@@ -172,8 +172,8 @@ For our purpose, we shall be using Succesive Cancellation (SC) decoding. Each in
   \caption{Polar Coding for SW Compression}
   \label{fig:pswscheme}
 \end{figure}
-In \cite{discus}, the use of structured codes for Slepian-Wolf compression has been discussed.Further, in \cite{pslep} a specific scheme using Polar Codes has been illustrated, as shown in figure \ref{fig:pswscheme}.\\
-Consider the setting where $X_N$ and $Y_N$ are uniform. $Y_N$ is a corrupted version of $X_N$ by a BSC(p). The bits that are to be sent for estimation of $X_N$ from $Y_N$ are the frozen bits in $U_N$. In other words applying $T^{-1}$ to $X_N$ and choosing the bits at frozen positions (the syndrome) essentially describes the compression operation. These bits are communicated error free to the SC-Decoder. On applying $T$ to the output of SC-decoder the estimate $\hat{X}_N$ is received. It is to be noted here that in general the frozen positions are set to 0 in channel coding but in Slepian-Wolf compression they are non-zero by the nature of the scheme. Performance analysis of this scheme is presented in figure \ref{fig:swfer}.
+In \cite{discus}, the use of structured codes for Slepian-Wolf compression has been discussed.Further, in \cite{pslep} a specific scheme using Polar Codes has been illustrated, as shown in figure \ref{fig:pswscheme}.
+Consider the setting where $X_N$ and $Y_N$ are uniform. $Y_N$ is a corrupted version of $X_N$ by N BSC(p) channel uses. The bits that are to be sent for estimation of $X_N$ from $Y_N$ are the frozen bits in $U_N$. In other words applying $T^{-1}$ to $X_N$ and choosing the bits at frozen positions (the syndrome) essentially describes the compression operation. These bits are communicated error free to the SC-Decoder. Thus $H(X_N)-I(W_N)=H(X_N/Y_N)$ bits are sent. On applying $T$ to the output of SC-decoder the estimate $\hat{X}_N$ is received. It is to be noted here that in general the frozen positions are set to $0$ in channel coding but in Slepian-Wolf compression they are non-zero by the nature of the scheme. Performance analysis of this scheme is presented in figure \ref{fig:swfer}.
 \begin{figure}[h]
  \begin{center}
     \includegraphics[width=0.6\textwidth]{swfer.png}
@@ -184,7 +184,7 @@ Consider the setting where $X_N$ and $Y_N$ are uniform. $Y_N$ is a corrupted ver
 Intuitively, a method to generate the syndrome incrementally will lead us to an implementation of RDE. Rateless Polar Codes will be instrumental to accomplish this.
 
 \subsection{Rateless Polar codes}
-\paragraph{Rateless code:}A rateless coding scheme transmits incrementally more and more coded bits over an unknown channel until all the information bits are decoded reliably by the receiver. A fixed rate code is designed for a specific channel. In contrast, a rateless code is designed for a set of channels and judged for its performance for the entire set (the compound channel). In general a rateless code design is based on hybrid-ARQ techniques and uses code puncturing. \\For Polar Codes, puncturing is not straightforward. Hybrid-ARQ schemes and puncturing of Polar Codes has been proposed and compared in \cite{harqtav},\cite{harqcheng},and \cite{harqchen}.\\ In \cite{chen}, the authors have proposed a provably capacity achieving rateless coding scheme based on Polar Codes. This scheme is useful for broad class of channels as long as they are ordered by degradation.\footnote{using construction methods in \cite{wang},\cite{mondelli} this method can be extended to a broader class of \emph{less noisy} ordered channels}. The scheme stems from the inherent nesting property and degradedness of Polar codes, this makes puncturing a relatively simple affair. 
+\paragraph{Rateless code:}A rateless coding scheme transmits incrementally more and more coded bits over an unknown channel until all the information bits are decoded reliably by the receiver. A fixed rate code is designed for a specific channel. In contrast, a rateless code is designed for a set of channels and judged for its performance for the entire set (the compound channel). In general a rateless code design is based on hybrid-ARQ techniques and uses code puncturing. \\For Polar Codes, puncturing is not straightforward. Hybrid-ARQ schemes and puncturing of Polar Codes has been proposed and compared in \cite{harqtav},\cite{harqcheng},and \cite{harqchen}.\\ In \cite{chen}, the authors have proposed a provably capacity achieving rateless coding scheme based on Polar Codes. This scheme is useful for broad class of channels as long as they are ordered by degradation\footnote{using construction methods in \cite{wang},\cite{mondelli} this method can be extended to a broader class of \emph{less noisy} ordered channels}. The scheme stems from the inherent nesting property and degradedness of Polar codes, this makes puncturing a relatively simple affair. 
 
 \subsubsection{Degradedness and Nesting Property}
 \begin{wrapfigure}{r}{0.5\textwidth}
@@ -195,10 +195,9 @@ Intuitively, a method to generate the syndrome incrementally will lead us to an 
   \label{fig:relorder}
 \end{wrapfigure}
 \paragraph{Degraded channels:}A symmetric binary input channel $W_2$ is said to be degraded with respect to a channel $W_1$ if there exists random variables X,Y,Z such that X\---Y\---Z forms a Markov chain and $W_1=P_{Y|X} , W_2=P_{Z|X}$. By Data Processing Inequality it is evident that the capacity of $W_2$ is lesser than that of $W_1$. This is denoted by $W_2 \preceq W_1$. For example, $BSC(p_1) \preceq BSC(p_2)$ if $p_1 \geq p_2$.
-\paragraph{Nesting Property:}Polarization suggests that $W_2 \preceq W_1$ will reflect as lesser number of \emph{good channels} for $W_2$. As the polarization operation preserves degradedness, the good bit indices of $W_2$ must be a subset of the good bit indices of $W_1$. This is Nesting Property. This leads to a \emph{reliability ordering} of the channels, such that a more reliable channel is always noiseless if a less reliable channel is noiseless regardless of the underlying channel.
+\paragraph{Nesting Property:}Polarization suggests that $W_2 \preceq W_1$ will reflect as lesser number of \emph{good channels} for $W_2$. As the polarization operation preserves degradedness\cite{wang}, the good bit indices of $W_2$ must be a subset of the good bit indices of $W_1$. This is Nesting Property. This leads to a \emph{reliability ordering} of the channels, such that a more reliable channel is always noiseless if a less reliable channel is noiseless regardless of the underlying channel.
 \subsubsection{Incremental freezing}\label{if}
-These Rateless Polar Coding coding scheme described in \cite{chen} can be described as follows.
-Given the reliability ordering, a rateless scheme can be designed as follows. The initial transmission can be done using a high rate polar code with many information bits less frozen bits. If this transmission cannot be decoded\footnote{Decodability is checked by CRC in higher layers.} then among the informations bits sent, the ones on comparatively lesser reliable channels are retransmitted. By decoding these bits from future transmissions they effectively become frozen, allowing the rest of the information bits sent on the first transmission to be decoded. Thus, this scheme can be called \emph{incremental freezing}, as future transmissions successively freeaze more and more bits sent in earlier transmission.
+Given the reliability ordering, a rateless scheme in \cite{chen} can be described as follows. The initial transmission can be done using a high rate polar code with many information bits and less frozen bits. If this transmission cannot be decoded\footnote{Decodability is checked by CRC in higher layers.} then among the informations bits sent, the ones on comparatively lesser reliable channels are retransmitted. By decoding these bits from future transmissions they effectively become frozen, allowing the rest of the information bits sent on the first transmission to be decoded.  As future transmissions successively freeze more and more bits sent in earlier transmission, this scheme can be called \emph{incremental freezing}.
 \begin{figure}[h]
  \begin{center}
     \includegraphics[width=1\textwidth]{if.png}
@@ -206,7 +205,7 @@ Given the reliability ordering, a rateless scheme can be designed as follows. Th
   \caption{Incremental freezing for N=16, K=12 and 4 iterations}
   \label{fig:if}
 \end{figure}  
-\\Figure \ref{fig:if} illustrates the scheme for a set of channels with rates $\{ R=12/16, R_1= R/2,R_2= R/3,R_3= R/4\}$. Here $u_i$ are the message bits. Note that with the $4^th$ transmission  $u_4$ to $u_{12}$ has been incrementally frozen. This scheme is capacity achieving in the sense that no rate has been wasted, the final rate achieved is, $$R^*= \frac{12}{16x4}=\frac{3}{16}=R_3 $$. In case the real channel has capacity $ \geq R_3$ the scheme stops at appropriate iteration to achieve that capacity.\\
+\\Figure \ref{fig:if} illustrates the scheme for a set of channels with rates $\{ R=12/16, R_1= R/2,R_2= R/3,R_3= R/4\}$. Here $u_i$ are the message bits. Note that with the $4^{th}$ transmission  $u_4$ to $u_{12}$ has been incrementally frozen. This scheme is capacity achieving in the sense that no rate has been wasted, the final rate achieved is, $$R^*= \frac{12}{16x4}=\frac{3}{16}=R_3 $$. In case the real channel has capacity $ \geq R_3$ the scheme stops at appropriate iteration to achieve that capacity.\\
 Though this scheme is not truly rateless as it can achieve only R, R/2, R/3,...rather than a set of arbitrary rates, adding new information bits in future transmissions allow us to rectify this. In similar fashion this can be extended to parallel channels.\\
 It is useful to note that a certain number of channels in this scheme is "\emph{always available}" guaranteeing a certain rate in each transmission. A specific application of this will be discussed in section \ref{future}.
 \\In \cite{chen}, The performance evaluation of the scheme establishes that $n$ iterations of the scheme is almost equivalent in performance to a $R/n$ fixed rate Polar Code.
@@ -227,7 +226,7 @@ Then the set is rate compatible if codeword for $C_i$ can be built by removing $
   \caption{H-ARQ for Polar Codes with selective repetition}
   \label{fig:selrepharq}
 \end{wrapfigure}
-In \cite{harqchen}, a H-ARQ scheme for Polar codes based on selective repetition has been studied. The incremental freezing scheme described in \cite{chen} and \cite{mondelli} can be classified as a H-ARQ scheme. In \cite{harqtav} another H-ARQ scheme based on Subset Polar Codes is described along with performance comparison with the other schemes. Here these schemes are briefly discussed. 
+In \cite{harqchen}, a H-ARQ scheme for Polar codes based on selective repetition has been studied. The incremental freezing scheme described in \cite{chen} and \cite{mondelli} can be classified as a H-ARQ scheme. In \cite{harqtav} another H-ARQ scheme based on Subset Polar Codes is described along with performance comparison with the other schemes. Here these schemes are discussed in brief. 
 \paragraph{H-ARQ for Polar codes with selective repetition:}
 As the initial transmission, an information block of K bits is fed into a polar
 encoder. The output codeword of $N_0$ bits is punctured into $N_1$
@@ -248,8 +247,13 @@ It is to be noted that the schemes described above use CRC for checking decodabi
 connected to the error probability of the corresponding
 bit, it can be used to determine which bits most
 likely caused a word error. The bit error probability for the $k^{th}$ bit can be estimated form LLR ($\tilde{u}_k$) as,
-$$ P_{b,k}=P(\hat{u_k} \neq u_k) = \frac{1}{1+e^{|\tilde{u}_k|}}$$
-then word error probability becomes, $$P_w=1-e^{log\bar{P}_w}$$
+\begin{equation}
+P_{b,k}=P(\hat{u_k} \neq u_k) = \frac{1}{1+e^{|\tilde{u}_k|}}
+\end{equation}
+then word error probability becomes, 
+\begin{equation}
+P_w=1-e^{log\bar{P}_w}
+\end{equation}
 where, $$log\bar{P}_w=log\prod_{k=1}^K (1- P_{b,k})$$ 
 if the word error probability does not meet the requirements the bits with higher bit error probability may be retransmitted. This retransmission criterion results in increase of throughput, particularly evident in case of short packet lengths.
 
@@ -260,139 +264,39 @@ if the word error probability does not meet the requirements the bits with highe
 %----------------------------------------------------------------------------------------
 \newpage
 \section{Proposed implementation of Recursive Data Exchange} \label{propsol}
+As indicated in section \ref{intro} and \ref{suggapp}, our approach towards implementation of a solution to \emph{The Data Exchange} using RDE and Polar codes can be summarised as below, 
+\begin{itemize}
+\item{Use Rateless Polar Codes with Incremental Freezing to implement iterative Slepian-Wolf compression.}
+\item{Use a PHY layer error detection as retransmission criterion in Incremantal Freezing.}
+\end{itemize}
+The following subsections elaborate on the same.
 
-Let $\mathcal{C}$ denote an $(N, K)$ proper binary linear code with length $N$ ,dimension $K$ ,minimum distance ($d_{min}$) atleast 2,and rate defined by $r \triangleq K/N$. We assume that a random codeword is chosen uniformly from this code and transmitted over a memoryless Binary Erasure Channel (BEC).A BEC with erasure probability $p$ is denoted by BEC($p$),or BEC($\underline{p}$) in case the erasure probability is different for each bit where $\underline{p} = (p_1 , \ldots , p_n)$ and
-$p_i$ indicates the erasure probability for bit $i$.
-The input and output alphabets of the BEC are denoted by $\mathcal{X} = \{0, 1\}$ and $\mathcal{Y} = \{0, 1, e\}$, respectively. Let $\underline{X} = (X_1 , \ldots , X_N) \in \mathcal{X}_N$ be a uniform random codeword and
-$\underline{Y} = (Y_1 , \ldots, Y_N) \in \mathcal{Y}_N$ be the received sequence obtained by transmitting $\underline{X}$ through a BEC($p$).For a vector $a = (a_1 , a_2 , \ldots , a_N)$, the shorthand $\underline{a}_{\sim i}$ denotes
-$(a_1 , \ldots , a_{i-1} , a_{i+1}, \ldots , a_N)$.
-Let $\underline{a}$,$\underline{b}$ denote the indicator vectors of the sets $A \subseteq [N]$,$B \subseteq [N]$.We say that $A$ \emph{covers} $B$ if $B \subseteq A$, equivalently  $\underline{a}\leq\underline{b}$.For linear codes and erasure channels, it is possible to recover the transmitted codeword if and only if the erasure
-pattern does not cover any codeword.Similarly,
-it is possible to recover bit $i$ if and only if the erasure
-pattern does not cover any codeword where bit $i$ is non-zero.
+
 
 
 \subsection{Adaptation of Rateless Polar Codes for RDE} 
-\paragraph*{Bit error probability:}Let $D_i : \mathcal{Y}^N \to \mathcal{X} \cup \{e\}$ denote the bit-MAP decoder for bit $i$ of $\mathcal{C}$. For a received sequence $\underline{Y}$ , if $X_i$ can be recovered uniquely, then $D_i(\underline{Y}) = X_i$. Otherwise, $D_i$ declares an erasure and returns $e$. Let the erasure probability for bit $i \in [N]$ be $$P_{b,i} \triangleq \mathbb{P}[D_i(\underline{Y}) \neq X_i].$$ and the average bit erasure probability be $$P_b \triangleq \frac{1}{N}\sum_{i=1}^N P_{b,i}.$$
-
-Whenever bit $i$ can be recovered from a received sequence $\underline{Y}=\underline{y}$, $H(X_i | \underline{Y}=\underline{y}) = 0$. Otherwise, the uniform codeword assumption implies that the posterior marginal of bit $i$ given the observations is $\mathbb{P}(X_i = x|\underline{Y}=\underline{y}) = 1/2$ and $H(X_i |\underline{Y}=\underline{y}) = 1$. This immediately implies that $$P_{b,i} = H(X_i|\underline{Y})$$ and, $$P_b = \frac{1}{N}\sum_{i=1}^N  H(X_i|\underline{Y}).$$
-
-\subsection{PHY-Layer error Detection} The vector EXIT function associated with bit $i$ of the (uniformly randomly chosen) codeword is $$h_i(\underline{p})\triangleq H(X_i | \underline{Y}_{\sim i}(\underline{p}_{\sim i})).$$ The average vector EXIT function is defined by $$h(\underline{p}) \triangleq \frac{1}{N}\sum_{i=1}^N h_i(\underline{p}).$$ Scalar EXIT functions are defined by choosing $\underline{p}=(p,p,\ldots,p)$.
-\begin{align*}
-H(X_i|\underline{Y}) &= \mathbb{P}(Y_i=e)H(X_i|\underline{Y}_{\sim i}, Y_i=e) + \mathbb{P}(X_i=Y_i)H(X_i|\underline{Y}_{\sim i}, Y_i=X_i)\\
-&= \mathbb{P}(Y_i=e)H(X_i|\underline{Y}_{\sim i}).
-\end{align*}
-Therefore, $$P_{b,i}(p) = ph_i(p)$$ and $$P_b(p) = ph(p).$$
-\begin{proposition}
-The MAP EXIT function for the $i$th bit satisfies $h_i(p)=
-\frac{\partial H(\underline{X}/\underline{Y}(\underline{p}))}{\partial p_i} $
-\begin{proof}
-\begin{align*}
-H(\underline{X}/\underline{Y}(\underline{p})) &= H(X_i/\underline{Y}(\underline{p}))+H(X_{\sim i}/X_i,\underline{Y}(\underline{p})\\
-&=H(X_i/\underline{Y}(\underline{p}))+H(X_{\sim i}/X_i,Y_{\sim i})  \text{ ,by memorylessness}\\
-&=p_ih_i(p)+H(X_{\sim i}/X_i,Y_{\sim i}) 
-\end{align*}
-We note the second term is independent of $p_{i}$,the proposition follows on differentiation.
-\end{proof}
-\label{propn1}
-\end{proposition}
-\paragraph{Indirect Recovery} Consider a code $\mathcal{C}$ and the \emph{indirect recovery} of $X_i$ from the subvector $\underline{Y}_{\sim i}$ (i.e., the bit-MAP decoding of $Y_i$ from $\underline{Y}$ when $Y_i=e$). For $i \in [N]$, the set of erasure patterns that prevent indirect recovery of $X_i$ under bit-MAP decoding is given by 
-\begin{definition}
-$\Omega_i \triangleq \{A \subseteq [N]\backslash\{i\} : \exists B \subseteq [N]\backslash\{i\}, B \cup \{i\} \in \mathcal{C}, B \subseteq A\}$.
-\label{defn2}
-\end{definition}
-For distinct $i,j \in [N]$, the set of erasure patterns where the $j$-th bit is \emph{pivotal} for the indirect recovery of $X_i$ is given by 
-\begin{definition}
-$\partial_j\Omega_i \triangleq \{A \subseteq [N]\backslash\{i\}: A\backslash \{j\} \notin \Omega_i, A \cup \{j\} \in \Omega_i \}$
-\end{definition}
-These are the erasure patterns where $X_i$ can be recovered from $\underline{Y}_{\sim i}$ if and only if $Y_j \neq e$.Note $\partial_j\Omega_i$ includes patterns from both $\Omega_i$ and $\Omega_i^c$.
-\begin{proposition}
-\label{propn4}
-For a code $\mathcal{C}$ and transmission over a BEC, we have the following properties for the EXIT functions.
-\begin{enumerate}
-\item[(a)] The EXIT function associated with bit $i$ satisfies $$h_i(p) = \mu_{p}(\Omega_i)= \sum_{A \in \Omega_i} p^{|A|}(1-p)^{N-1-|A|}.$$
-\item[(b)] For $j \in [N]\backslash\{i\}$, the partial derivative satisfies $$\frac{\partial h_i(\underline{p})}{\partial p_j}\Bigg|_{\underline{p}=(p,p,\ldots,p)} =\mu_{p}(\partial_j\Omega_i)= \sum_{A \in \partial_j\Omega_i} p^{|A|}(1-p)^{N-1-|A|}.$$
-\item[(c)]The average EXIT function satisfies the \emph{area theorem} $$\int_0^1 h(p)dp = \frac{K}{N}.$$
-\end{enumerate}
-Where $\mu_{p}(\Omega)$ is the measure of the set of erasure patterns $\Omega$.
-Here (a) and (b) follow from definition of conditional entropy and the fact that $H(X_i/\underline{Y}_{\sim i}=\underline{y}_{\sim i})=1$ when $A \cup \{i\}$ covers some codeword and decoding fails, and $0$ otherwise.(c) is a direct consequence of proposition \ref{propn1}
-\end{proposition}
-From the above discussion it is clear that the measure of the set $\Omega_i$ is equal to the probability of error for bit i , which in turn is equal to the ith EXIT function due to the uniform input assumption.
-
-\subsubsection{The Error Detection Test } Let $S_N$ be the symmetric group on $N$ elements. The permutation group of a code is defined as the subgroup of $S_N$ whose group action on the bit ordering preserves the set of codewords.\\
-
-\begin{definition}The permutation group $\mathcal{G}$ of a code $\mathcal{C}$ is defined to be $$\mathcal{G} = \{\pi \in S_N : \pi(A) \in \mathcal{C} \text{ for all } A \in \mathcal{C}\}.$$
-\end{definition}
-
-\begin{definition} - Suppose $\mathcal{G}$ is a permutation group. Then,
-\begin{enumerate}
-\item[(a)]$\mathcal{G}$ is \emph{transitive} if, for any $i,j \in [N]$, there exists a permutation $\pi \in \mathcal{G}$ such that $\pi(i)=j$, and
-\item[(b)] $\mathcal{G}$ is \emph{doubly transitive} if, for any distinct $i,j,k \in [N]$, there exists a $\pi \in \mathcal{G}$ such that $\pi(i)=i$ and $\pi(j)=k$.
-\end{enumerate}
-\end{definition}
-
-\begin{proposition}\emph{All EXIT functions are equal.}
-Suppose the permutation group $\mathcal{G}$ of a code $\mathcal{C}$ is transitive. Then, for any $i \in [N]$, $$h(p) = h_i(p) \text{ for } 0 \le p\le 1.$$
-\begin{proof}
-claim:if $\mathcal{G}$ is transitive, then so is $\Omega_i$.
-As $ A\in\Omega_i$,by definition\ref{defn2} $\exists B ,s.t.,B\cup\{i\} \in \mathcal{C}$, but by transitivity of $\mathcal{G}$, $\pi(B\cup\{i\}) \in \mathcal{C}$.Observe,$\pi(B\cup\{i\})=\pi(B)\cup\pi(\{i\})=\pi(B)\cup j$.Since $\pi(B) \subseteq \pi(A)$,it follows $\pi(A) \in \Omega_j$ .This indicates a bijection between $\Omega_i$ and $\Omega_j$,i.e,$|\Omega_i|=|\Omega_j|$.Moreover since, $ |A| =|\pi(A)|,$ propostion follows from proposition\ref{propn4} (a)
-\end{proof}
-\label{propn07}
-\end{proposition}
+The RDE, which is essentially an iterative Slepian-Wolf compression, can be constructed using Rateless Polar Code as shown in the example of figure \ref{fig:iswrpc}.
+\begin{figure}[h]
+ \begin{center}
+    \includegraphics[width=1\textwidth]{iswrpc.png}
+  \end{center}
+  \caption{Example of Iterative Slepian-Wolf Compression with Incremental Freezing.}
+  \label{fig:iswrpc}
+\end{figure} 
+Here, a compund BSC channel $\mathcal{C}=\{ p_1 \leq p_2 \leq p_3 \leq p_4\}$, is considered, where $p_i$ is the flipover probability of channel $i$. It is assumed that the rates supported by the channels are $\{ R_1=R, R_2= R/2,R_3= R/3,R_4= R/4\}$. The actual channel in the example is BSC($p_3$), henceforth we shall denote this as BSC($p_{channel}$).\\
+\paragraph{first Iteration:} In the first iteration, the Slepian-Wolf compression with Polar Coding scheme suggested in figure \ref{fig:pswscheme} is followed. Additionally, the soft outputs(LLRs) generated from the decoder block are passed through an Error Detection (ED) block. In case error is present, receiver replies with a NACK and further iterations are commenced. It is to be noted that the decoder \emph{guesses} the channel to be BSC($p_1$) greedily and computes LLR accordingly. Henceforth we shall denote this as BSC($p_{guess}$). Note, in this iteration the frozen bits are non-zero, and are communicated error-free to receiver.
+\paragraph{subsequent iterations:}In the subsequent iterations, the decoder makes greedy guesses about the channel from a subset of the compound channel which does not include previous guesses. In other words, in second iteration $p_{guess}=p_2$, in third $p_{guess}=p_3$. Iterations continue as long as the ED does not declare error-free transmission, which is communicated as ACK by the receiver.\\
+The message sent in these iterations consist of information bits which are suspected to be sent unreliably in previous iterations under impression that present $p_{guess}$ is correct, as discussed in section \ref{if} . The frozen bits are set to zero and need not sent to receiver. Transmission is as illustrated in figure \ref{fig:pchscheme}.
+\paragraph{Final decoding:}When the ED declares no error the decoder infers that the $p_{channel}=p_{guess}$, let us denote this as $p_{final}$. The decoder now  decodes the bits of penultimate iteration from the channel output of the penultimate iteration using $p_{final}$ and considering the information bits decoded in last iteration as frozen. This continues till all bits are decoded successfully. Finally, with arikan transform X is estimated.
+\\\emph{Note, X and Y have there usual meanings as in figure \ref{fig:swcomp}.}  
 
 
-\begin{proposition}
-Suppose the permutation group $\mathcal{G}$ of a code $\mathcal{C}$ is doubly transitive. Then, for distinct $i,j,k \in [N]$, and any $0 \le p \le 1$, $$\frac{\partial h_i(\underline{p})}{\partial p_j'}\Bigg|_{\underline{p}=(p,p,\ldots,p)} = \frac{\partial h_i(\underline{p})}{\partial p_k'}\Bigg|_{\underline{p}=(p,p,\ldots,p)}.$$
-\begin{proof}
-Similar to the proof of proposition 7.Intuitively we expect that once we permute the locations , the bits which were pivotal must continue to remain so.Otherwise we could have decoded the concerned bit using simple permutations.
-\end{proof}
-\label{propn8}
-\end{proposition}
-\paragraph*{Summary of properties of EXIT function.}
-\begin{description}
-\item[1] $h_i(p)$ captures the bit error probability of MAP decoder.
-\item[2] $h_i(p)$ is measure of $\Omega_i$.
-\item[3] All EXIT functions are equal to average EXIT function h(p).
-\item[4] $h_i(p)$ is strictly increasing and invertible.(follows from proposition \ref{propn4} (b))
-\item[5] The area under the h vs p curve is the rate( by \emph{Area Theorem}).
-\end{description}
-We may notice here, that is $A\in\Omega_i$, it is a bit erasure pattern that causes error at position i, then $B\supset A$ will surely cause errors, and $B\in\Omega_i$.Thus $\Omega_i$ is monotone.Proving $\Omega_i $ is symmetric and has a sharp threshold at $p=1-r$, will establish that 2-transitive codes achieve Capacity.We will formalize this in the following subsections.
+\subsection{PHY-Layer error Detection} 
 
-\subsection{Proposed tests}
-\begin{definition}
-Suppose $\{\mathcal{C}_n\}$ is a sequence of codes with rates $\{r_n\}$ where $r_n \to r$ for $r \in (0,1)$.
-a) $\{\mathcal{C}_n\}$ is said to be \emph{capacity achieving} on the BEC under bit-MAP decoding, if for any $p \in [0, 1-r)$, the average bit-erasure probabilities satisfy $$\lim_{n \to \infty} P_b^{(n)}(p) = 0.$$
+A distinct difference between Polar codes for error control and Slepian-Wolf compression using polar codes is that, in the latter the $U_N$ is generated from $X_N$. Hence using a CRC in $U_N$ which can be exploited for error detection and retransmission in Incremental Freezing does not remain feasible.\\This necessitates  
 
-\end{definition}
-\label{def10}
-
-%\begin{figure}[h]
-%\centering 
-%\includegraphics[width=0.75\columnwidth]{exitfun} 
-%\caption[]{The average EXIT function of the rate-$1/2$ Reed-Muller code with blocklength $N$.} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
-%\label{fig:exit} 
-%\end{figure}
-
-The following theorem bridges capacity achieving codes, average EXIT functions, and the sharp transition framework that allows us to show that the transition width of certain functions goes to $0$. The average EXIT functions of some rate-$1/2$ Reed-Muller codes are shown in Figure~\ref{fig:exit}. Observe that as the blocklength increases, the transition width of the average EXIT function decreases. According to the following proposition, if this width converges to $0$, then Reed-Muller codes achieve capacity on the BEC under bit-MAP decoding.
-\begin{proposition}
-Let $\{\mathcal{C}_n\}$ be a seq. of codes with rates $\{r_n\}$, $r_n \to r$ for $r \in (0,1)$. The following are equivalent -
-\begin{enumerate}
-\item[S1:] $\{\mathcal{C}_n\}$ is capacity achieving on the BEC under bit-MAP decoding.
-\item[S2:] The sequence of average EXIT functions satisfies
-\[
-    \lim_{n \to \infty} h^{(n)}(p)=\left\{
-                \begin{array}{ll}
-                  0 \text{ if } 0 \le p < 1-r\\
-                  1 \text{ if } 1-r < p \le 1.\\
-                \end{array}
-              \right.
-  \]
-\item[S3:] For any $0 < \epsilon \le 1/2$, $$\lim_{n \to \infty} p_{1-\epsilon}^{(n)} - p_{\epsilon}^{(n)} = 0.$$
-\end{enumerate}
-\label{propn11}
-\end{proposition}
-\emph{where $h^{(n)}(p_{\epsilon}^{(n)})=\epsilon$.}\\
-In short $S1\Rightarrow S2$, due to close relationship between bit error probability and average EXIT function pointed out in propostion \ref{propn4} .$S2\Rightarrow S3$,and $S3\Rightarrow S1$ by area theorem.Hence, proving S3 suffices to complete the proof.
+\subsubsection{The Error Detection Test }
+\subsection{Proposed Tests}
 \subsection{Performance Evaluation}
 
 %--------------------------------------------------------------------------

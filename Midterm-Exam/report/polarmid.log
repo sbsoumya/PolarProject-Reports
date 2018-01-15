@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  9 JAN 2018 20:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  15 JAN 2018 21:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1135,27 +1135,18 @@ LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <10.95> not available
 \tf@toc=\write4
 \openout4 = `polarmid.toc'.
 
- [2]
+Package tocbasic Info: character protrusion at lof deactivated on input line 76
+.
+ (./polarmid.lof)
+\tf@lof=\write5
+\openout5 = `polarmid.lof'.
 
-LaTeX Warning: Citation `rm1' on page 3 undefined on input line 82.
-
-
-LaTeX Warning: Citation `rm1' on page 3 undefined on input line 82.
-
-
-LaTeX Warning: Citation `vishva' on page 3 undefined on input line 82.
-
-
-Overfull \hbox (32.19579pt too wide) in paragraph at lines 82--83
-\T1/pplj/m/n/10.95 prov-ably have been elu-sive un-til the ad-vent of po-lar co
-des[[]] in the last decade.Further,the
- []
-
-[3]
+ [2] [3]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/iwona/m/sc/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
- <Figures/dataex.png, id=91, 448.67625pt x 332.74312pt>
+
+<Figures/dataex.png, id=112, 448.67625pt x 332.74312pt>
 File: Figures/dataex.png Graphic file (type png)
 
 <use Figures/dataex.png>
@@ -1168,7 +1159,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--97
 
  []
 
-<Figures/swcomp.png, id=95, 471.26062pt x 314.67563pt>
+<Figures/swcomp.png, id=116, 471.26062pt x 314.67563pt>
 File: Figures/swcomp.png Graphic file (type png)
 
 <use Figures/swcomp.png>
@@ -1189,7 +1180,7 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/iwona/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 
-<Figures/channelcomb.png, id=123, 895.84688pt x 678.28406pt>
+<Figures/channelcomb.png, id=142, 895.84688pt x 678.28406pt>
 File: Figures/channelcomb.png Graphic file (type png)
 
 <use Figures/channelcomb.png>
@@ -1200,7 +1191,7 @@ Package pdftex.def Info: Figures/channelcomb.png used on input line 134.
 Package wrapfig Warning: Collision between wrapping environments on input line 
 140.
 
-<Figures/arikanfly.png, id=125, 288.3272pt x 199.49532pt>
+<Figures/arikanfly.png, id=144, 288.3272pt x 199.49532pt>
 File: Figures/arikanfly.png Graphic file (type png)
 
 <use Figures/arikanfly.png>
@@ -1220,33 +1211,33 @@ Package wrapfig Warning: Stationary wrapfigure forced to float on input line 14
 7.
 
 [5 <./Figures/channelcomb.png>]
-<Figures/pchscheme.png, id=138, 636.87938pt x 299.61937pt>
+<Figures/pchscheme.png, id=157, 636.87938pt x 299.61937pt>
 File: Figures/pchscheme.png Graphic file (type png)
 
 <use Figures/pchscheme.png>
 Package pdftex.def Info: Figures/pchscheme.png used on input line 152.
 (pdftex.def)             Requested size: 240.00244pt x 112.9056pt.
- <Figures/fer.png, id=141, 578.16pt x 433.62pt>
+ <Figures/fer.png, id=160, 578.16pt x 433.62pt>
 File: Figures/fer.png Graphic file (type png)
 
 <use Figures/fer.png>
 Package pdftex.def Info: Figures/fer.png used on input line 160.
 (pdftex.def)             Requested size: 240.00244pt x 180.00188pt.
  [6 <./Figures/arikanfly.png> <./Figures/pchscheme.png> <./Figures/fer.png>] <F
-igures/pswscheme.png, id=154, 764.10469pt x 309.40594pt>
+igures/pswscheme.png, id=170, 764.10469pt x 309.40594pt>
 File: Figures/pswscheme.png Graphic file (type png)
 
 <use Figures/pswscheme.png>
 Package pdftex.def Info: Figures/pswscheme.png used on input line 170.
 (pdftex.def)             Requested size: 240.00244pt x 97.18011pt.
- <Figures/swfer.png, id=159, 578.16pt x 433.62pt>
+ <Figures/swfer.png, id=175, 578.16pt x 433.62pt>
 File: Figures/swfer.png Graphic file (type png)
 
 <use Figures/swfer.png>
 Package pdftex.def Info: Figures/swfer.png used on input line 179.
 (pdftex.def)             Requested size: 240.00244pt x 180.00188pt.
  [7 <./Figures/pswscheme.png> <./Figures/swfer.png>]
-<Figures/relorder.png, id=178, 459.96844pt x 413.29407pt>
+<Figures/relorder.png, id=192, 459.96844pt x 413.29407pt>
 File: Figures/relorder.png Graphic file (type png)
 
 <use Figures/relorder.png>
@@ -1258,82 +1249,98 @@ Overfull \hbox (3.59314pt too wide) in paragraph at lines 198--199
 iza-tion sug-
  []
 
-<Figures/if.png, id=181, 1244.65pt x 514.92375pt>
+<Figures/if.png, id=196, 1244.65pt x 514.92375pt>
 File: Figures/if.png Graphic file (type png)
  <use Figures/if.png>
-Package pdftex.def Info: Figures/if.png used on input line 204.
+Package pdftex.def Info: Figures/if.png used on input line 203.
 (pdftex.def)             Requested size: 400.0pt x 165.4861pt.
  [8 <./Figures/relorder.png>] [9 <./Figures/if.png>]
-<Figures/selrepharq.png, id=210, 365.86688pt x 158.09062pt>
+<Figures/selrepharq.png, id=224, 365.86688pt x 158.09062pt>
 File: Figures/selrepharq.png Graphic file (type png)
 
 <use Figures/selrepharq.png>
-Package pdftex.def Info: Figures/selrepharq.png used on input line 225.
+Package pdftex.def Info: Figures/selrepharq.png used on input line 224.
 (pdftex.def)             Requested size: 200.0pt x 86.4194pt.
  [10 <./Figures/selrepharq.png>] [11]
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 276
-.
+<Figures/iswrpc.png, id=249, 970.3753pt x 516.42938pt>
+File: Figures/iswrpc.png Graphic file (type png)
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
-File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-) [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 322--323
+<use Figures/iswrpc.png>
+Package pdftex.def Info: Figures/iswrpc.png used on input line 281.
+(pdftex.def)             Requested size: 400.0pt x 212.88002pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--287
 
  []
+
+[12 <./Figures/iswrpc.png>]
+Overfull \hbox (6.46083pt too wide) in paragraph at lines 288--290
+[] []\T1/iwona/m/sc/10.95/80ls sub-se-quent it-er-a-tions:[] \T1/pplj/m/n/10.95
+ In the sub-se-quent it-er-a-tions, the de-coder makes greedy
+ []
+
+[13]
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 323
+.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
+)
+
+LaTeX Warning: Reference `propn4' on page 14 undefined on input line 335.
+
+
+LaTeX Warning: Reference `propn4' on page 14 undefined on input line 337.
+
+
+LaTeX Warning: Reference `propn8' on page 14 undefined on input line 348.
+
+
+LaTeX Warning: Citation `talagrand' on page 14 undefined on input line 351.
 
 [14]
-LaTeX Font Info:    Font shape `T1/iwona/bx/sc' in size <10.95> not available
-(Font)              Font shape `T1/iwona/b/sc' tried instead on input line 353.
+
+LaTeX Warning: Citation `russo' on page 15 undefined on input line 357.
 
 
-
-LaTeX Warning: Reference `fig:exit' on page 15 undefined on input line 376.
-
-[15] [16]
-
-LaTeX Warning: Citation `talagrand' on page 17 undefined on input line 447.
-
-[17]
-
-LaTeX Warning: Citation `russo' on page 18 undefined on input line 453.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 455--456
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
-[18] (./polarmid.bbl
+
+LaTeX Warning: Reference `propn11' on page 15 undefined on input line 361.
+
+[15] (./polarmid.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 28--31
 []\T1/pplj/m/n/10.95 S. Onay.  Po-lar codes for nonassy-met-ric slepian-wolf co
 d-ing.
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 472.
- [19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 472.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 376.
+ [16]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 376.
  (./polarmid.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 472.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 472.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 376.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 376.
 Package rerunfilecheck Info: File `polarmid.out' has not changed.
-(rerunfilecheck)             Checksum: 462D4E227D79C8D9275A52730600346D;984.
+(rerunfilecheck)             Checksum: B99A96E5419616102531DFA4DA99340C;984.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 472.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 376.
  ) 
 Here is how much of TeX's memory you used:
- 14946 strings out of 493029
- 259396 string characters out of 6136234
+ 14931 strings out of 493029
+ 259226 string characters out of 6136234
  553263 words of memory out of 5000000
- 18096 multiletter control sequences out of 15000+600000
- 123239 words of font info for 139 fonts, out of 8000000 for 9000
+ 18090 multiletter control sequences out of 15000+600000
+ 114827 words of font info for 136 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 59i,23n,84p,1310b,627s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/iwona/ec-iwona-sc.enc}{/usr/sh
-are/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-di
-st/fonts/enc/dvips/iwona/ec-iwona.enc}</usr/share/texlive/texmf-dist/fonts/type
+ 59i,23n,84p,1310b,564s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texliv
+e/texmf-dist/fonts/enc/dvips/iwona/ec-iwona.enc}{/usr/share/texlive/texmf-dist/
+fonts/enc/dvips/iwona/ec-iwona-sc.enc}</usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/e
@@ -1353,10 +1360,10 @@ wona/iwonab.pfb></usr/share/texlive/texmf-dist/fonts/type1/nowacki/iwona/iwonar
 share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on polarmid.pdf (19 pages, 588534 bytes).
+Output written on polarmid.pdf (16 pages, 615867 bytes).
 PDF statistics:
- 386 PDF objects out of 1000 (max. 8388607)
- 321 compressed objects within 4 object streams
- 78 named destinations out of 1000 (max. 500000)
- 22685 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 374 PDF objects out of 1000 (max. 8388607)
+ 310 compressed objects within 4 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 21666 words of extra memory for PDF output out of 24883 (max. 10000000)
 
