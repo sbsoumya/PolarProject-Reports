@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  15 JAN 2018 21:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  17 JAN 2018 13:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -851,23 +851,9 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count109
 )
-(/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
-Package: subfig 2005/06/28 ver: 1.3 subfig package
-\c@KVtest=\count110
-\sf@farskip=\skip89
-\sf@captopadj=\dimen136
-\sf@capskip=\skip90
-\sf@nearskip=\skip91
-\c@subfigure=\count111
-\c@subfigure@save=\count112
-\c@subtable=\count113
-\c@subtable@save=\count114
-\sf@top=\skip92
-\sf@bottom=\skip93
-)
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2016/03/03 v2.15a AMS math features
-\@mathmargin=\skip94
+\@mathmargin=\skip89
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -876,49 +862,49 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks20
-\ex@=\dimen137
+\ex@=\dimen136
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen138
+\pmbraise@=\dimen137
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count115
+\inf@bad=\count110
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count116
-\leftroot@=\count117
+\uproot@=\count111
+\leftroot@=\count112
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count118
-\DOTSCASE@=\count119
+\classnum@=\count113
+\DOTSCASE@=\count114
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box29
 \strutbox@=\box30
-\big@size=\dimen139
+\big@size=\dimen138
 LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
-\macc@depth=\count120
-\c@MaxMatrixCols=\count121
+\macc@depth=\count115
+\c@MaxMatrixCols=\count116
 \dotsspace@=\muskip11
-\c@parentequation=\count122
-\dspbrk@lvl=\count123
+\c@parentequation=\count117
+\dspbrk@lvl=\count118
 \tag@help=\toks21
-\row@=\count124
-\column@=\count125
-\maxfields@=\count126
+\row@=\count119
+\column@=\count120
+\maxfields@=\count121
 \andhelp@=\toks22
-\eqnshift@=\dimen140
-\alignsep@=\dimen141
-\tagshift@=\dimen142
-\tagwidth@=\dimen143
-\totwidth@=\dimen144
-\lineht@=\dimen145
+\eqnshift@=\dimen139
+\alignsep@=\dimen140
+\tagshift@=\dimen141
+\tagwidth@=\dimen142
+\totwidth@=\dimen143
+\lineht@=\dimen144
 \@envbody=\toks23
-\multlinegap=\skip95
-\multlinetaggap=\skip96
+\multlinegap=\skip90
+\multlinetaggap=\skip91
 \mathdisplay@stack=\toks24
 LaTeX Info: Redefining \[ on input line 2735.
 LaTeX Info: Redefining \] on input line 2736.
@@ -940,33 +926,38 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@headfont=\toks27
 \thm@notefont=\toks28
 \thm@headpunct=\toks29
-\thm@preskip=\skip97
-\thm@postskip=\skip98
-\thm@headsep=\skip99
+\thm@preskip=\skip92
+\thm@postskip=\skip93
+\thm@headsep=\skip94
 \dth@everypar=\toks30
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/varioref.sty
 Package: varioref 2015/09/22 v1.5b package for extended references (FMi)
-\c@vrcnt=\count127
+\c@vrcnt=\count122
 )
 (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen146
-\WF@size=\dimen147
-\c@WF@wrappedlines=\count128
+\wrapoverhang=\dimen145
+\WF@size=\dimen146
+\c@WF@wrappedlines=\count123
 \WF@box=\box31
 \WF@everypar=\toks31
 Package: wrapfig 2003/01/31  v 3.6
 )
-\c@definition=\count129
-\c@theorem=\count130
-Package hyperref Info: Option `colorlinks' set `true' on input line 78.
-Package hyperref Info: Option `breaklinks' set `true' on input line 78.
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
+\c@subfigure=\count124
+\c@subtable=\count125
+)
+\c@definition=\count126
+\c@theorem=\count127
+Package hyperref Info: Option `colorlinks' set `true' on input line 82.
+Package hyperref Info: Option `breaklinks' set `true' on input line 82.
 
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 78.
+(hyperref)                setting the option has no effect on input line 82.
 
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 78.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 82.
 ) (./polarmid.aux)
 \openout1 = `polarmid.aux'.
 
@@ -997,7 +988,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count131
+\c@section@level=\count128
 LaTeX Info: Redefining \Ref on input line 513.
 )
 LaTeX Info: Redefining \ref on input line 37.
@@ -1012,16 +1003,16 @@ LaTeX Info: Redefining \Ref on input line 37.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count132
-\scratchdimen=\dimen148
+\scratchcounter=\count129
+\scratchdimen=\dimen147
 \scratchbox=\box33
-\nofMPsegments=\count133
-\nofMParguments=\count134
+\nofMPsegments=\count130
+\nofMParguments=\count131
 \everyMPshowfont=\toks32
-\MPscratchCnt=\count135
-\MPscratchDim=\dimen149
-\MPnumerator=\count136
-\makeMPintoPDFobject=\count137
+\MPscratchCnt=\count132
+\MPscratchDim=\dimen148
+\MPnumerator=\count133
+\makeMPintoPDFobject=\count134
 \everyMPtoPDFconversion=\toks33
 )
 LaTeX Info: Redefining \microtypecontext on input line 37.
@@ -1036,7 +1027,6 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
@@ -1113,7 +1103,7 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<Figures/iisclogo.png, id=52, 586.19pt x 580.1675pt>
+<Figures/iisclogo.png, id=48, 586.19pt x 580.1675pt>
 File: Figures/iisclogo.png Graphic file (type png)
 
 <use Figures/iisclogo.png>
@@ -1146,7 +1136,7 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/iwona/m/sc/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
 
-<Figures/dataex.png, id=112, 448.67625pt x 332.74312pt>
+<Figures/dataex.png, id=130, 448.67625pt x 332.74312pt>
 File: Figures/dataex.png Graphic file (type png)
 
 <use Figures/dataex.png>
@@ -1159,7 +1149,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--97
 
  []
 
-<Figures/swcomp.png, id=116, 471.26062pt x 314.67563pt>
+<Figures/swcomp.png, id=134, 471.26062pt x 314.67563pt>
 File: Figures/swcomp.png Graphic file (type png)
 
 <use Figures/swcomp.png>
@@ -1180,7 +1170,7 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/iwona/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 
-<Figures/channelcomb.png, id=142, 895.84688pt x 678.28406pt>
+<Figures/channelcomb.png, id=155, 895.84688pt x 678.28406pt>
 File: Figures/channelcomb.png Graphic file (type png)
 
 <use Figures/channelcomb.png>
@@ -1191,7 +1181,7 @@ Package pdftex.def Info: Figures/channelcomb.png used on input line 134.
 Package wrapfig Warning: Collision between wrapping environments on input line 
 140.
 
-<Figures/arikanfly.png, id=144, 288.3272pt x 199.49532pt>
+<Figures/arikanfly.png, id=157, 288.3272pt x 199.49532pt>
 File: Figures/arikanfly.png Graphic file (type png)
 
 <use Figures/arikanfly.png>
@@ -1211,33 +1201,33 @@ Package wrapfig Warning: Stationary wrapfigure forced to float on input line 14
 7.
 
 [5 <./Figures/channelcomb.png>]
-<Figures/pchscheme.png, id=157, 636.87938pt x 299.61937pt>
+<Figures/pchscheme.png, id=170, 636.87938pt x 299.61937pt>
 File: Figures/pchscheme.png Graphic file (type png)
 
 <use Figures/pchscheme.png>
 Package pdftex.def Info: Figures/pchscheme.png used on input line 152.
 (pdftex.def)             Requested size: 240.00244pt x 112.9056pt.
- <Figures/fer.png, id=160, 578.16pt x 433.62pt>
+ <Figures/fer.png, id=173, 578.16pt x 433.62pt>
 File: Figures/fer.png Graphic file (type png)
 
 <use Figures/fer.png>
 Package pdftex.def Info: Figures/fer.png used on input line 160.
 (pdftex.def)             Requested size: 240.00244pt x 180.00188pt.
  [6 <./Figures/arikanfly.png> <./Figures/pchscheme.png> <./Figures/fer.png>] <F
-igures/pswscheme.png, id=170, 764.10469pt x 309.40594pt>
+igures/pswscheme.png, id=184, 764.10469pt x 309.40594pt>
 File: Figures/pswscheme.png Graphic file (type png)
 
 <use Figures/pswscheme.png>
 Package pdftex.def Info: Figures/pswscheme.png used on input line 170.
 (pdftex.def)             Requested size: 240.00244pt x 97.18011pt.
- <Figures/swfer.png, id=175, 578.16pt x 433.62pt>
+ <Figures/swfer.png, id=189, 578.16pt x 433.62pt>
 File: Figures/swfer.png Graphic file (type png)
 
 <use Figures/swfer.png>
 Package pdftex.def Info: Figures/swfer.png used on input line 179.
 (pdftex.def)             Requested size: 240.00244pt x 180.00188pt.
  [7 <./Figures/pswscheme.png> <./Figures/swfer.png>]
-<Figures/relorder.png, id=192, 459.96844pt x 413.29407pt>
+<Figures/relorder.png, id=205, 459.96844pt x 413.29407pt>
 File: Figures/relorder.png Graphic file (type png)
 
 <use Figures/relorder.png>
@@ -1249,121 +1239,238 @@ Overfull \hbox (3.59314pt too wide) in paragraph at lines 198--199
 iza-tion sug-
  []
 
-<Figures/if.png, id=196, 1244.65pt x 514.92375pt>
-File: Figures/if.png Graphic file (type png)
- <use Figures/if.png>
-Package pdftex.def Info: Figures/if.png used on input line 203.
-(pdftex.def)             Requested size: 400.0pt x 165.4861pt.
- [8 <./Figures/relorder.png>] [9 <./Figures/if.png>]
-<Figures/selrepharq.png, id=224, 365.86688pt x 158.09062pt>
+<Figures/if2.png, id=209, 970.3753pt x 533.74406pt>
+File: Figures/if2.png Graphic file (type png)
+ <use Figures/if2.png>
+Package pdftex.def Info: Figures/if2.png used on input line 203.
+(pdftex.def)             Requested size: 400.0pt x 220.0174pt.
+
+[8 <./Figures/relorder.png>] [9 <./Figures/if2.png>]
+<Figures/selrepharq.png, id=237, 365.86688pt x 158.09062pt>
 File: Figures/selrepharq.png Graphic file (type png)
 
 <use Figures/selrepharq.png>
 Package pdftex.def Info: Figures/selrepharq.png used on input line 224.
 (pdftex.def)             Requested size: 200.0pt x 86.4194pt.
  [10 <./Figures/selrepharq.png>] [11]
-<Figures/iswrpc.png, id=249, 970.3753pt x 516.42938pt>
+<Figures/iswrpc.png, id=263, 954.56625pt x 557.83406pt>
 File: Figures/iswrpc.png Graphic file (type png)
 
 <use Figures/iswrpc.png>
 Package pdftex.def Info: Figures/iswrpc.png used on input line 281.
-(pdftex.def)             Requested size: 400.0pt x 212.88002pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 278--287
-
- []
-
-[12 <./Figures/iswrpc.png>]
+(pdftex.def)             Requested size: 400.0pt x 233.75246pt.
+ [12 <./Figures/iswrpc.png>]
 Overfull \hbox (6.46083pt too wide) in paragraph at lines 288--290
 [] []\T1/iwona/m/sc/10.95/80ls sub-se-quent it-er-a-tions:[] \T1/pplj/m/n/10.95
  In the sub-se-quent it-er-a-tions, the de-coder makes greedy
  []
 
-[13]
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 323
+<Figures/absllr0p04.png, id=274, 578.16pt x 433.62pt>
+File: Figures/absllr0p04.png Graphic file (type png)
+
+<use Figures/absllr0p04.png>
+Package pdftex.def Info: Figures/absllr0p04.png used on input line 310.
+(pdftex.def)             Requested size: 400.0pt x 299.99872pt.
+ [13] [14 <./Figures/absllr0p04.png>]
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 335
 .
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
+<Figures/theta0p04.png, id=291, 578.16pt x 433.62pt>
+File: Figures/theta0p04.png Graphic file (type png)
 
-LaTeX Warning: Reference `propn4' on page 14 undefined on input line 335.
+<use Figures/theta0p04.png>
+Package pdftex.def Info: Figures/theta0p04.png used on input line 339.
+(pdftex.def)             Requested size: 400.0pt x 299.99872pt.
+
+<Figures/theta0p15new.png, id=293, 578.16pt x 433.62pt>
+File: Figures/theta0p15new.png Graphic file (type png)
+
+<use Figures/theta0p15new.png>
+Package pdftex.def Info: Figures/theta0p15new.png used on input line 349.
+(pdftex.def)             Requested size: 220.00122pt x 164.99565pt.
+
+Overfull \hbox (20.00122pt too wide) in paragraph at lines 349--350
+ [][] 
+ []
+
+<Figures/theta0p2.png, id=294, 578.16pt x 433.62pt>
+File: Figures/theta0p2.png Graphic file (type png)
+ <use Figures/theta0p2.png>
+Package pdftex.def Info: Figures/theta0p2.png used on input line 355.
+(pdftex.def)             Requested size: 220.00122pt x 164.99565pt.
+
+Overfull \hbox (20.00122pt too wide) in paragraph at lines 355--356
+ [][] 
+ []
+
+[15 <./Figures/theta0p04.png>]
+<Figures/FERSW_0p04.png, id=302, 578.16pt x 433.62pt>
+File: Figures/FERSW_0p04.png Graphic file (type png)
+
+<use Figures/FERSW_0p04.png>
+Package pdftex.def Info: Figures/FERSW_0p04.png used on input line 369.
+(pdftex.def)             Requested size: 320.00122pt x 240.00029pt.
+
+<Figures/FERSW_0p15.png, id=303, 578.16pt x 433.62pt>
+File: Figures/FERSW_0p15.png Graphic file (type png)
+
+<use Figures/FERSW_0p15.png>
+Package pdftex.def Info: Figures/FERSW_0p15.png used on input line 376.
+(pdftex.def)             Requested size: 320.00122pt x 240.00029pt.
 
 
-LaTeX Warning: Reference `propn4' on page 14 undefined on input line 337.
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Figures/FERSW_0p2.png, id=304, 578.16pt x 433.62pt>
+File: Figures/FERSW_0p2.png Graphic file (type png)
+
+<use Figures/FERSW_0p2.png>
+Package pdftex.def Info: Figures/FERSW_0p2.png used on input line 383.
+(pdftex.def)             Requested size: 320.00122pt x 240.00029pt.
 
 
-LaTeX Warning: Reference `propn8' on page 14 undefined on input line 348.
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Figures/FERSW_0p25.png, id=305, 578.16pt x 433.62pt>
+File: Figures/FERSW_0p25.png Graphic file (type png)
+
+<use Figures/FERSW_0p25.png>
+Package pdftex.def Info: Figures/FERSW_0p25.png used on input line 390.
+(pdftex.def)             Requested size: 320.00122pt x 240.00029pt.
 
 
-LaTeX Warning: Citation `talagrand' on page 14 undefined on input line 351.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[14]
+<Figures/ratelosssw.png, id=306, 578.16pt x 433.62pt>
+File: Figures/ratelosssw.png Graphic file (type png)
 
-LaTeX Warning: Citation `russo' on page 15 undefined on input line 357.
+<use Figures/ratelosssw.png>
+Package pdftex.def Info: Figures/ratelosssw.png used on input line 397.
+(pdftex.def)             Requested size: 359.99756pt x 269.99289pt.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+LaTeX Warning: `h' float specifier changed to `ht'.
 
+[16 <./Figures/theta0p15new.png> <./Figures/theta0p2.png> <./Figures/FERSW_0p04
+.png>] [17 <./Figures/FERSW_0p15.png> <./Figures/FERSW_0p2.png>] [18 <./Figures
+/FERSW_0p25.png> <./Figures/ratelosssw.png>]
+<Figures/FER_channel0p04.png, id=327, 578.16pt x 433.62pt>
+File: Figures/FER_channel0p04.png Graphic file (type png)
+
+<use Figures/FER_channel0p04.png>
+Package pdftex.def Info: Figures/FER_channel0p04.png used on input line 408.
+(pdftex.def)             Requested size: 220.00122pt x 164.99565pt.
+
+Overfull \hbox (20.00122pt too wide) in paragraph at lines 408--409
+ [][] 
+ []
+
+<Figures/FER_channel0p15.png, id=328, 578.16pt x 433.62pt>
+File: Figures/FER_channel0p15.png Graphic file (type png)
+
+<use Figures/FER_channel0p15.png>
+Package pdftex.def Info: Figures/FER_channel0p15.png used on input line 414.
+(pdftex.def)             Requested size: 220.00122pt x 164.99565pt.
+
+Overfull \hbox (20.00122pt too wide) in paragraph at lines 414--415
+ [][] 
+ []
+
+<Figures/FER_channel0p2.png, id=329, 578.16pt x 433.62pt>
+File: Figures/FER_channel0p2.png Graphic file (type png)
+
+<use Figures/FER_channel0p2.png>
+Package pdftex.def Info: Figures/FER_channel0p2.png used on input line 420.
+(pdftex.def)             Requested size: 220.00122pt x 164.99565pt.
+
+Overfull \hbox (20.00122pt too wide) in paragraph at lines 420--421
+ [][] 
+ []
+
+<Figures/FER_channel0p25.png, id=330, 578.16pt x 433.62pt>
+File: Figures/FER_channel0p25.png Graphic file (type png)
+
+<use Figures/FER_channel0p25.png>
+Package pdftex.def Info: Figures/FER_channel0p25.png used on input line 426.
+(pdftex.def)             Requested size: 220.00122pt x 164.99565pt.
+
+Overfull \hbox (20.00122pt too wide) in paragraph at lines 426--427
+ [][] 
+ []
+
+<Figures/rateloss_channel.png, id=331, 578.16pt x 433.62pt>
+File: Figures/rateloss_channel.png Graphic file (type png)
+
+<use Figures/rateloss_channel.png>
+Package pdftex.def Info: Figures/rateloss_channel.png used on input line 432.
+(pdftex.def)             Requested size: 220.00122pt x 164.99565pt.
+
+Overfull \hbox (20.00122pt too wide) in paragraph at lines 432--433
+ [][] 
  []
 
 
-LaTeX Warning: Reference `propn11' on page 15 undefined on input line 361.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[15] (./polarmid.bbl
+[19 <./Figures/FER_channel0p04.png> <./Figures/FER_channel0p15.png> <./Figures/
+FER_channel0p2.png> <./Figures/FER_channel0p25.png> <./Figures/rateloss_channel
+.png>] [20
+
+
+] (./polarmid.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 28--31
 []\T1/pplj/m/n/10.95 S. Onay.  Po-lar codes for nonassy-met-ric slepian-wolf co
 d-ing.
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 376.
- [16]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 376.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 471.
+ [21
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 471.
  (./polarmid.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 376.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 376.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 471.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 471.
 Package rerunfilecheck Info: File `polarmid.out' has not changed.
-(rerunfilecheck)             Checksum: B99A96E5419616102531DFA4DA99340C;984.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 376.
+(rerunfilecheck)             Checksum: E4E21BC3A7A2CE606217DC81C34DAC96;916.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 471.
  ) 
 Here is how much of TeX's memory you used:
- 14931 strings out of 493029
- 259226 string characters out of 6136234
- 553263 words of memory out of 5000000
- 18090 multiletter control sequences out of 15000+600000
- 114827 words of font info for 136 fonts, out of 8000000 for 9000
+ 14953 strings out of 493029
+ 260165 string characters out of 6136234
+ 551695 words of memory out of 5000000
+ 18082 multiletter control sequences out of 15000+600000
+ 118050 words of font info for 149 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 59i,23n,84p,1310b,564s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,23n,84p,1310b,540s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texliv
 e/texmf-dist/fonts/enc/dvips/iwona/ec-iwona.enc}{/usr/share/texlive/texmf-dist/
 fonts/enc/dvips/iwona/ec-iwona-sc.enc}</usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/e
-uler/euex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/eule
-r/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/e
-ufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/fpl/fplbj8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/fpl/fplrij8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/nowacki/i
-wona/iwonab.pfb></usr/share/texlive/texmf-dist/fonts/type1/nowacki/iwona/iwonar
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/nowacki/iwona/iwonari.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on polarmid.pdf (16 pages, 615867 bytes).
+1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/euler/euex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/e
+uler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler
+/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eu
+rm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/nowacki/iwona/iwonab.pfb></usr/share/texlive/texmf-dist/fonts/type1/n
+owacki/iwona/iwonar.pfb></usr/share/texlive/texmf-dist/fonts/type1/nowacki/iwon
+a/iwonari.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbol
+s/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on polarmid.pdf (21 pages, 1559813 bytes).
 PDF statistics:
- 374 PDF objects out of 1000 (max. 8388607)
- 310 compressed objects within 4 object streams
- 68 named destinations out of 1000 (max. 500000)
- 21666 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 436 PDF objects out of 1000 (max. 8388607)
+ 340 compressed objects within 4 object streams
+ 79 named destinations out of 1000 (max. 500000)
+ 21216 words of extra memory for PDF output out of 24883 (max. 10000000)
 

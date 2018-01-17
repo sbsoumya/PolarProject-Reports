@@ -14,7 +14,7 @@
 \contentsline {subsubsection}{\numberline {1.5.3}H-ARQ for Polar codes}{10}{subsubsection.1.5.3}
 \contentsline {paragraph}{HYBRID ARQ:}{10}{subsubsection.1.5.3}
 \contentsline {paragraph}{Rate Compatible Codes:}{10}{subsubsection.1.5.3}
-\contentsline {paragraph}{H-ARQ for Polar codes with selective repetition:}{10}{figure.caption.11}
+\contentsline {paragraph}{H-ARQ for Polar codes with selective repetition:}{11}{figure.caption.11}
 \contentsline {paragraph}{Incremental freezing:}{11}{figure.caption.11}
 \contentsline {paragraph}{H-ARQ for Polar codes based on Subset Polar Codes:}{11}{figure.caption.11}
 \contentsline {paragraph}{Reliability Based H-ARQ:}{11}{figure.caption.11}
@@ -25,6 +25,8 @@
 \contentsline {paragraph}{Final decoding:}{13}{figure.caption.12}
 \contentsline {subsection}{\numberline {2.2}PHY-Layer error Detection}{13}{subsection.2.2}
 \contentsline {subsubsection}{\numberline {2.2.1}The Error Detection Test }{13}{subsubsection.2.2.1}
-\contentsline {subsection}{\numberline {2.3}Proposed Tests}{13}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Performance Evaluation}{13}{subsection.2.4}
-\contentsline {section}{\numberline {3}Conclusion and Future work}{14}{section.3}
+\contentsline {subsubsection}{\numberline {2.2.2}Proposed Tests}{14}{subsubsection.2.2.2}
+\contentsline {paragraph}{TEST 1: all good channels are above a given threshold.}{14}{subsubsection.2.2.2}
+\contentsline {paragraph}{TEST 2: A given fraction of good channels are above a threshold.}{15}{subsubsection.2.2.2}
+\contentsline {subsection}{\numberline {2.3}Performance Evaluation}{16}{subsection.2.3}
+\contentsline {section}{\numberline {3}Conclusion and Future work}{20}{section.3}

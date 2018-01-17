@@ -200,12 +200,12 @@ Intuitively, a method to generate the syndrome incrementally will lead us to an 
 Given the reliability ordering, a rateless scheme in \cite{chen} can be described as follows. The initial transmission can be done using a high rate polar code with many information bits and less frozen bits. If this transmission cannot be decoded\footnote{Decodability is checked by CRC in higher layers.} then among the informations bits sent, the ones on comparatively lesser reliable channels are retransmitted. By decoding these bits from future transmissions they effectively become frozen, allowing the rest of the information bits sent on the first transmission to be decoded.  As future transmissions successively freeze more and more bits sent in earlier transmission, this scheme can be called \emph{incremental freezing}.
 \begin{figure}[h]
  \begin{center}
-    \includegraphics[width=1\textwidth]{if.png}
+    \includegraphics[width=1\textwidth]{if2.png}
   \end{center}
-  \caption{Incremental freezing for N=16, K=12 and 4 iterations}
+  \caption{Incremental freezing for N=8, K=6 and 3 iterations}
   \label{fig:if}
 \end{figure}  
-\\Figure \ref{fig:if} illustrates the scheme for a set of channels with rates $\{ R=12/16, R_1= R/2,R_2= R/3,R_3= R/4\}$. Here $u_i$ are the message bits. Note that with the $4^{th}$ transmission  $u_4$ to $u_{12}$ has been incrementally frozen. This scheme is capacity achieving in the sense that no rate has been wasted, the final rate achieved is, $$R^*= \frac{12}{16x4}=\frac{3}{16}=R_3 $$. In case the real channel has capacity $ \geq R_3$ the scheme stops at appropriate iteration to achieve that capacity.\\
+\\Figure \ref{fig:if} illustrates the scheme for a set of channels with rates $\{ R=6/8, R_1= R/2=3/8,R_2= R/3=1/4\}$. Here $u_i$ are the message bits. Note that with the $3^{rd}$ transmission  $u_2$ to $u_{5}$ has been incrementally frozen. This scheme is capacity achieving in the sense that no rate has been wasted, the final rate achieved is, $$R^*= \frac{6}{8x3}=\frac{1}{4}=R_2 $$. In case the real channel has capacity $ \geq R_3$ the scheme stops at appropriate iteration to achieve that capacity.\\
 Though this scheme is not truly rateless as it can achieve only R, R/2, R/3,...rather than a set of arbitrary rates, adding new information bits in future transmissions allow us to rectify this. In similar fashion this can be extended to parallel channels.\\
 It is useful to note that a certain number of channels in this scheme is "\emph{always available}" guaranteeing a certain rate in each transmission. A specific application of this will be discussed in section \ref{future}.
 \\In \cite{chen}, The performance evaluation of the scheme establishes that $n$ iterations of the scheme is almost equivalent in performance to a $R/n$ fixed rate Polar Code.
@@ -226,7 +226,7 @@ Then the set is rate compatible if codeword for $C_i$ can be built by removing $
   \caption{H-ARQ for Polar Codes with selective repetition}
   \label{fig:selrepharq}
 \end{wrapfigure}
-In \cite{harqchen}, a H-ARQ scheme for Polar codes based on selective repetition has been studied. The incremental freezing scheme described in \cite{chen} and \cite{mondelli} can be classified as a H-ARQ scheme. In \cite{harqtav} another H-ARQ scheme based on Subset Polar Codes is described along with performance comparison with the other schemes. Here these schemes are discussed in brief. 
+In \cite{harqchen}, a H-ARQ scheme for Polar codes based on selective repetition has been studied. The incremental freezing scheme described in \cite{chen} and \cite{mondelli} can be classified as a H-ARQ scheme. In \cite{harqtav} another H-ARQ scheme based on Subset Polar Codes is described along with performance comparison with the other schemes. Here these schemes are discussed in brief.            
 \paragraph{H-ARQ for Polar codes with selective repetition:}
 As the initial transmission, an information block of K bits is fed into a polar
 encoder. The output codeword of $N_0$ bits is punctured into $N_1$
@@ -247,7 +247,7 @@ It is to be noted that the schemes described above use CRC for checking decodabi
 connected to the error probability of the corresponding
 bit, it can be used to determine which bits most
 likely caused a word error. The bit error probability for the $k^{th}$ bit can be estimated form LLR ($\tilde{u}_k$) as,
-\begin{equation}
+\begin{equation}\label{eq:errorllr}
 P_{b,k}=P(\hat{u_k} \neq u_k) = \frac{1}{1+e^{|\tilde{u}_k|}}
 \end{equation}
 then word error probability becomes, 
@@ -274,7 +274,7 @@ The following subsections elaborate on the same.
 
 
 
-\subsection{Adaptation of Rateless Polar Codes for RDE} 
+\subsection{Adaptation of Rateless Polar Codes for RDE}\label{adapt}
 The RDE, which is essentially an iterative Slepian-Wolf compression, can be constructed using Rateless Polar Code as shown in the example of figure \ref{fig:iswrpc}.
 \begin{figure}[h]
  \begin{center}
@@ -283,88 +283,183 @@ The RDE, which is essentially an iterative Slepian-Wolf compression, can be cons
   \caption{Example of Iterative Slepian-Wolf Compression with Incremental Freezing.}
   \label{fig:iswrpc}
 \end{figure} 
-Here, a compund BSC channel $\mathcal{C}=\{ p_1 \leq p_2 \leq p_3 \leq p_4\}$, is considered, where $p_i$ is the flipover probability of channel $i$. It is assumed that the rates supported by the channels are $\{ R_1=R, R_2= R/2,R_3= R/3,R_4= R/4\}$. The actual channel in the example is BSC($p_3$), henceforth we shall denote this as BSC($p_{channel}$).\\
-\paragraph{first Iteration:} In the first iteration, the Slepian-Wolf compression with Polar Coding scheme suggested in figure \ref{fig:pswscheme} is followed. Additionally, the soft outputs(LLRs) generated from the decoder block are passed through an Error Detection (ED) block. In case error is present, receiver replies with a NACK and further iterations are commenced. It is to be noted that the decoder \emph{guesses} the channel to be BSC($p_1$) greedily and computes LLR accordingly. Henceforth we shall denote this as BSC($p_{guess}$). Note, in this iteration the frozen bits are non-zero, and are communicated error-free to receiver.
+Here, a compund BSC channel $\mathcal{C}=\{ p_1 \leq p_2 \leq p_3 \leq p_4\}$, is considered, where $p_i$ is the flipover probability of channel $i$. It is assumed that the rates supported by the channels are $\{ R_1=R, R_2= R/2,R_3= R/3,R_4= R/4\}$. The actual channel in the example is BSC($p_3$), henceforth we shall denote this as BSC($p_{channel}$). The vector channel is manufactured by polarization of N BSC($p_{channel}$) channels.
+\paragraph{first Iteration:} In the first iteration, the Slepian-Wolf compression with Polar Coding scheme suggested in figure \ref{fig:pswscheme} is followed. Additionally, the soft outputs(LLRs) generated from the decoder block are passed through an Error Detection (ED) block. In case error is present, receiver replies with a NACK and further iterations are commenced. It is to be noted that the decoder \emph{guesses} the channel to be BSC($p_1$) greedily and computes LLR accordingly. Henceforth we shall denote this as BSC($p_{guess}$). Note, in this case the frozen bits are non-zero, and are communicated error-free to receiver, unlike the in channel coding scenario in figure \ref{fig:if}.
 \paragraph{subsequent iterations:}In the subsequent iterations, the decoder makes greedy guesses about the channel from a subset of the compound channel which does not include previous guesses. In other words, in second iteration $p_{guess}=p_2$, in third $p_{guess}=p_3$. Iterations continue as long as the ED does not declare error-free transmission, which is communicated as ACK by the receiver.\\
-The message sent in these iterations consist of information bits which are suspected to be sent unreliably in previous iterations under impression that present $p_{guess}$ is correct, as discussed in section \ref{if} . The frozen bits are set to zero and need not sent to receiver. Transmission is as illustrated in figure \ref{fig:pchscheme}.
-\paragraph{Final decoding:}When the ED declares no error the decoder infers that the $p_{channel}=p_{guess}$, let us denote this as $p_{final}$. The decoder now  decodes the bits of penultimate iteration from the channel output of the penultimate iteration using $p_{final}$ and considering the information bits decoded in last iteration as frozen. This continues till all bits are decoded successfully. Finally, with arikan transform X is estimated.
+The error-free transmission in these iterations consist of information bits which are suspected to be sent unreliably in previous iterations under impression that present $p_{guess}$ is correct. 
+\paragraph{Final decoding:}When the ED declares no error the decoder infers that the $p_{channel}=p_{guess}$, let us denote this as $p_{final}$. The decoder now  decodes the received channel output vector using $p_{final}$ and considering the bits transmitted error-free in all the iterations as frozen. Finally, with arikan transform X is estimated.
 \\\emph{Note, X and Y have there usual meanings as in figure \ref{fig:swcomp}.}  
 
 
 \subsection{PHY-Layer error Detection} 
 
-A distinct difference between Polar codes for error control and Slepian-Wolf compression using polar codes is that, in the latter the $U_N$ is generated from $X_N$. Hence using a CRC in $U_N$ which can be exploited for error detection and retransmission in Incremental Freezing does not remain feasible.\\This necessitates  
+A distinct difference between Polar codes for error control and that for Slepian-Wolf compression is that, in the latter the $U_N$ is generated from $X_N$. Hence using a CRC in $U_N$ which can be exploited for error detection and retransmission in Incremental Freezing (Inc-Frz) does not remain feasible.\\This necessitates an error detection scheme which is free of CRC and works in PHY layer. At a high level the ED scheme can be viewed as a hypothesis testing problem for \emph{each iteration} where,
+\begin{align*}
+\mathcal{H}_0 & :\text{The Channel is the current guess, i.e,} p_{channel}=p_{guess}\\
+\mathcal{H}_1 & :\text{The Channel is worse, i.e,} p_{channel} > p_{guess}
+\end{align*}
+
+It is understood that due to the sequential and greedy nature of Inc-Frz, cases where $p_{channel} < p_{guess}$ need not be considered. Since the magnitude of the LLR dictates the error probability of corresponding bit, a hypothesis test based on $|LLR|$ has been proposed.
 
 \subsubsection{The Error Detection Test }
-\subsection{Proposed Tests}
-\subsection{Performance Evaluation}
+Consider the setting as in section \ref{adapt}. Let there be $K$ good bit-channels after polarization.  
+Since Inc-Frz guesses the best channel first, we can say that at $j^{th}$ iteration $p_{guess}=p_j$. 
+Let $\Lambda_j^i(k)$ be the magnitude of the LLR of $k^{th}$ bit-channel,$k\in{1,2,...N}$ at the output of the decoder when $p_{channel}=p_i$, and $p_{guess}=p_j$, i.e, at the end of $j^{th}$ iteration. Empirical distribution of $\Lambda_j^i(k)$ based on a simulation has been shown in figure \ref{fig:absllr}.
+\begin{figure}[h]
+ \begin{center}
+    \includegraphics[width=1\textwidth]{absllr0p04.png}
+  \end{center}
+  \caption{$|LLR|$ for $p_{guess}=0.04$ and $p_{channel} \in \mathcal{C}$.}
+  \label{fig:absllr}
+\end{figure}\\
+Hence the hypotheses may be restated as,
+\begin{align*}
+\mathcal{H}_0 & :j=i\\
+\mathcal{H}_1 & :j<i
+\end{align*}
+Note that, for $j < i$, $p_i > p_j$, hence the true channel is worse. Two tests have been suggested based on statistics which are functions of  $\Lambda_j^i(k)$ in the following subsection.
 
+\subsubsection{Proposed Tests}
+\paragraph{TEST 1: all good channels are above a given threshold.} Initially, a test was considered where $p_{guess}=p_{channel}$ is declared if the |LLR| of all the good channels clear a given threshold under the current guess.That is, after $j^{th}$ iteration,
+\begin{align*}  
+j & =i &\text{   if, }  \Lambda_{j}^i(k) > \lambda, \forall k \in {1,2,3...K}\\
+ & &\text{i.e., if } \min_{k \in [K]}\Lambda_{j}^i(k) > \lambda  \\
+ j & < i  &\text{otherwise. Thus more iterations are needed.}
+\end{align*} 
+Here $\lambda$ is chosen to reflect the required reliability. As it can be seen in figure \ref{fig:absllr}, the support of the distributions of $\Lambda_{j=i}^i(k)$ and $\Lambda_{j \neq i}^i(k)$ overlap considerably and $\Lambda_{j=i}^i(k)$ has a higher variance. This gave rise to considerably high missed detection probability $P_M$, which resulted in premature termination of the Inc-Frz scheme and thus, high probability of error. Here, $P_M=P_1(p_i>p_j)$ indicates the probability that the test declares a better channel as the true channel, thus fails to perform ED.
+\paragraph{TEST 2: A given fraction of good channels are above a threshold.}  
+In this test $p_{guess}=p_{channel}$ is declared if the |LLR| of a certain fraction of the good channels clear a threshold. The fraction is dependent on the iteration number. After $j^{th}$ iteration,
+\begin{align*}  
+j & =i &\text{   if, } \frac{1}{K}\sum^K_{k=1} \mathbb{1}_{\{\Lambda_{j}^i(k) > \lambda\}} > \Theta_j,0<\Theta_j<1 \\
+j & < i  &\text{otherwise. }
+\end{align*} 
+The results of Monte-Carlo simulation for estimating $P_M$ and $P_F$ for $\mathcal{C}=\{p_1=0.04,p_2=0.15,p_3=0.2,p_4=0.25\}$ is shown in figure \ref{fig:theta1},\ref{fig:theta2}, \ref{fig:theta3}. Note in the figures $\Theta$ is considered as a percentage.
+\begin{figure}[h]
+ \begin{center}
+    \includegraphics[width=1\textwidth]{theta0p04.png}
+  \end{center}
+  \caption{$P_M$ and $P_F$ estimation for ED after $1^{st}$ iteration, $p_{guess}=0.04$.}
+  \label{fig:theta1}
+\end{figure}\\
+From figure \ref{fig:theta1}, the detection error probabilities can be estimated as $P_F=0.16$ and $P_M=0.06$. For the values of $\Theta$ used the $P_F\approx0.4$  for second and third iteration with $P_M\approx0.13$. A higher value of $P_F$ does not affect the frame error probabilities but causes rate loss. Though higher value of $P_M$ affects frame error probabilities adversely, it should be noted that the detection error probabilities in later iterations are weighted by that of the previous ones and hence the effect diminishes with iteration.
+\begin{figure}[h]
+\centering
+\begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=1.1\textwidth]{theta0p15new.png}
+    \caption{ED after $2^{nd}$ iteration.}
+    \label{fig:theta2}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=1.1\textwidth]{theta0p2.png}
+    \caption{ED after $3^{rd}$ iteration.}
+    \label{fig:theta3}
+\end{subfigure}
+\caption{$P_M$ and $P_F$ estimation for ED after $2^{nd}$ and $3^{rd}$ iteration.}
+\label{fig:theta23}
+\end{figure}
+\subsection{Performance Evaluation}
+%-------------------------------SW
+Simulation results for scheme in figure \ref{fig:iswrpc} used for Iterative Slepian-Wolf Compression with Inc-Frz and PHY-ED are shown below.
+
+
+\begin{figure}[h]
+ \begin{center}
+    \includegraphics[width=0.8\textwidth]{FERSW_0p04.png}
+  \end{center}
+  \caption{FER vs Rate for SW compression with $p_{channel}=0.04$}
+  \label{fig:fersw1}
+\end{figure}
+\begin{figure}[h]
+ \begin{center}
+    \includegraphics[width=0.8\textwidth]{FERSW_0p15.png}
+  \end{center}
+  \caption{FER vs Rate for SW compression with $p_{channel}=0.15$ }
+  \label{fig:fersw2}
+\end{figure}
+\begin{figure}[h]
+ \begin{center}
+    \includegraphics[width=0.8\textwidth]{FERSW_0p2.png}
+  \end{center}
+  \caption{FER vs Rate for SW compression with $p_{channel}=0.2$ }
+  \label{fig:fersw3}
+\end{figure}
+\begin{figure}[h]
+ \begin{center}
+    \includegraphics[width=0.8\textwidth]{FERSW_0p25.png}
+  \end{center}
+  \caption{FER vs Rate for SW compression with $p_{channel}=0.25$ }
+  \label{fig:fersw4}
+\end{figure}
+\begin{figure}[h]
+ \begin{center}
+    \includegraphics[width=0.9\linewidth]{ratelosssw.png}
+  \end{center}
+  \caption{Rate loss for SW compression with Inc-Frz.}
+  \label{fig:rlsw}
+\end{figure}
+%----------------------------------channel
+\clearpage
+\begin{figure}[h]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.1\linewidth]{FER_channel0p04.png}
+  \caption{FER vs Rate for $p_{channel}=0.04$}
+  \label{fig:pch1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.1\linewidth]{FER_channel0p15.png}
+  \caption{FER vs Rate for $p_{channel}=0.15$}
+  \label{fig:pch2}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.1\linewidth]{FER_channel0p2.png}
+  \caption{FER vs Rate for $p_{channel}=0.2$}
+  \label{fig:pch3}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.1\linewidth]{FER_channel0p25.png}
+  \caption{FER vs Rate for $p_{channel}=0.25$}
+  \label{fig:pch4}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1.1\linewidth]{rateloss_channel.png}
+  \caption{Rate loss in Inc-Frz with PHY-ED}
+  \label{fig:rlch}
+\end{subfigure}
+\caption{Performance Evaluation of Rateless Polar Coding with Inc-Frz and PHY-ED.}
+\label{fig:perfch}
+\end{figure}
 %--------------------------------------------------------------------------
 % CONCLUSION AND FUTURE WORK
 %--------------------------------------------------------------------------
-\newpage
+\clearpage
 \section{Conclusion and Future work}\label{future}
-proposed scheme
-shortpacket
-implementation
-\begin{definition}
-We can redefine $\Omega_i$ as a set of indicator vectors of $A$.Let,
-\[
-    [\phi_i(A)]_l=\left\{
-                \begin{array}{ll}
-                  \mathbf{1}_A(l) \text{ if } l < i\\
-                  \mathbf{1}_A(l+1) \text{ if } l \ge i.\\
-                \end{array}
-              \right.
-  \]
-\begin{align*}
-\Omega_i' &\triangleq \{\phi_i(A) \in \{0,1\}^{N-1} : A \in \Omega_i\}\\
-\partial_j\Omega_i' &\triangleq \{\phi_i(A) \in \{0,1\}^{N-1}: A \in \partial_j\Omega_i\}.\\& =\{\underline{x} \in \{0,1\}^{N-1} | \mathbb{1}_{\Omega_i}(\underline{x}) \neq  \mathbb{1}_{\Omega_i}(\underline{x}^{(j)})\}
-\end{align*}
-\label{defn13}
-\end{definition}
-Here the last equality follows from definition of $\partial_j\Omega_i$.\\
-Consider the space $\{0,1\}^M$ ,we can redefine measure $\mu_p$ such that $$\mu_p(\Omega) = \sum_{\underline{x} \in \Omega} p^{|\underline{x}|}(1-p)^{M-|\underline{x}|}, \text{ for }\Omega \subseteq \{0,1\}^M,$$ where the weight $|\underline{x}| = x_1 + x_2 + \ldots + x_M$ is the number of $1$'s in $\underline{x}$. 
-\begin{definition}
-For a monotone set $\Omega$.The influence of bit $j \in [N]$,is defined by,
-$$I_j^{(p)}(\Omega)\triangleq \mu_p(\partial_j\Omega)$$
-The total influence in defined by,
-$$I^{(p)}\triangleq \sum^N_{j=1}I_j^{(p)}.$$
-\label{defn15}
-\end{definition}
-Using proposition~\ref{propn4}(a) and proposition 7, we have, 
-$$h(p)=h_i(p)=\mu_p(\Omega_i')$$
-Further,from proposition~\ref{propn4}(b), we get,
-$$I_j^{p}(\Omega_i')=\mu_p(\partial_j\Omega_i') = \frac{\partial h_i(\underline{p})}{\partial p_j'}\Bigg|_{\underline{p}=(p,p,\ldots,p)}$$
-where $j'$ is given by 
-\[
-    j'=\left\{
-                \begin{array}{ll}
-                  j \text{ if } j < i\\
-                  j+1 \text{ if } j \ge i.\\
-                \end{array}
-              \right.
-  \]
-Since $\mathcal{G}$ is doubly transitive, from propostion~\ref{propn8}, $$I_j^{p}(\Omega_i') = I_k^{p}(\Omega_i') \text{ for all } j,k \in [N-1].$$
-Hence,$\Omega_i$ is a \emph{symmetric monotone set.}
+\begin{itemize}
+\item The proposed scheme reduces communication among nodes.
+\item The CRC-free universal polar code promises considerable rate gain for communication using short packet lengths.
+\end{itemize}
+\begin{itemize}
+\item Future work.
+\begin{itemize}
+\item Extensive performance analysis and theoritical analysis of proposed error detection scheme as a RB-HARQ for polar codes.
+\item Implementation of the scheme for multiparty data exchange.
+\end{itemize}
+\end{itemize}
 
-The following theorem could be seen as a consequence of the result by Talagrand~\cite{talagrand}.
-\begin{theorem}
-Let $\Omega$ be a monotone set and suppose that, for all $0 \le p \le 1$, the influences of all bits are equal $I_1^{(p)}(\Omega) = \ldots = I_M^{(p)}(\Omega)$. Then, for any $0 < \epsilon \le 1/2$, $$p_{1-\epsilon} - p_\epsilon \le \frac{2 \log \frac{1-\epsilon}{\epsilon}}{C\log (N-1)},$$ where $p_t = \inf\{p \in [0,1] : \mu_p (\Omega) \ge t\}$ is well defined because $\mu_p(\Omega)$ is strictly increasing in $p$ with $\mu_0(\Omega) = 0$ and $\mu_1(\Omega)=1$.
-\label{thm19}
-\end{theorem}
-\begin{proof}
-Using Russo's lemma~\cite{russo}.
-\end{proof}
-We see that $\Omega_i$ satisfies the conditions of Theorem~\ref{thm19}.
-Hence,\\$$\lim_{n \to \infty} (p_{1-\epsilon} - p_\epsilon) = 0.$$
-Further , using proposition~\ref{propn11}, we state,\emph{\\$\{\mathcal{C}_n\}$ is capacity achieving on the BEC under bit-MAP decoding.}
+
 
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
-\newpage
+\clearpage
 \renewcommand{\refname}{\spacedlowsmallcaps{References}} % For modifying the bibliography heading
 
 \bibliographystyle{unsrt}

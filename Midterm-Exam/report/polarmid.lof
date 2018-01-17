@@ -8,6 +8,15 @@
 \contentsline {figure}{\numberline {7}{\ignorespaces Polar Coding for SW Compression\relax }}{7}{figure.caption.7}
 \contentsline {figure}{\numberline {8}{\ignorespaces FER vs Rate for SW with Polar Code\relax }}{7}{figure.caption.8}
 \contentsline {figure}{\numberline {9}{\ignorespaces Nesting in BSC(p) channels\relax }}{8}{figure.caption.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Incremental freezing for N=16, K=12 and 4 iterations\relax }}{9}{figure.caption.10}
+\contentsline {figure}{\numberline {10}{\ignorespaces Incremental freezing for N=8, K=6 and 3 iterations\relax }}{9}{figure.caption.10}
 \contentsline {figure}{\numberline {11}{\ignorespaces H-ARQ for Polar Codes with selective repetition\relax }}{10}{figure.caption.11}
 \contentsline {figure}{\numberline {12}{\ignorespaces Example of Iterative Slepian-Wolf Compression with Incremental Freezing.\relax }}{12}{figure.caption.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces $|LLR|$ for $p_{guess}=0.04$ and $p_{channel} \in \mathcal {C}$.\relax }}{14}{figure.caption.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces $P_M$ and $P_F$ estimation for ED after $1^{st}$ iteration, $p_{guess}=0.04$.\relax }}{15}{figure.caption.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces $P_M$ and $P_F$ estimation for ED after $2^{nd}$ and $3^{rd}$ iteration.\relax }}{16}{figure.caption.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces FER vs Rate for SW compression with $p_{channel}=0.04$\relax }}{16}{figure.caption.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces FER vs Rate for SW compression with $p_{channel}=0.15$ \relax }}{17}{figure.caption.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces FER vs Rate for SW compression with $p_{channel}=0.2$ \relax }}{17}{figure.caption.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces FER vs Rate for SW compression with $p_{channel}=0.25$ \relax }}{18}{figure.caption.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Rate loss for SW compression with Inc-Frz.\relax }}{18}{figure.caption.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Performance Evaluation of Rateless Polar Coding with Inc-Frz and PHY-ED.\relax }}{19}{figure.caption.21}

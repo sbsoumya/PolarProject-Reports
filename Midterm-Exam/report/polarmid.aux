@@ -74,11 +74,11 @@
 \newlabel{fig:relorder}{{9}{8}{Nesting in BSC(p) channels\relax }{figure.caption.9}{}}
 \@writefile{toc}{\contentsline {paragraph}{Nesting Property:}{8}{figure.caption.9}}
 \citation{chen}
-\citation{harqmukhtar}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {1.5.2}Incremental freezing}{9}{subsubsection.1.5.2}}
 \newlabel{if}{{1.5.2}{9}{Incremental freezing}{subsubsection.1.5.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Incremental freezing for N=16, K=12 and 4 iterations\relax }}{9}{figure.caption.10}}
-\newlabel{fig:if}{{10}{9}{Incremental freezing for N=16, K=12 and 4 iterations\relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Incremental freezing for N=8, K=6 and 3 iterations\relax }}{9}{figure.caption.10}}
+\newlabel{fig:if}{{10}{9}{Incremental freezing for N=8, K=6 and 3 iterations\relax }{figure.caption.10}{}}
+\citation{harqmukhtar}
 \citation{mondelli}
 \citation{harqchen}
 \citation{chen}
@@ -89,15 +89,17 @@
 \@writefile{toc}{\contentsline {paragraph}{Rate Compatible Codes:}{10}{subsubsection.1.5.3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces H-ARQ for Polar Codes with selective repetition\relax }}{10}{figure.caption.11}}
 \newlabel{fig:selrepharq}{{11}{10}{H-ARQ for Polar Codes with selective repetition\relax }{figure.caption.11}{}}
-\@writefile{toc}{\contentsline {paragraph}{H-ARQ for Polar codes with selective repetition:}{10}{figure.caption.11}}
 \citation{harqtav}
 \citation{rbharq}
+\@writefile{toc}{\contentsline {paragraph}{H-ARQ for Polar codes with selective repetition:}{11}{figure.caption.11}}
 \@writefile{toc}{\contentsline {paragraph}{Incremental freezing:}{11}{figure.caption.11}}
 \@writefile{toc}{\contentsline {paragraph}{H-ARQ for Polar codes based on Subset Polar Codes:}{11}{figure.caption.11}}
 \@writefile{toc}{\contentsline {paragraph}{Reliability Based H-ARQ:}{11}{figure.caption.11}}
+\newlabel{eq:errorllr}{{1}{11}{Reliability Based H-ARQ:}{equation.1.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Proposed implementation of Recursive Data Exchange}{12}{section.2}}
 \newlabel{propsol}{{2}{12}{Proposed implementation of Recursive Data Exchange}{section.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Adaptation of Rateless Polar Codes for RDE}{12}{subsection.2.1}}
+\newlabel{adapt}{{2.1}{12}{Adaptation of Rateless Polar Codes for RDE}{subsection.2.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Example of Iterative Slepian-Wolf Compression with Incremental Freezing.\relax }}{12}{figure.caption.12}}
 \newlabel{fig:iswrpc}{{12}{12}{Example of Iterative Slepian-Wolf Compression with Incremental Freezing.\relax }{figure.caption.12}{}}
 \@writefile{toc}{\contentsline {paragraph}{first Iteration:}{12}{figure.caption.12}}
@@ -105,15 +107,44 @@
 \@writefile{toc}{\contentsline {paragraph}{Final decoding:}{13}{figure.caption.12}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}PHY-Layer error Detection}{13}{subsection.2.2}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}The Error Detection Test }{13}{subsubsection.2.2.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Proposed Tests}{13}{subsection.2.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Performance Evaluation}{13}{subsection.2.4}}
-\citation{talagrand}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Conclusion and Future work}{14}{section.3}}
-\newlabel{future}{{3}{14}{Conclusion and Future work}{section.3}{}}
-\newlabel{defn13}{{1}{14}{}{definition.1}{}}
-\newlabel{defn15}{{2}{14}{}{definition.2}{}}
-\citation{russo}
-\newlabel{thm19}{{1}{15}{}{theorem.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces $|LLR|$ for $p_{guess}=0.04$ and $p_{channel} \in \mathcal  {C}$.\relax }}{14}{figure.caption.13}}
+\newlabel{fig:absllr}{{13}{14}{$|LLR|$ for $p_{guess}=0.04$ and $p_{channel} \in \mathcal {C}$.\relax }{figure.caption.13}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Proposed Tests}{14}{subsubsection.2.2.2}}
+\@writefile{toc}{\contentsline {paragraph}{TEST 1: all good channels are above a given threshold.}{14}{subsubsection.2.2.2}}
+\@writefile{toc}{\contentsline {paragraph}{TEST 2: A given fraction of good channels are above a threshold.}{15}{subsubsection.2.2.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces $P_M$ and $P_F$ estimation for ED after $1^{st}$ iteration, $p_{guess}=0.04$.\relax }}{15}{figure.caption.14}}
+\newlabel{fig:theta1}{{14}{15}{$P_M$ and $P_F$ estimation for ED after $1^{st}$ iteration, $p_{guess}=0.04$.\relax }{figure.caption.14}{}}
+\newlabel{fig:theta2}{{15a}{16}{ED after $2^{nd}$ iteration.\relax }{figure.caption.15}{}}
+\newlabel{sub@fig:theta2}{{a}{16}{ED after $2^{nd}$ iteration.\relax }{figure.caption.15}{}}
+\newlabel{fig:theta3}{{15b}{16}{ED after $3^{rd}$ iteration.\relax }{figure.caption.15}{}}
+\newlabel{sub@fig:theta3}{{b}{16}{ED after $3^{rd}$ iteration.\relax }{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces $P_M$ and $P_F$ estimation for ED after $2^{nd}$ and $3^{rd}$ iteration.\relax }}{16}{figure.caption.15}}
+\newlabel{fig:theta23}{{15}{16}{$P_M$ and $P_F$ estimation for ED after $2^{nd}$ and $3^{rd}$ iteration.\relax }{figure.caption.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Performance Evaluation}{16}{subsection.2.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces FER vs Rate for SW compression with $p_{channel}=0.04$\relax }}{16}{figure.caption.16}}
+\newlabel{fig:fersw1}{{16}{16}{FER vs Rate for SW compression with $p_{channel}=0.04$\relax }{figure.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces FER vs Rate for SW compression with $p_{channel}=0.15$ \relax }}{17}{figure.caption.17}}
+\newlabel{fig:fersw2}{{17}{17}{FER vs Rate for SW compression with $p_{channel}=0.15$ \relax }{figure.caption.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces FER vs Rate for SW compression with $p_{channel}=0.2$ \relax }}{17}{figure.caption.18}}
+\newlabel{fig:fersw3}{{18}{17}{FER vs Rate for SW compression with $p_{channel}=0.2$ \relax }{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces FER vs Rate for SW compression with $p_{channel}=0.25$ \relax }}{18}{figure.caption.19}}
+\newlabel{fig:fersw4}{{19}{18}{FER vs Rate for SW compression with $p_{channel}=0.25$ \relax }{figure.caption.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Rate loss for SW compression with Inc-Frz.\relax }}{18}{figure.caption.20}}
+\newlabel{fig:rlsw}{{20}{18}{Rate loss for SW compression with Inc-Frz.\relax }{figure.caption.20}{}}
+\newlabel{fig:pch1}{{21a}{19}{FER vs Rate for $p_{channel}=0.04$\relax }{figure.caption.21}{}}
+\newlabel{sub@fig:pch1}{{a}{19}{FER vs Rate for $p_{channel}=0.04$\relax }{figure.caption.21}{}}
+\newlabel{fig:pch2}{{21b}{19}{FER vs Rate for $p_{channel}=0.15$\relax }{figure.caption.21}{}}
+\newlabel{sub@fig:pch2}{{b}{19}{FER vs Rate for $p_{channel}=0.15$\relax }{figure.caption.21}{}}
+\newlabel{fig:pch3}{{21c}{19}{FER vs Rate for $p_{channel}=0.2$\relax }{figure.caption.21}{}}
+\newlabel{sub@fig:pch3}{{c}{19}{FER vs Rate for $p_{channel}=0.2$\relax }{figure.caption.21}{}}
+\newlabel{fig:pch4}{{21d}{19}{FER vs Rate for $p_{channel}=0.25$\relax }{figure.caption.21}{}}
+\newlabel{sub@fig:pch4}{{d}{19}{FER vs Rate for $p_{channel}=0.25$\relax }{figure.caption.21}{}}
+\newlabel{fig:rlch}{{21e}{19}{Rate loss in Inc-Frz with PHY-ED\relax }{figure.caption.21}{}}
+\newlabel{sub@fig:rlch}{{e}{19}{Rate loss in Inc-Frz with PHY-ED\relax }{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Performance Evaluation of Rateless Polar Coding with Inc-Frz and PHY-ED.\relax }}{19}{figure.caption.21}}
+\newlabel{fig:perfch}{{21}{19}{Performance Evaluation of Rateless Polar Coding with Inc-Frz and PHY-ED.\relax }{figure.caption.21}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Conclusion and Future work}{20}{section.3}}
+\newlabel{future}{{3}{20}{Conclusion and Future work}{section.3}{}}
 \bibstyle{unsrt}
 \bibdata{polarmid.bib}
 \bibcite{arikan}{1}
