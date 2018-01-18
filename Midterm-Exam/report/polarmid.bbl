@@ -1,12 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{arikan}
-E.~Ar{\i}kan.
-\newblock Channel polarization: A method for constructing capacity- achieving
-  codes for symmetric binary-input memoryless channels.
-\newblock {\em IEEE Transactions on Information Theory}, 55, no. 7:3051--3073,
-  July 2009.
-
 \bibitem{rsync}
 A.~Tridgell and P.~Mackerras.
 \newblock The r-sync algorithm.
@@ -15,70 +8,77 @@ A.~Tridgell and P.~Mackerras.
 
 \bibitem{sw}
 D.~Slepian and J.~K. Wolf.
-\newblock Noiseless coding of correlated information sources.
+\newblock {N}oiseless {C}oding of {C}orrelated {I}nformation {S}ources.
 \newblock {\em IEEE Transactions on Information Theory}, 1973.
 
 \bibitem{discus}
 S.~Sandeep Pradhan and K.~Ramachanderan.
-\newblock Distributed source coding using syndromes (discus):design and
-  construction.
+\newblock {D}istributed {S}ource {C}oding {U}sing {S}yndromes
+  ({DISCUS}):{D}esign and {C}onstruction.
 \newblock {\em IEEE Transactions on Information Theory}, 49,No. 3, 2003.
 
 \bibitem{pslep}
 S.~Onay.
-\newblock Polar codes for nonassymetric slepian-wolf coding.
+\newblock {P}olar {C}odes for {N}onassymetric {S}lepian-{W}olf {C}oding.
 \newblock {\em arXiv.1208.3056v1[cs.IT]}, August 2012.
 
 \bibitem{htsw}
 H.~Tyagi and S.~Watanabe.
-\newblock Universal multiparty data exchange and secret key arrangement.
+\newblock {U}niversal {M}ultiparty {D}ata {E}xchange and {S}ecret {K}ey
+  {A}rrangement.
 \newblock {\em ISIT}, 2016.
+
+\bibitem{arikan}
+E.~Ar{\i}kan.
+\newblock {C}hannel polarization: {A} method for constructing capacity-
+  achieving codes for symmetric binary-input memoryless channels.
+\newblock {\em IEEE Transactions on Information Theory}, 55, no. 7:3051--3073,
+  July 2009.
 
 \bibitem{zhang}
 Y.~Zhang et~al.
-\newblock A practical construction method for polar codes.
+\newblock {A} {P}ractical {C}onstruction {M}ethod for {P}olar {C}odes.
 \newblock {\em IEEE Communication letters}, 18, no. 11, Nov. 2014.
 
 \bibitem{harqtav}
 S.~Tavildar.
-\newblock A h-arq scheme for polar codes.
+\newblock A {H-ARQ} {S}cheme for {P}olar codes.
 \newblock {\em arXiv.1606.08545v1[cs.IT]}, Jun. 2016.
 
 \bibitem{harqcheng}
 J.~Cheng.
-\newblock Coding performance of hybrid arq schemes.
-\newblock {\em IEEE TRANSACTIONS ON COMMUNICATIONS}, VOL. 54, NO. 6, Jun. 2006.
+\newblock {C}oding {P}erformance of {H}ybrid {ARQ} schemes.
+\newblock {\em IEEE Transaction on Communications}, VOL. 54, NO. 6, Jun. 2006.
 
 \bibitem{harqchen}
 J.~Lin K.~Chen, K.~Niu.
-\newblock A hybrid arq scheme based on polar codes.
-\newblock {\em IEEE TRANSACTIONS ON COMMUNICATIONS}, VOL. 17, NO. 10, Oct.
-  2013.
+\newblock {A} {H}ybrid {ARQ} {S}cheme based on {P}olar codes.
+\newblock {\em IEEE Transaction on Communications}, VOL. 17, NO. 10, Oct. 2013.
 
 \bibitem{chen}
 K.~Chen B.~Li, D.~Tse and H.~Shen.
-\newblock Capacity achieving rateless polar codes.
+\newblock {C}apacity {A}chieving {R}ateless {P}olar {C}odes.
 \newblock {\em arXiv.1508.0311v1[cs.IT]}, Aug. 2015.
 
 \bibitem{wang}
 E.~Sasoglu and L.~Wang.
-\newblock Universal polarization.
+\newblock {U}niversal {P}olarization.
 \newblock {\em arXiv:1307.7495v2[cs.IT]}, Dec. 2013.
 
 \bibitem{mondelli}
 M.~Mondelli et~al.
-\newblock Capacity achieving rate compatible polar codes for general channels.
+\newblock {C}apacity achieving rate compatible polar codes for general
+  channels.
 \newblock {\em arXiv.1611.01199v2[cs.IT]}, Jan. 2017.
 
 \bibitem{harqmukhtar}
 M.~Al-Mualla H.~Mukhtar, A. Al-Dweik.
-\newblock Crc-free hybrid arq using turbo product codes.
-\newblock {\em IEEE TRANSACTIONS ON COMMUNICATIONS}, VOL. 62, NO. 12, Dec.
-  2014.
+\newblock {CRC}-{F}ree {H}ybrid {ARQ} using {T}urbo {P}roduct codes.
+\newblock {\em IEEE Transaction on Communications}, VOL. 62, NO. 12, Dec. 2014.
 
 \bibitem{rbharq}
 H.~Schoeneich J.~Fricke and P.~A. Hoeher.
-\newblock Reliability based retransmission criterion for harq.
-\newblock {\em IEEE TRANSACTIONS ON COMMUNICATIONS}, VOL. 57, NO. 8, Aug. 2009.
+\newblock {R}eliability based retransmission criterion for {HARQ}.
+\newblock {\em IEEE Transaction on Communications}, VOL. 57, NO. 8, Aug. 2009.
 
 \end{thebibliography}

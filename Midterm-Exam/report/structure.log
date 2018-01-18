@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  22 NOV 2017 11:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  17 JAN 2018 17:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -133,19 +133,6 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.42 \usepackage{
-                 subfig} % Required for creating figures with multiple parts...
-
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-! LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
 l.44 \usepackage{
                  amsmath,amssymb,amsthm} % For including math equations, the...
 
@@ -164,8 +151,44 @@ l.46 \usepackage{
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 \usepackage{
+                 wrapfig}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 \usepackage{
+                 caption}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52 \usepackage{
+                 subcaption}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
 ! Undefined control sequence.
-l.54 \theoremstyle
+l.60 \theoremstyle
                   {definition} % Define theorem styles here based on the def...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -180,7 +203,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.54 \theoremstyle{d
+l.60 \theoremstyle{d
                     efinition} % Define theorem styles here based on the def...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -198,12 +221,12 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 \c@definition=\count79
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 54--56
+Overfull \hbox (20.0pt too wide) in paragraph at lines 60--62
 [] 
  []
 
 ! Undefined control sequence.
-l.57 \theoremstyle
+l.63 \theoremstyle
                   {plain} % Define theorem styles here based on the plain st...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -218,7 +241,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.57 \theoremstyle{p
+l.63 \theoremstyle{p
                     lain} % Define theorem styles here based on the plain st...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -231,12 +254,12 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 \c@theorem=\count80
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 57--59
+Overfull \hbox (20.0pt too wide) in paragraph at lines 63--65
 [] 
  []
 
 ! Undefined control sequence.
-l.60 \theoremstyle
+l.66 \theoremstyle
                   {remark} % Define theorem styles here based on the remark ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -251,7 +274,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.60 \theoremstyle{r
+l.66 \theoremstyle{r
                     emark} % Define theorem styles here based on the remark ...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -264,12 +287,12 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no k in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 60--61
+Overfull \hbox (20.0pt too wide) in paragraph at lines 66--67
 [] 
  []
 
 ! Undefined control sequence.
-l.66 \hypersetup
+l.72 \hypersetup
                 {
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -284,7 +307,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.68 c
+l.74 c
       olorlinks=true, breaklinks=true, bookmarks=true,bookmarksnumbered,
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -431,29 +454,29 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no = in font nullfont!
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 71.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 77.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 71.
-LaTeX Font Info:    Try loading font information for +cmr on input line 71.
-LaTeX Font Info:    No file cmr.fd. on input line 71.
-LaTeX Font Info:    Try loading font information for +cmsy on input line 71.
-LaTeX Font Info:    No file cmsy.fd. on input line 71.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
+LaTeX Font Info:    Try loading font information for +cmr on input line 77.
+LaTeX Font Info:    No file cmr.fd. on input line 77.
+LaTeX Font Info:    Try loading font information for +cmsy on input line 77.
+LaTeX Font Info:    No file cmsy.fd. on input line 77.
 
 
 LaTeX Font Warning: Font shape `/cmr/m/n' undefined
-(Font)              using `/cmsy/m/n' instead on input line 71.
+(Font)              using `/cmsy/m/n' instead on input line 77.
 
 
 LaTeX Font Warning: Font shape `/cmsy/m/n' undefined
-(Font)              using `/cmsy/m/n' instead on input line 71.
+(Font)              using `/cmsy/m/n' instead on input line 77.
 
 ! Corrupted NFSS tables.
 wrong@fontshape ...message {Corrupted NFSS tables}
                                                   error@fontshape else let f...
-l.71 pdfauthor={\textcopyright
+l.77 pdfauthor={\textcopyright
                               }, % PDF Author
 This error message was generated by an \errmessage
 command, so I can't give any explicit help.
@@ -462,7 +485,7 @@ and deduce the truth by order and method.
 
 
 LaTeX Font Warning: Font shape `/cmsy/m/n' undefined
-(Font)              using `OT1/cmr/m/n' instead on input line 71.
+(Font)              using `OT1/cmr/m/n' instead on input line 77.
 
 Missing character: There is no , in font nullfont!
 Missing character: There is no p in font nullfont!
@@ -556,12 +579,12 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 68--77
+Overfull \hbox (20.0pt too wide) in paragraph at lines 74--83
 []
  []
 
 
-Overfull \hbox (10.00002pt too wide) in paragraph at lines 68--77
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 74--83
 []
  []
 
