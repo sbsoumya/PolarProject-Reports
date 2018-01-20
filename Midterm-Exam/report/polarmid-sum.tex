@@ -1,0 +1,193 @@
+%
+% ---- contains strange adjustments search "goja"
+%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+11pt, % Main document font size
+a4paper, % Paper type, use 'letterpaper' for US Letter paper
+oneside, % One page layout (no page indentation)
+%twoside, % Two page layout (page indentation for binding and different headers)
+headinclude,footinclude, % Extra spacing for the header and footer
+BCOR5mm, % Binding correction
+]{scrartcl}
+\input{structure-plain.tex} % Include the structure.tex file which specified the document structure and layout
+
+%Proposition using definition counter
+\newenvironment{proposition}[1][]{\refstepcounter{definition}\par\medskip
+   \noindent \textbf{Proposition~\thedefinition. #1} \rmfamily}{\medskip}
+ 
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE AND AUTHOR(S)
+%----------------------------------------------------------------------------------------
+
+\begin{center}
+\begin{huge}
+\vspace{1 in}
+{\bf  Communication Efficient Data Exchange Among Multiple Nodes}\\  
+\end{huge}
+\vspace{1 cm}
+\begin{large}
+\textbf{Midterm Report Summary}\\
+\end{large}
+\begin{large}
+\vspace{0.5cm}
+{by\\}
+\vspace{0.1cm}
+{\textbf{Soumya Subhra Banerjee,} \\ \textit{M.Tech, ECE(CN).} }
+\end{large}
+
+\vspace{.2in}
+
+\begin{large}
+{ Under the guidance of}\\
+\end{large}
+\vspace{0.2cm}
+\begin{large}
+{\textbf{Himanshu Tyagi,}\\ \textit{Assistant Professor, ECE, IISc}}\end{large}
+\vspace{1.0cm}
+
+\end{center}
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\section*{Overview}
+Multiple parties observing correlated data seek to exchange their data using minimum communication. In case the underlying joint distribution is known to the encoder a rate optimal solution to this problem is offered by Slepian-Wolf compression. In absence of this knowledge interative and interactive communication is neccessary to attain universal optimality. The \emph{Data-Exchange} problem  encompasses the latter scenario. \\In both the cases joint decoding using type classes is of exponential complexity. However, Slepian-Wolf compression can be implemented using structered channel codes. We have considered implementation of the iterative Slepian-Wolf compression for two parties as a recursive data-exchange protocol (RDE)  using Rateless Polar Codes where data exchange happens incrementally till completion. \\In this setting, interaction based on retransmission criterion offered by higher layers is not feasible.
+Hence, we have  proposed a PHY-layer error detection scheme based on soft outputs of the Succesive Cancellation decoder. We have presented simulation results that exhibit the performance of the considered methods.
+Besides offering a solution to our problem, this scheme provides a CRC-free Rateless Polar Code which promises rate gain for short packet length communication.
+
+%----------------------------------------------------------------------------------------
+%	PROPOSED SOLUTION
+%----------------------------------------------------------------------------------------
+\newpage
+\section*{Proposed implementation of Recursive Data Exchange} \label{propsol}
+Our approach towards implementation of a solution to the \emph{Data-Exchange} problem can be summarised as below, 
+\begin{itemize}
+\item{Use Rateless Polar Codes with Incremental Freezing to implement RDE.}
+\item{Use a PHY layer error detection as retransmission criterion in Incremantal Freezing.}
+\end{itemize}
+\begin{figure}[h]
+ \begin{center}
+    \includegraphics[width=0.7\textwidth]{iswrpc.png}
+  \end{center}
+  \caption{Iterative SW compression with Incremental Freezing.}
+  \label{fig:iswrpc}
+\end{figure} 
+Here, a compund BSC channel $\mathcal{C}=\{ p_1 \leq p_2 \leq p_3 \leq p_4\}$ is considered, where $p_i$ is the flipover probability of channel $i$. The flipover probability of the true channel is $p_{channel}$.
+In the first iteration the scheme guesses the best channel as the true channel and sends the bits that are ought to be frozen with this guess to the receiver over an error-free channel.The decoder uses the log-likelihood ratios for error detection and sends ACK/NACK feedback. In the subsequent iteration the scheme guesses next best channel and the operation is repeated. The scheme terminates on receiving a NACK from reciever or after few iterations. This scheme has been called Incremental Freezing (Inc-Frz).
+
+
+
+\subsection*{PHY Layer Error Detection (PHY-ED)} 
+Let there be $K$ good bit-channels after polarization $N$ channels.  
+Since Inc-Frz guesses the best channel first, we can say that at $j^{th}$ iteration $p_{guess}=p_j$. 
+Let $\Lambda_j^i(k)$ be the magnitude of the LLR of $k^{th}$ bit-channel, $k\in{1,2,...N}$ at the output of the decoder at the end of $j^{th}$ iteration such that $p_{guess}=p_j$ for $p_{channel}=p_i$. 
+Error detection may be seen as a hypothesis test where,
+\begin{align*}
+\mathcal{H}_0 & :\text{The channel is the current guess, i.e., } j=i\\
+\mathcal{H}_1 & :\text{The channel is worse, i.e., }j<i
+\end{align*}
+\paragraph{TEST : A given fraction of good channels are above a threshold.}  
+In this test $p_{guess}=p_{channel}$ is declared if the |LLR| of a certain fraction of the good channels clear a threshold. The fraction is dependent on the iteration number. After $j^{th}$ iteration,
+\begin{align*}  
+j &=i,
+ \text{   if, } \frac{1}{K}\sum^K_{k=1} \mathbbm{1}_{\{\Lambda_{j}^i(k) > \lambda\}} > \Theta_j \\
+j & < i,  \text{ o.w. }
+\end{align*} 
+The results of Monte-Carlo simulation for estimating $P_M$ and $P_F$ for $\mathcal{C}=\{p_1=0.04,p_2=0.15,p_3=0.2,p_4=0.25\}$ after first iteration is shown in figure \ref{fig:theta1}. Note, in the figures $\Theta$ is considered to be percentage.
+\begin{figure}[h!]
+ \begin{center}
+    \includegraphics[width=0.7\textwidth]{theta0p04.png}
+  \end{center}
+  \caption{$P_M$ and $P_F$ estimation for ED after $1^{st}$ iteration, $p_{guess}=0.04$.}
+  \label{fig:theta1}
+\end{figure}
+\subsection*{Performance Evaluation}
+%-------------------------------SW
+\begin{figure}[h!]
+\centering
+\begin{subfigure}{.5\textwidth}
+ \begin{center}
+    \includegraphics[width=1.1\textwidth]{FERSW_0p04.png}
+  \end{center}
+  \caption{$p_{channel}=0.04$}
+  \label{fig:fersw1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+ \begin{center}
+    \includegraphics[width=1.1\textwidth]{FERSW_0p15.png}
+  \end{center}
+  \caption{$p_{channel}=0.15$ }
+  \label{fig:fersw2}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+ \begin{center}
+    \includegraphics[width=1.1\textwidth]{FERSW_0p2.png}
+  \end{center}
+  \caption{$p_{channel}=0.2$ }
+  \label{fig:fersw3}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+ \begin{center}
+    \includegraphics[width=1.1\textwidth]{FERSW_0p25.png}
+  \end{center}
+  \caption{$p_{channel}=0.25$ }
+  \label{fig:fersw4}
+\end{subfigure}
+\caption{FER vs Rate of SW compression with Inc-Frz and PHY-ED.}
+\label{fig:perfsw}
+\end{figure}
+\begin{figure}[h]
+ \begin{center}
+    \includegraphics[width=0.7\linewidth]{ratelosssw.png}
+  \end{center}
+  \caption{Rate loss for SW compression with Inc-Frz.}
+  \label{fig:rlsw}
+\end{figure}
+Simulation results for the scheme in figure \ref{fig:iswrpc} used for iterative SW compression with Inc-Frz and PHY-ED are presented in figure \ref{fig:perfsw}.
+Let $K$ be the number of bit-channels assumed to be good at the first iteration. For simulation, $K$ is varied from $0$ to $K^*$ such that $K^*/N$ is the capacity of the best channel. In case of SW compression the number of bits that remain unfrozen after the final iteration divided by $N$ is viewed as the achieved rate. The FER has been plotted against the achieved rates for performance evaluation.
+
+%--------------------------------------------------------------------------
+% CONCLUSION AND FUTURE WORK
+%--------------------------------------------------------------------------
+\section*{Conclusion and Future work}\label{future}
+\begin{itemize}
+\item The scheme reduces the communication among nodes.
+\item The CRC-free universal polar code promises considerable rate gain for communication using short packet lengths. 
+\end{itemize}
+\begin{itemize}
+\item Future work.
+\begin{itemize}
+\item Extensive performance analysis and theoritical analysis of proposed error detection scheme. 
+\item Implementation of the scheme for multiparty data exchange.
+\end{itemize}
+\end{itemize}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+\clearpage
+%\renewcommand{\refname}{\spacedlowsmallcaps{References}} % For modifying the bibliography heading
+
+\bibliographystyle{unsrt}
+
+\bibliography{polarmid.bib} % The file containing the bibliography
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

@@ -1,35 +1,50 @@
 \documentclass[xcolor=dvipsnames]{beamer}
-%\documentclass[unknownkeysallowed]{beamer}
 \usecolortheme[named=MidnightBlue]{structure}
 \definecolor{blue(ryb)}{rgb}{0.2, 0.2, 0.6}
 \definecolor{blue(ryb)}{rgb}{0.01, 0.28, 1.0}
 \definecolor{bostonuniversityred}{rgb}{0.8, 0.0, 0.0}
 \DeclareGraphicsExtensions{jpg,eps,png}
  \renewcommand{\thefootnote}{\fnsymbol{footnote}}
-%\usetheme{umbc2} 
-%\usetheme{Warsaw}
-
-
-%\documentclass[xcolor=dvipsnames]{beamer}
-%\usecolortheme[named=Periwinkle]{structure} 
-%\usetheme{default}
 \usetheme{Boadilla} 
-\setbeamertemplate{navigation symbols}{} 
+%--------------modify footer
+\makeatother
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+   \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{section in head/foot}%
+    \usebeamerfont{section in head/foot}\insertsectionhead
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{section in head/foot}\insertshorttitle\hspace*{3em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatletter
+\setbeamertemplate{navigation symbols}{}
+%---------------------------modify footer end
 %\hypersetup{pdfpagemode=FullScreen}
 \usepackage{epsfig}
 \usepackage{graphicx}
 \usepackage{epstopdf}
-\title[E2 - 207 : Concentration Inequalities]{Reed-Muller Codes Achieve Capacity on Erasure Channels}
-\author[]{Shrinivas Kudekar, Santhosh Kumar, Marco Mondelli, Henry D. Pfister, Eren \c{S}a\c{s}\u{o}glu, R\"{u}diger Urbanke}
+%-------------------------------------
+%Title
+%-------------------------------------
+
+\title[]{Communication Efficient Data Exchange Among Multiple Nodes}
+\author[]{Soumya Subhra Banerjee,  }
 \normalsize
 \institute[ECE, IISc]{Project presentation, E2 207 -- Concentration Inequalities\footnote[2]{ \tiny \textit{presented by} K. R. Sahasranand, Dept. of Electrical Communication Engg., IISc.}}
 \date{\today}
-
+%====================================Title
 \begin{document}
 \begin{frame}
 \titlepage
 \end{frame}
+%====================================Overview
 
+\section{Introduction}
 \begin{frame}
 \frametitle{Proof Outline}
 \begin{itemize}
