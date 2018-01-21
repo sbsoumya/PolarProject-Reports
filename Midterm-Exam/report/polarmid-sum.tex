@@ -64,8 +64,8 @@ BCOR5mm, % Binding correction
 %----------------------------------------------------------------------------------------
 
 \section*{Overview}
-Multiple parties observing correlated data seek to exchange their data using minimum communication. In case the underlying joint distribution is known to the encoder a rate optimal solution to this problem is offered by Slepian-Wolf compression. In absence of this knowledge interative and interactive communication is neccessary to attain universal optimality. The \emph{Data-Exchange} problem  encompasses the latter scenario. \\In both the cases joint decoding using type classes is of exponential complexity. However, Slepian-Wolf compression can be implemented using structered channel codes. We have considered implementation of the iterative Slepian-Wolf compression for two parties as a recursive data-exchange protocol (RDE)  using Rateless Polar Codes where data exchange happens incrementally till completion. \\In this setting, interaction based on retransmission criterion offered by higher layers is not feasible.
-Hence, we have  proposed a PHY-layer error detection scheme based on soft outputs of the Succesive Cancellation decoder. We have presented simulation results that exhibit the performance of the considered methods.
+Multiple parties observing correlated data seek to exchange their data using minimum communication. In case the underlying joint distribution is known to the encoder a rate optimal solution to this problem is offered by Slepian-Wolf compression. In absence of this knowledge iterative and interactive communication is necessary to attain universal optimality. The \emph{Data-Exchange} problem  encompasses the latter scenario. \\In both the cases joint decoding using type classes is of exponential complexity. However, Slepian-Wolf compression can be implemented using structured channel codes. We have considered implementation of the iterative Slepian-Wolf compression for two parties as a recursive data-exchange protocol (RDE)  using Rateless Polar Codes where data exchange happens incrementally till completion. \\In this setting, interaction based on retransmission criterion offered by higher layers is not feasible.
+Hence, we have  proposed a PHY-layer error detection scheme based on soft outputs of the Successive Cancellation decoder. We have presented simulation results that exhibit the performance of the considered methods.
 Besides offering a solution to our problem, this scheme provides a CRC-free Rateless Polar Code which promises rate gain for short packet length communication.
 
 %----------------------------------------------------------------------------------------
@@ -76,7 +76,7 @@ Besides offering a solution to our problem, this scheme provides a CRC-free Rate
 Our approach towards implementation of a solution to the \emph{Data-Exchange} problem can be summarised as below, 
 \begin{itemize}
 \item{Use Rateless Polar Codes with Incremental Freezing to implement RDE.}
-\item{Use a PHY layer error detection as retransmission criterion in Incremantal Freezing.}
+\item{Use a PHY layer error detection as retransmission criterion in Incremental Freezing.}
 \end{itemize}
 \begin{figure}[h]
  \begin{center}
@@ -85,8 +85,8 @@ Our approach towards implementation of a solution to the \emph{Data-Exchange} pr
   \caption{Iterative SW compression with Incremental Freezing.}
   \label{fig:iswrpc}
 \end{figure} 
-Here, a compund BSC channel $\mathcal{C}=\{ p_1 \leq p_2 \leq p_3 \leq p_4\}$ is considered, where $p_i$ is the flipover probability of channel $i$. The flipover probability of the true channel is $p_{channel}$.
-In the first iteration the scheme guesses the best channel as the true channel and sends the bits that are ought to be frozen with this guess to the receiver over an error-free channel.The decoder uses the log-likelihood ratios for error detection and sends ACK/NACK feedback. In the subsequent iteration the scheme guesses next best channel and the operation is repeated. The scheme terminates on receiving a NACK from reciever or after few iterations. This scheme has been called Incremental Freezing (Inc-Frz).
+Here, a compound BSC channel $\mathcal{C}=\{ p_1 \leq p_2 \leq p_3 \leq p_4\}$ is considered, where $p_i$ is the flipover probability of channel $i$. The flipover probability of the true channel is $p_{channel}$.
+In the first iteration the scheme guesses the best channel as the true channel and sends the bits that are ought to be frozen with this guess to the receiver over an error-free channel.The decoder uses the log-likelihood ratios for error detection and sends ACK/NACK feedback. In the subsequent iteration the scheme guesses next best channel and the operation is repeated. The scheme terminates on receiving a NACK from receiver or after few iterations. This scheme has been called Incremental Freezing (Inc-Frz).
 
 
 
@@ -170,7 +170,7 @@ Let $K$ be the number of bit-channels assumed to be good at the first iteration.
 \begin{itemize}
 \item Future work.
 \begin{itemize}
-\item Extensive performance analysis and theoritical analysis of proposed error detection scheme. 
+\item Extensive performance analysis and theoretical analysis of proposed error detection scheme. 
 \item Implementation of the scheme for multiparty data exchange.
 \end{itemize}
 \end{itemize}

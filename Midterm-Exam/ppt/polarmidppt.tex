@@ -24,18 +24,36 @@
 \makeatletter
 \setbeamertemplate{navigation symbols}{}
 %---------------------------modify footer end
+\usepackage[absolute,overlay]{textpos}
+\newcommand\hypercorner[1]{%
+  \begin{textblock*}{\paperwidth}(0pt,255pt)
+    \raggedleft #1\hspace{.5em}
+  \end{textblock*}}
+  
 %\hypersetup{pdfpagemode=FullScreen}
 \usepackage{epsfig}
 \usepackage{graphicx}
 \usepackage{epstopdf}
+\graphicspath{{Figures/}}
+
+\newcommand\hyperback[1]{%
+  \begin{textblock*}{\paperwidth}(10pt,254pt)
+    \raggedright #1\hspace{.5em}
+  \end{textblock*}}
+  
+%\hypersetup{pdfpagemode=FullScreen}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\graphicspath{{Figures/}}
 %-------------------------------------
 %Title
 %-------------------------------------
 
 \title[]{Communication Efficient Data Exchange Among Multiple Nodes}
-\author[]{Soumya Subhra Banerjee,  }
+\author[]{Soumya Subhra Banerjee \\\vspace{.5cm} \tiny \textit{Under guidance of,}\\\normalsize Himanshu Tyagi }
 \normalsize
-\institute[ECE, IISc]{Project presentation, E2 207 -- Concentration Inequalities\footnote[2]{ \tiny \textit{presented by} K. R. Sahasranand, Dept. of Electrical Communication Engg., IISc.}}
+\institute[ECE, IISc]{Mid-Term Project presentation,\\ EP 299 Project, M.Tech, Communication and Networks, ECE}
 \date{\today}
 %====================================Title
 \begin{document}
@@ -44,193 +62,271 @@
 \end{frame}
 %====================================Overview
 
-\section{Introduction}
-\begin{frame}
-\frametitle{Proof Outline}
-\begin{itemize}
-\item Preliminaries
-\item Key ingredients
-\begin{itemize}
-\item Reed Muller codes are doubly transitive
-\item {\color{blue(ryb)}Symmetric monotone sets have sharp thresholds}
-\item EXIT\footnote[2]{EXtrinsic Information Transfer} functions satisfy the area theorem
-\end{itemize}
-\item Conclusion
-\end{itemize}
-\end{frame}
+\section{Overview}
 
-\begin{frame}
-\frametitle{Preliminaries}
-\framesubtitle{Binary Erasure Channel (BEC) and MAP decoder}
+%-------------------motivation
+\begin{frame}[label = motivation]
+\frametitle{Motivation}
+\framesubtitle{The Data-Exchange problem}
 \begin{figure}[!htb]
 \begin{center}
-\includegraphics[scale=0.18]{./figures/bec.png}
-\caption{Denoted BEC($p$). If $X_i$ is transmitted over BEC($p_i$), referred to as BEC($\underline{p}$)}
-\label{fig:bec}
-\end{center}
-\end{figure}
-\begin{itemize}
-\item $D_i : \mathcal{Y}^N \to \mathcal{X} \cup \{e\}$ : bit-MAP decoder for bit $i$.
-\item Erasure probability for bit $i \in [N]$, $P_{b,i} \triangleq \mathbb{P}[D_i(\underline{Y}) \neq X_i]$. \\
-Average bit erasure probability, $P_b \triangleq \frac{1}{N}\sum_{i=1}^N P_{b,i}$.
-\item If bit $i$ is recovered given $\underline{y}$, $H(X_i|\underline{Y}=\underline{y}) = 0$. \\Otherwise, uniform codeword assumption $\Rightarrow H(X_i|\underline{Y}=\underline{y}) = 1$. Thus, $P_{b,i} = H(X_i|\underline{Y}) \text{ and, } P_b = \frac{1}{N}\sum_{i=1}^N  H(X_i|\underline{Y}).$
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Preliminaries}
-\framesubtitle{MAP EXIT functions}
-The vector EXIT function associated with bit $i$ of the (uniformly randomly chosen) codeword $$h_i(\underline{p})\triangleq H(X_i | \underline{Y}_{-i}(\underline{p}_{-i})).$$ The average vector EXIT function is defined by $$h(\underline{p}) \triangleq \frac{1}{N}\sum_{i=1}^N h_i(\underline{p}).$$ Scalar EXIT functions defined by choosing $\underline{p}=(p,p,\ldots,p)$.
-\begin{align*}
-H(X_i|\underline{Y}) &= \mathbb{P}(Y_i=e)H(X_i|\underline{Y}_{-i}, Y_i=e) + \mathbb{P}(X_i=Y_i)H(X_i|\underline{Y}_{-i}, Y_i=X_i)\\
-&= \mathbb{P}(Y_i=e)H(X_i|\underline{Y}_{-i}).
-\end{align*}
-Therefore, $P_{b,i}(p) = ph_i(p)$ and $P_b(p) = ph(p)$ \hspace{2cm}$(3)$
-\end{frame}
-
-\begin{frame}
-\frametitle{Preliminaries}
-\framesubtitle{More definitions}
-\emph{Definition $2$} - Consider a code $\mathcal{C}$ and the \emph{indirect recovery} of $X_i$ from the subvector $\underline{Y}_{-i}$ (i.e., the bit-MAP decoding of $Y_i$ from $\underline{Y}$ when $Y_i=e$). For $i \in [N]$, the set of erasure patterns that prevent indirect recovery of $X_i$ under bit-MAP decoding is given by $$\Omega_i \triangleq \{A \subseteq [N]\backslash\{i\} : \exists B \subseteq [N]\backslash\{i\}, B \cup \{i\} \in \mathcal{C}, B \subseteq A\}.$$ For distinct $i,j \in [N]$, the set of erasure patterns where the $j$-th bit is \emph{pivotal} for the indirect recovery of $X_i$ is given by $$\partial_j\Omega_i \triangleq \{A \subseteq [N]\backslash\{i\}: A\backslash \{j\} \notin \Omega_i, A \cup \{j\} \in \Omega_i \}$$ These are the erasure patterns where $X_i$ can be recovered from $\underline{Y}_{-i}$ iff $Y_j \neq e$.
-\end{frame}
-
-\begin{frame}
-\begin{block}{Proposition $4$}
-For a code $\mathcal{C}$ and transmission over a BEC, we have the following properties for the EXIT functions.
-\begin{enumerate}
-\item[(a)] The EXIT function associated with bit $i$ satisfies $$h_i(p) = \sum_{A \in \Omega_i} p^{|A|}(1-p)^{N-1-|A|}.$$
-\item[(b)] For $j \in [N]\backslash\{i\}$, the partial derivative satisfies $$\frac{\partial h_i(\underline{p})}{\partial p_j}\Bigg|_{\underline{p}=(p,p,\ldots,p)} = \sum_{A \in \partial_j\Omega_i} p^{|A|}(1-p)^{N-1-|A|}.$$
-\item[(c)]The average EXIT function satisfies the \emph{area theorem} $$\int_0^1 h(p)dp = \frac{K}{N}.$$
-\end{enumerate}
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Preliminaries}
-\framesubtitle{Permutations of linear codes}
-$S_N$, the symmetric group on $N$ elements. The permutation group of a code is defined as the subgroup of $S_N$ whose group action on the bit ordering preserves the set of codewords.\\
-\vspace{1cm}
-\emph{Definition $5$} - The permutation group $\mathcal{G}$ of a code $\mathcal{C}$ is defined to be $$\mathcal{G} = \{\pi \in S_N : \pi(A) \in \mathcal{C} \text{ for all } A \in \mathcal{C}\}.$$\\
-\emph{Definition $6$} - Suppose $\mathcal{G}$ is a permutation group. Then,
-\begin{enumerate}
-\item[(a)]$\mathcal{G}$ is \emph{transitive} if, for any $i,j \in [N]$, there exists a permutation $\pi \in \mathcal{G}$ such that $\pi(i)=j$, and
-\item[(b)] $\mathcal{G}$ is \emph{doubly transitive} if, for any distinct $i,j,k \in [N]$, there exists a $\pi \in \mathcal{G}$ such that $\pi(i)=i$ and $\pi(j)=k$.
-\end{enumerate}
-\end{frame}
-
-\begin{frame}
-\frametitle{}
-\begin{block}{Proposition $7$}
-Suppose the permutation group $\mathcal{G}$ of a code $\mathcal{C}$ is transitive. Then, for any $i \in [N]$, $$h(p) = h_i(p) \text{ for } 0 \le p\le 1.$$
-\end{block}
-\begin{block}{Proposition $8$}
-Suppose the permutation group $\mathcal{G}$ of a code $\mathcal{C}$ is doubly transitive. Then, for distinct $i,j,k \in [N]$, and any $0 \le p \le 1$, $$\frac{\partial h_i(\underline{p})}{\partial p_j'}\Bigg|_{\underline{p}=(p,p,\ldots,p)} = \frac{\partial h_i(\underline{p})}{\partial p_k'}\Bigg|_{\underline{p}=(p,p,\ldots,p)}.$$
-
-\end{block}
-\end{frame}
-
-\begin{frame}
-\frametitle{Capacity achieving codes and the EXIT function}
-\emph{Definition} : Suppose $\{\mathcal{C}_n\}$ is a sequence of codes with rates $\{r_n\}$ where $r_n \to r$ for $r \in (0,1)$. $\{\mathcal{C}_n\}$ is said to be {\color{blue(ryb)}capacity achieving} on the BEC under bit-MAP decoding, if for any $p \in [0, 1-r)$, the average bit-erasure probabilities satisfy $$\lim_{n \to \infty} P_b^{(n)}(p) = 0.$$
-\begin{figure}[!htb]
-\begin{center}
-\includegraphics[scale=0.18]{./figures/exitfun.png}
+\includegraphics[scale=0.4]{./multipartydataex.png}
 \label{fig:exitfun}
 \end{center}
 \end{figure}
+Multiple parties observing correlated data seek to recover each other's data. How can they accomplish this using minimum communication?
 \end{frame}
 
-\begin{frame}
-\begin{block}{Proposition $10$}
-Let $\{\mathcal{C}_n\}$ be a seq. of codes with rates $\{r_n\}$, $r_n \to r$ for $r \in (0,1)$. TFAE - 
-\begin{enumerate}
-\item[S1:] $\{\mathcal{C}_n\}$ is capacity achieving on the BEC under bit-MAP decoding.
-\item[S2:] The sequence of average EXIT functions satisfies
-\[
-    \lim_{n \to \infty} h^{(n)}(p)=\left\{
-                \begin{array}{ll}
-                  0 \text{ if } 0 \le p < 1-r\\
-                  1 \text{ if } 1-r < p \le 1.\\
-                \end{array}
-              \right.
-  \]
-\item[S3:] For any $0 < \epsilon \le 1/2$, $$\lim_{n \to \infty} p_{1-\epsilon}^{(n)} - p_{\epsilon}^{(n)} = 0.$$
-\end{enumerate}
-\end{block}
-\emph{Proof}: 
+%-------------------Two party case
+\begin{frame}[label = twoparty]
+\frametitle{The Data-Exchange Problem}
+\framesubtitle{Two party case}
+\begin{minipage}[0.9\textheight]{\textwidth}
+\begin{columns}
+\begin{column}{0.4\textwidth}
 \begin{itemize}
-\item S2 $\Rightarrow$ S1 : $P_b(p) = ph(p)$.
-\item S1 $\Rightarrow$ S2 : $P_b(p) = ph(p)$ and \emph{Area Theorem} (Proposition $4$).
-\item S2 $\Rightarrow$ S3 : $p_{1-\epsilon}^{(n)} - p_{\epsilon}^{(n)}$  $\sim$ $h^{(n)}$ transitions from $\epsilon$ to $1-\epsilon$.
-\item S3 $\Rightarrow$ S2 :  Suffices to show, $\lim_{n \to \infty} p_\epsilon^{(n)} = \lim_{n \to \infty} p_{1-\epsilon}^{(n)} = 1-r$. \\
-$\hspace{1.84cm}$Use Area Theorem.
+\item Random correlated data (X,Y) is distributed between two parties.
+\item The first observes X and second observes Y.
+\item They seek to recover each others data.
+\item The joint distribution of X and Y is unknown.
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\includegraphics[width=5.2cm]{./dataexp.png}
+\end{column}
+\end{columns}
+\end{minipage}\\
+\vspace{0.5cm}
+This project seeks to device a protocol which achieves this with minimal communication. 
+\end{frame}
+
+%----------------------rsynccomp
+\begin{frame}[label= rsynccomp]
+\frametitle{Working Solution}
+\framesubtitle{r-sync vs Slepian-Wolf compression}
+\begin{itemize}
+\item In practice, algorithms like r-sync are used for data exchange.
+\begin{itemize}
+\item Uses \emph{one} guess.
+\item Does not exploit the correlation between the data well.
+\item Needs more communication.
+\item Fast and low complexity.
+\end{itemize}
+\end{itemize}
+\begin{minipage}[0.5\textheight]{\textwidth}
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\begin{itemize}
+\item In theory, Slepian-Wolf compression is optimal. 
+\begin{itemize}
+\item Under joint decoding $H(X|Y)$ is sufficient to estimate X.
+\end{itemize}
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\includegraphics[width=5.2cm]{./swcompp.png}
+\end{column}
+\end{columns}
+\end{minipage}
+\hypercorner{\hyperlink{rsync}{\beamerbutton{r-sync}}}
+\end{frame}
+
+%--------------------implementation of slepian wolf
+\begin{frame}
+\frametitle{Implementation of SW compression.}
+\framesubtitle{ Difficulties and suggested approach...}
+Difficulties in implementaion of SW compression
+\begin{itemize}
+\item Search is over an exponential list in decoding.
+\item Knowledge of $P_{X|Y}$ is required at encoder.
+\end{itemize}
+\begin{block}{Suggested Approach}
+\begin{itemize}
+\item{Implement SW Compression using Polar Codes.}
+\item{Achieve universality using \emph{recursive data exchange} protocol (RDE).}
+\item{Realise RDE using Rateless Polar Codes with physical layer error detection.}
+\end{itemize}
+\end{block}
+\end{frame}
+
+%===========================Outline
+\section{Outline}
+\begin{frame}
+\frametitle{Outline}
+\begin{itemize}
+\item Background
+\begin{itemize}
+\item{Recursive Data Exchange (RDE)}
+\item{Brief introduction to Polar Codes}
+\item{Slepian-Wolf compression with Polar Codes}
+\item{Rateless Polar Codes}
+\end{itemize}
+\item Proposed implementation of RDE
+\begin{itemize}
+\item Adaptation of Rateless Polar Code for RDE
+\item PHY-Layer error detection
+\end{itemize}
+\item Performance evaluation
+\item Conclusion and future work
 \end{itemize}
 \end{frame}
 
-\begin{frame}
-\frametitle{More definitions}
-Define 
-\[
-    [\phi_i(A)]=\left\{
-                \begin{array}{ll}
-                  \mathbf{1}_A(l) \text{ if } l < i\\
-                  \mathbf{1}_A(l+1) \text{ if } l \ge i.\\
-                \end{array}
-              \right.
-  \]
-Now define
-\begin{align*}
-\Omega_i' &\triangleq \{\phi_i(A) \in \{0,1\}^{N-1} : A \in \Omega_i\}\\
-\partial_j\Omega_i' &\triangleq \{\phi_i(A) \in \{0,1\}^{N-1}: A \in \partial_j\Omega_i\}. &&(8)
-\end{align*}
-Consider the space $\{0,1\}^M$ with a measure $\mu_p$ such that $$\mu_p(\Omega) = \sum_{\underline{x} \in \Omega} p^{|\underline{x}|}(1-p)^{M-|\underline{x}|}, \text{ for }\Omega \subseteq \{0,1\}^M,$$ where the weight $|\underline{x}| = x_1 + x_2 + \ldots + x_M$ is the number of $1$'s in $\underline{x}$. \\Using proposition $4$, $h_i(p)=\mu_p(\Omega_i')$ with $M=N-1$.
+%============================background
+\section{Background}
+
+%----------------------------RDE
+\begin{frame}[label = rde]
+\frametitle{Recursive Data Exchange (RDE)}
+The \emph{recursive data exchange}\footnote{\tiny H. Tyagi and S. Watanabe, Universal Multiparty Data Exchange and Secret Key arrangement, \textit{ISIT,} 2016} protocol is based on an interactive version of the SW protocol 
+\begin{itemize}
+\item Here the length of communication is increased in steps until the second party decodes the data of the first.
+\item After each transmission second party sends ACK-NACK feedback signal, the protocol stops when ACK is recieved or some fixed number of bits have been transmitted.
+\item This protocol is \emph{universal} as it does not rely on knowledge of the joint distribution.
+\item It uses an iterative variable length approach to reach rate optimality universally. 
+\item The suggested decoders are theoritical constructs which use type classes to form a list of guesses for data of other parties and thus has exponential complexity.
+\end{itemize}
 \end{frame}
 
-\begin{frame}
-\frametitle{Invoking something we learnt..}
-\begin{block}{Theorem $16$}
-Let $\Omega$ be a monotone set and suppose that, for all $0 \le p \le 1$, the influences of all bits are equal $I_1^{(p)}(\Omega) = \ldots = I_M^{(p)}(\Omega)$. Then, for any $0 < \epsilon \le 1/2$, $$p_{1-\epsilon} - p_\epsilon \le \frac{2 \log \frac{1-\epsilon}{\epsilon}}{C\log (N-1)},$$ where $p_t = \inf\{p \in [0,1] : \mu_p (\Omega) \ge t\}$ is well defined because $\mu_p(\Omega)$ is strictly increasing in $p$ with $\mu_0(\Omega) = 0$ and $\mu_1(\Omega)=1$.
+%----------------------------Polar codes
+\begin{frame}[label = polarcodes]
+\frametitle{Brief Introduction to Polar Codes}
+\framesubtitle{Channel polarization}
+\begin{minipage}[0.9\textheight]{\textwidth}
+\begin{columns}
+\begin{column}{0.6\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=4cm]{./channelcomb.png}
+\end{figure}
+\end{column}
+\begin{column}{0.4\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=4cm]{./arikanfly.png}
+\caption{Transformation butterfly}
+\end{figure}
+\end{column}
+\end{columns}
+\end{minipage}
+\begin{itemize}
+\item $N$ independent copies of a given B-DMC ($W$) are combined and split into a second set of $N$ channels $\{W^{(i)}_N : 1 \leq i \leq N \}$.
+\item There symmetric capacity $I(W^{(i)}_N )$ tend towards $0$ or $1$.
+\item The channels with Bhattacharya parameter $Z(W^{(i)}_N)=0$ captures the capacity of $W_{vec}$.
+\end{itemize}
+\end{frame}
+
+%----------------------polar encodedecode
+\begin{frame}[label = polarencodedecode]
+\frametitle{Brief Introduction to Polar Codes}
+\framesubtitle{Encoding and decoding}
+\begin{figure}
+\centering
+\includegraphics[width=7cm]{./pchschemep.png}
+\end{figure}
+\begin{itemize}
+\item The encoding process\footnote{\tiny {$U_N$ is a uniform message vector, $T$ is a linear transform for the butterfly.}} sends data on transformed channels with $Z(W^{(i)}_N)=0$  (\emph{good channels}) and treats the channels with $Z(W^{(i)}_N)=1$ as \emph{frozen}, sending no useful data on them.
+\item For our purpose, we shall be using Succesive Cancellation (SC) decoding.
+\end{itemize}
+\hypercorner{\hyperlink{polarencode}{\beamerbutton{Encoding}} \hyperlink{polardecode}{\beamerbutton{SC-Decoding}} \hyperlink{polarperformance}{\beamerbutton{Performance}}}
+\end{frame}
+
+%----------------------polar slepian
+\begin{frame}[label = polarslepian]
+\frametitle{Slepian-Wolf compression with Polar Codes}
+\begin{figure}
+\centering
+\includegraphics[width=7cm]{./pswschemep.png}
+\end{figure}
+\begin{itemize}
+\item $Y_N$ is a corrupted version of $X_N$ by $N$ BSC(p) channels.
+\item The bits that are to be sent for estimation of $X_N$ from $Y_N$ are the frozen bits in $U_N$.  
+\item These bits are communicated error free to the SC-decoder. 
+\item $H(X_N)-I(W_N)=H(X_N/Y_N)$ bits are sent. 
+\end{itemize}
+\hypercorner{ \hyperlink{polarswperformance}{\beamerbutton{Performance}}}
+\end{frame}
+%---------------------Rateless polar codes
+\begin{frame}[label = rpc]
+\frametitle{Rateless Polar Codes}
+\framesubtitle{Rateless code}
+\begin{block}{Rateless Code}
+A rateless coding scheme transmits incrementally more and more coded bits over an unknown channel until all the information bits are decoded reliably by the receiver.
 \end{block}
-\emph{Proof}: Using Russo's lemma.
+\begin{itemize}
+\item A rateless code is designed for a set of channels and judged for its performance for the entire set.
+\item In general rateless code design is based on Hybrid-ARQ techniques and uses code puncturing.
+\item Rateless Polar Codes can be constructed using nesting property of Polar Codes for degraded channels.
+\end{itemize}
 \end{frame}
-
-
-\begin{frame}
-\frametitle{... and finally ~~~~~~~~~~~~~\tiny{Wake up folks! It's the main result :)}}
-\begin{block}{Theorem $17$}
-Let $\{\mathcal{C}_n\}$ be a sequence of codes where the blocklengths satisfy $N_n \to \infty$, the rates satisfy $r_n \to r$, and the permutation group $\mathcal{G}(n)$ (of $\mathcal{C}_n$) is doubly transitive for each $n$. If $r \in (0,1)$, then $\{\mathcal{C}_n\}$ is capacity achieving on the BEC under bit-MAP decoding.
+%---------------------degradedness and nesting
+\begin{frame}[label = dgnest]
+\frametitle{Rateless Polar Codes}
+\framesubtitle{Degraded channels and nesting property}
+\begin{columns}
+\begin{column}{0.6\textwidth}
+\begin{block}{Degraded channels} 
+if X\---Y\---Z, and $W_1=P_{Y|X}$, $W_2=P_{Z|X}$ then $W_2 \preceq W_1$.
 \end{block}
-\normalsize
-\emph{Proof}: \\Let the average EXIT function of $\mathcal{C}_n$ be $h^{(n)}$. Fix some $i \in [N]$. Since $\mathcal{G}$ is transitive, from Proposition $7$, $$h(p) = h_i(p) \text{ for all } p \in [0,1].$$
-
-Consider the sets $\Omega_i'$ from Definition $2$ and Equation $(8)$, and let $M=N-1$. 
+\begin{itemize}
+\item The capacity of $W_2$ is lesser than that of $W_1$. $W_2$ has lesser number of good channels.
+\item e.g., $BSC(p_1) \preceq BSC(p_2)$ if $p_1 \geq p_2$.
+\end{itemize}
+\end{column}
+\begin{column}{0.3\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=5cm]{./relorder.png}
+\end{figure}
+\end{column}
+\end{columns}
+\begin{itemize}
+\item The good bit indices of $W_2$ is a subset of the good bit indices of $W_1$.
+\item  A more reliable bit-channel is always noiseless if a less reliable bit-channel is noiseless. This leads to \emph{reliability ordering}.
+\end{itemize}
 \end{frame}
-
-\begin{frame}
-\frametitle{Proof of Theorem $17$ (contd.)}
-Observe that, from Proposition $4$,
-\begin{align*}
-h_i(p) = \mu_p(\Omega_i'), &&I_j^{p}(\Omega_i') = \frac{\partial h_i(\underline{p})}{\partial p_j'}\Bigg|_{\underline{p}=(p,p,\ldots,p)}
-\end{align*}
-where $j'$ is given by 
-\[
-    j'=\left\{
-                \begin{array}{ll}
-                  j \text{ if } j < i\\
-                  j+1 \text{ if } j \ge i.\\
-                \end{array}
-              \right.
-  \]
-Since $\mathcal{G}$ is doubly transitive, from Proposition $8$, $$I_j^{p}(\Omega_i') = I_k^{p}(\Omega_i') \text{ for all } j,k \in [N-1].$$
+%--------------------------------------IncFrz
+\begin{frame}[label = incfrz]
+\frametitle{Incremental Freezing}
+\framesubtitle{Rateless Polar Code employing reliability ordering}
+\begin{figure}
+\centering
+\includegraphics[width=9cm]{./ifp.png}
+\end{figure}
+\begin{itemize}
+\item Initial transmission is done using a high rate Polar Code.
+\item If decoding fails then the comparatively lesser reliable channels are retransmitted.  
+\end{itemize}
 \end{frame}
-
-\begin{frame}
-\frametitle{Proof of Theorem $17$ (contd.)}
-Using Theorem $16$, we have $$p_{1-\epsilon} - p_\epsilon \le \frac{2 \log \frac{1-\epsilon}{\epsilon}}{C\log (N-1)},$$ where $p_t$ is the functional inverse of $h$ as in Theorem $16$. Since $N \to \infty$ from the hypothesis, $$\lim_{n \to \infty} (p_{1-\epsilon} - p_\epsilon) = 0.$$
-
-Now, using Proposition $10$, $\{\mathcal{C}_n\}$ is capacity achieving on the BEC under bit-MAP decoding. \\$\square$
+%-------------------------------incfrz2
+\begin{frame}[label = incfrz2]
+\frametitle{Incremental Freezing}
+\framesubtitle{continued...}
+\begin{itemize}
+\item Features
+\begin{itemize}
+\item By decoding the bits from future transmissions they effectively become frozen.
+\item This scheme is capacity achieving in the sense that no rate has been wasted.\footnote{\tiny, Figure illustrates the scheme for a set of channels with rates $\{ R_1=6/8, R_2= R_1/2=3/8,R_3= R_1/3=1/4\}$. After the $3^{rd}$ transmission  $u_2$ to $u_{5}$ have been incrementally frozen. The final rate achieved is, $R^*= \frac{6}{8*3}=\frac{1}{4}=R_3 $}
+\item A certain number of channels in this scheme is "\emph{always available}" guaranteeing a certain rate in each transmission. 
+\item $n$ iterations of the scheme is almost equivalent in performance to a $R/n$ fixed rate Polar Code.
+\end{itemize}
+\end{itemize}
 \end{frame}
-
+%------------------------------HARQ
+\begin{frame}[label = HARQ]
+\frametitle{Rateless Polar Codes as Hybrid ARQ}
+\begin{itemize}
+\item Features
+\begin{itemize}
+\item By decoding the bits from future transmissions they effectively become frozen.
+\item This scheme is capacity achieving in the sense that no rate has been wasted.\footnote{\tiny, Figure illustrates the scheme for a set of channels with rates $\{ R_1=6/8, R_2= R_1/2=3/8,R_3= R_1/3=1/4\}$. After the $3^{rd}$ transmission  $u_2$ to $u_{5}$ have been incrementally frozen. The final rate achieved is, $R^*= \frac{6}{8*3}=\frac{1}{4}=R_3 $}
+\item A certain number of channels in this scheme is "\emph{always available}" guaranteeing a certain rate in each transmission. 
+\item $n$ iterations of the scheme is almost equivalent in performance to a $R/n$ fixed rate Polar Code.
+\end{itemize}
+\end{itemize}
+\hypercorner{ \hyperlink{selrep}{\beamerbutton{Selective Repetition}} \hyperlink{subpol}{\beamerbutton{Subset Polar Codes}} \hyperlink{rbharq}{\beamerbutton{RB-HARQ}}}
+\end{frame}
+ 
+%****************************************
 \begin{frame}{References}
 \begin{enumerate}
 \item[(1)] S. Kumar and H. D. Pfister, “Reed-Muller codes achieve
@@ -257,4 +353,98 @@ Thank You!
 \end{block}
 \end{frame}
 
+%============================Backup slides
+\section{Appendix}
+%---rsync
+\begin{frame}[label = rsync]
+\frametitle{The r-sync protocol}
+\hyperlink{rsynccomp}{\beamerbutton{back}}
+\end{frame}
+%---polar encoding
+\begin{frame}[label = polarencode]
+\frametitle{Polar Encoding}
+\hyperlink{polarencodedecode}{\beamerbutton{back}}
+\end{frame}
+%-----polar decode
+\begin{frame}[label = polardecode]
+\frametitle{Succesive Cancellation Decoding}
+\hyperlink{polarencodedecode}{\beamerbutton{back}}
+\end{frame}
+%-----------------------polar performance
+\begin{frame}[label = polarperformance]
+\frametitle{Performance of Polar Codes}
+\begin{figure}
+\centering
+\includegraphics[width=9cm]{./fer.png}
+\end{figure}
+\hyperback{\hyperlink{polarencodedecode}{\beamerbutton{back}}}
+\end{frame}
+%---------------------polarsw
+\begin{frame}[label = polarswperformance]
+\frametitle{Performance of SW compression Polar Codes}
+\begin{figure}
+\centering
+\includegraphics[width=9cm]{./swfer.png}
+\end{figure}
+\hyperback{\hyperlink{polarslepian}{\beamerbutton{back}}}
+\end{frame}
+%---------------------selective repetition
+\begin{frame}[label = selrep]
+\frametitle{Selective Repetition H-ARQ for polar codes}
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\begin{itemize}
+\item Initially, an information block of $K$ bits is fed into a polar encoder.
+\item The output codeword of $N_0$ bits is punctured into $N_1$
+bits and sent over the channel.
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\includegraphics[width=6cm]{./selrepharq.png}
+\end{figure}
+\end{column}
+\end{columns}
+\begin{itemize}
+\item {Retransmission process}
+\begin{itemize}
+\item On decoding failure reciever sends a NACK.
+\item $N_2-N_1$ of the information bits are retransmitted. 
+\item The receiver tries to perform decoding with all the $N_2$ received
+bits.
+\item This process continues until the transmitter
+receives an ACK 
+\end{itemize}
+\end{itemize}
+\hyperback{\hyperlink{HARQ}{\beamerbutton{back}}}
+
+\tiny The retransmitted bits (RV) are chosen one at a time as the most unreliable of the $K$ bits transmitted, reliability is calculated after choosing one bit and the process is iterated.
+\end{frame}
+%---------------------subset polar
+\begin{frame}[label = subpol]
+\frametitle{Subset Polar Codes}
+\begin{itemize}
+\item A Subset Polar Code can be created by greedily puncturing a low-rate mother code without re-optimizing the information bits.
+\item The scheme uses equivalent Subset Polar Codes as RV.
+\item This has the better performance compared to other HARQ methods.
+\end{itemize}
+\hyperback{\hyperlink{HARQ}{\beamerbutton{back}}}
+\end{frame}
+%---------------------RB-HARQ
+\begin{frame}[label = rbharq]
+\frametitle{Reliability based HARQ}
+Reliability based HARQ technique (RBHARQ) , eliminates the use of CRC by approximating bit and word error probability from likelihood ratios (LLR).   The bit error probability for the $k^{th}$ bit can be estimated from LLR ($\tilde{u}_k$) as,
+\begin{equation}\label{eq:errorllr}
+P_{b,k}=P(\hat{u_k} \neq u_k) = \frac{1}{1+e^{|\tilde{u}_k|}}
+\end{equation}
+then word error probability becomes, 
+\begin{equation}
+P_w=1-e^{log\bar{P}_w}
+\end{equation}
+where, $$log\bar{P}_w=log\prod_{k=1}^K (1- P_{b,k})$$ 
+If the word error probability does not meet the requirements the bits with higher bit error probability may be retransmitted. This increases throughput, particularly evident in case of short packet lengths.
+\hyperback{\hyperlink{HARQ}{\beamerbutton{back}}}
+\end{frame}
+
 \end{document}
+

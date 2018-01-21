@@ -91,9 +91,9 @@ January 2018
 %----------------------------------------------------------------------------------------
 \newpage
 \section*{Abstract}
-Multiple parties observing correlated data seek to exchange their data using minimum communication. A practical method to achieve this has been proposed. \\In case the underlying joint distribution is known to the encoder a rate optimal solution to this problem is offered by Slepian-Wolf compression. In absence of this knowledge iterative and interactive communication is necessary to attain universal optimality. In both the cases joint decoding using type classes is of exponential complexity. However, Slepian-Wolf compression can be implemented using structured channel codes. We have considered implementation of the iterative Slepian-Wolf compression for two parties using Rateless Polar Codes where data exchange happens incrementally till completion. \\In this setting, interaction based on retransmission criterion offered by higher layers is not feasible.
-Hence, we have  proposed a PHY-layer error detection scheme based on soft outputs of the Successive Cancellation decoder. We have presented simulation results that exhibit the performance of the considered methods.
-Besides offering a solution to our problem, this scheme provides a CRC-free Rateless Polar Code which promises rate gain for short packet length communication.\footnote{This Project was supported by Robert Bosch Center for Cyber Physical Systems}
+Multiple parties observing correlated data seek to exchange their data using minimum communication. A practical method to achieve this has been proposed. \\In case the underlying joint distribution is known to the encoder a rate optimal solution to this problem is offered by Slepian-Wolf compression. In absence of this knowledge interative and interactive communication is neccessary to attain universal optimality. In both the cases joint decoding using type classes is of exponential complexity. However, Slepian-Wolf compression can be implemented using structered channel codes. We have considered implementation of the iterative Slepian-Wolf compression for two parties using Rateless Polar Codes where data exchange happens incrementally till completion. \\In this setting, interaction based on retransmission criterion offered by higher layers is not feasible.
+Hence, we have  proposed a PHY-layer error detection scheme based on soft outputs of the Succesive Cancellation decoder. We have presented simulation results that exhibit the performance of the considered methods.
+Besides offering a solution to our problem, this scheme provides a CRC-free Rateless Polar Code which promises rate gain for short packet length communication.\footnote{This project is supported by Robert Bosch Center for Cyber Physical Systems}
  
 %----------------------------------------------------------------------------------------
 %	INTRODUCTION
@@ -119,7 +119,7 @@ In \cite{sw}, David Slepian and Jack Wolf had shown that the optimal solution to
   \label{fig:swcomp}
 \end{wrapfigure}
 \paragraph{Slepian-Wolf coding theorem:}It states that under joint decoding of X and Y a total rate H(X,Y) is sufficient for exchange of data.\\
-As described in \cite{discus}, consider first the problem where X and Y are correlated discrete-alphabet memoryless sources, we have to compress X losslessly, with Y (side information) being known at the decoder and \emph{not} at the encoder. If Y were known at both ends one can compress X at a theoretical rate of $H(X|Y)$. But if Y were known only at decoder the same can be achieved by just knowing $P_{X|Y}$ at encoder without explicit information of Y, this has been depicted in figure \ref{fig:swcomp}. 
+As described in \cite{discus}, consider first the problem where X and Y are correlated discrete-alphabet memoryless sources, we have to compress X losslessly, with Y (side information) being known at the decoder and \emph{not} at the encoder. If Y were known at both ends one can compress X at a theoritical rate of $H(X|Y)$. But if Y were known only at decoder the same can be achieved by just knowing $P_{X|Y}$ at encoder without explicit information of Y, this has been depicted in figure \ref{fig:swcomp}. 
 %goja
 \clearpage
 A practical implementation of Slepian-Wolf compression faces the following difficulties.
@@ -288,7 +288,7 @@ if the word error probability does not meet the requirements the bits with highe
 As indicated in section \ref{intro} and \ref{suggapp}, our approach towards implementation of a solution to the \emph{Data-Exchange} problem using RDE and Polar Codes can be summarised as below, 
 \begin{itemize}
 \item{Use Rateless Polar Codes with Incremental Freezing to implement RDE.}
-\item{Use a PHY layer error detection as retransmission criterion in Incremental Freezing.}
+\item{Use a PHY layer error detection as retransmission criterion in Incremantal Freezing.}
 \end{itemize}
 The following subsections elaborate the same.
 
@@ -305,7 +305,7 @@ Here, a compund BSC channel $\mathcal{C}=\{ p_1 \leq p_2 \leq p_3 \leq p_4\}$ is
 \paragraph{First Iteration:} In the first iteration, the SW compression with Polar Coding scheme suggested in figure \ref{fig:pswscheme} is followed. Additionally, the soft outputs (LLRs) generated from the decoder block are passed through an error-detection (ED) block. In case error is present, receiver replies with a NACK and further iterations are commenced. The decoder \emph{guesses} the channel to be BSC($p_1$) greedily and computes LLR accordingly. Henceforth, we shall denote this as BSC($p_{guess}$). Note, in this case the frozen bits are non-zero, and are communicated error-free to receiver, unlike in the channel coding scenario in figure \ref{fig:if}.
 \paragraph{Subsequent Iterations:}In the subsequent iterations, the decoder makes greedy guesses about the channel from a subset of the compound channel which does not include previous guesses. In other words, in second iteration $p_{guess}=p_2$, in third $p_{guess}=p_3$. Iterations continue as long as the ED does not declare error-free transmission, which is communicated as ACK by the receiver.\\
 The error-free transmission in these iterations consist of information bits which are suspected to be sent unreliably in previous iterations under impression that present $p_{guess}$ is correct. 
-\paragraph{Final Decoding:}When the ED declares no error the decoder infers that the $p_{channel}=p_{guess}$, let us denote this as $p_{final}$. The decoder now  decodes the received channel output vector using $p_{final}$ and considering the bits transmitted error-free in all the iterations as frozen. Finally, with Arikan transform X is estimated.
+\paragraph{Final Decoding:}When the ED declares no error the decoder infers that the $p_{channel}=p_{guess}$, let us denote this as $p_{final}$. The decoder now  decodes the received channel output vector using $p_{final}$ and considering the bits transmitted error-free in all the iterations as frozen. Finally, with arikan transform X is estimated.
 Note, X and Y have there usual meanings as in figure \ref{fig:swcomp}. 
 
 
@@ -475,7 +475,7 @@ Let $K$ be the number of bit-channels assumed to be good at the first iteration.
 \begin{itemize}
 \item Future work.
 \begin{itemize}
-\item Extensive performance analysis and theoretical analysis of proposed error detection scheme as a RB-HARQ for Polar Codes.
+\item Extensive performance analysis and theoritical analysis of proposed error detection scheme as a RB-HARQ for Polar Codes.
 \item Implementation of the scheme for multiparty data exchange.
 \end{itemize}
 \end{itemize}
