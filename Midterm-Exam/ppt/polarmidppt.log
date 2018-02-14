@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  21 JAN 2018 19:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  24 JAN 2018 13:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -750,6 +750,13 @@ Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 \epsfxsize=\dimen196
 \epsfysize=\dimen197
 )
+(/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 
@@ -767,35 +774,53 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 )))
+(/usr/share/texlive/texmf-dist/tex/latex/appendixnumberbeamer/appendixnumberbea
+mer.sty)
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 54.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 54.
+(hyperref)                removing `\\' on input line 59.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 54.
+(hyperref)                removing `\new@ifnextchar' on input line 59.
 
-(./polarmidppt.aux)
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 59.
+
+(./polarmidppt.aux
+
+LaTeX Warning: Label `fig:iswrpc' multiply defined.
+
+
+LaTeX Warning: Label `fig:iswrpc' multiply defined.
+
+
+LaTeX Warning: Label `fig:iswrpc' multiply defined.
+
+
+LaTeX Warning: Label `fig:iswrpc' multiply defined.
+
+
+LaTeX Warning: Label `fig:iswrpc' multiply defined.
+
+)
 \openout1 = `polarmidppt.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -846,7 +871,7 @@ LaTeX Font Info:    ... okay on input line 59.
 \everyMPtoPDFconversion=\toks45
 ) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box56
-Package hyperref Info: Link coloring OFF on input line 59.
+Package hyperref Info: Link coloring OFF on input line 64.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -856,66 +881,66 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count159
 )
-LaTeX Info: Redefining \ref on input line 59.
-LaTeX Info: Redefining \pageref on input line 59.
-LaTeX Info: Redefining \nameref on input line 59.
+LaTeX Info: Redefining \ref on input line 64.
+LaTeX Info: Redefining \pageref on input line 64.
+LaTeX Info: Redefining \nameref on input line 64.
 
 (./polarmidppt.out) (./polarmidppt.out)
 \@outlinefile=\write5
 \openout5 = `polarmidppt.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 59.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 64.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 59.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 64.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 59.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 59.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 59.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 59.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 59.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 64.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 59.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 59.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 59.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 64.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 59.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 59.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 59.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 64.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 59.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 59.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 64.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 59.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 64.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 59.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 59.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 59.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 59.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 59.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 64.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 59.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 59.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 64.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 64.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 5
-9.
+(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 6
+4.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 
-59.
+64.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 59.
+ut line 64.
 
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-bas
 ic-dictionary/translator-basic-dictionary-English.dict
@@ -941,62 +966,62 @@ Dictionary: translator-numbers-dictionary, Language: English
 orem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 59.
+LaTeX Info: Redefining \includegraphics on input line 64.
  (./polarmidppt.nav)
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 62.
+(Font)              size <5> substituted on input line 67.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<Figures/./multipartydataex.png, id=42, 498.36188pt x 286.82156pt>
+<Figures/./multipartydataex.png, id=62, 498.36188pt x 286.82156pt>
 File: Figures/./multipartydataex.png Graphic file (type png)
 
 <use Figures/./multipartydataex.png>
-Package pdftex.def Info: Figures/./multipartydataex.png used on input line 78.
+Package pdftex.def Info: Figures/./multipartydataex.png used on input line 83.
 (pdftex.def)             Requested size: 199.34122pt x 114.72658pt.
  [2
 
  <./Figures/./multipartydataex.png>]
-LaTeX Font Info:    Try loading font information for U+msa on input line 101.
+LaTeX Font Info:    Try loading font information for U+msa on input line 107.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 101.
+LaTeX Font Info:    Try loading font information for U+msb on input line 107.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 101.
+line 107.
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-<Figures/./dataexp.png, id=58, 448.67625pt x 332.74312pt>
+<Figures/./dataexp.png, id=78, 448.67625pt x 332.74312pt>
 File: Figures/./dataexp.png Graphic file (type png)
 
 <use Figures/./dataexp.png>
-Package pdftex.def Info: Figures/./dataexp.png used on input line 101.
+Package pdftex.def Info: Figures/./dataexp.png used on input line 107.
 (pdftex.def)             Requested size: 147.95424pt x 109.72432pt.
  [3
 
  <./Figures/./dataexp.png>]
-<Figures/./swcompp.png, id=69, 471.26062pt x 314.67563pt>
+<Figures/./swcompp.png, id=89, 471.26062pt x 314.67563pt>
 File: Figures/./swcompp.png Graphic file (type png)
 
 <use Figures/./swcompp.png>
-Package pdftex.def Info: Figures/./swcompp.png used on input line 132.
+Package pdftex.def Info: Figures/./swcompp.png used on input line 138.
 (pdftex.def)             Requested size: 147.95424pt x 98.79204pt.
 
 
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 132.
+(textpos)                Alignment may work out wrongly. on input line 138.
 
 [4
 
@@ -1005,71 +1030,78 @@ Package textpos Warning: environment textblock* not in vertical mode.
 ] [6
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmss on input line 188
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 201
 .
-LaTeX Font Info:    No file OMScmss.fd. on input line 188.
+LaTeX Font Info:    No file OMScmss.fd. on input line 201.
 
 
 LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textasteriskcentered' on input line 188.
+(Font)              for symbol `textasteriskcentered' on input line 201.
+
+<Figures/./rde.png, id=132, 471.26062pt x 473.51906pt>
+File: Figures/./rde.png Graphic file (type png)
+ <use Figures/./rde.png>
+Package pdftex.def Info: Figures/./rde.png used on input line 201.
+(pdftex.def)             Requested size: 147.95424pt x 148.66074pt.
 
 [7
 
-] <Figures/./channelcomb.png, id=123, 895.84688pt x 678.28406pt>
-File: Figures/./channelcomb.png Graphic file (type png)
+ <./Figures/./rde.png>]
+<Figures/./channelcombp.png, id=145, 660.96938pt x 455.45157pt>
+File: Figures/./channelcombp.png Graphic file (type png)
 
-<use Figures/./channelcomb.png>
-Package pdftex.def Info: Figures/./channelcomb.png used on input line 216.
-(pdftex.def)             Requested size: 113.81102pt x 86.1618pt.
+<use Figures/./channelcombp.png>
+Package pdftex.def Info: Figures/./channelcombp.png used on input line 228.
+(pdftex.def)             Requested size: 142.26378pt x 98.02441pt.
 
-<Figures/./arikanfly.png, id=124, 288.3272pt x 199.49532pt>
-File: Figures/./arikanfly.png Graphic file (type png)
+<Figures/./arikanflyp4.png, id=146, 498.36188pt x 368.1253pt>
+File: Figures/./arikanflyp4.png Graphic file (type png)
 
-<use Figures/./arikanfly.png>
-Package pdftex.def Info: Figures/./arikanfly.png used on input line 216.
-(pdftex.def)             Requested size: 113.81102pt x 78.7465pt.
+<use Figures/./arikanflyp4.png>
+Package pdftex.def Info: Figures/./arikanflyp4.png used on input line 228.
+(pdftex.def)             Requested size: 113.81102pt x 84.066pt.
  [8
 
- <./Figures/./channelcomb.png> <./Figures/./arikanfly.png>] <Figures/./pchschem
-ep.png, id=134, 658.71094pt x 299.61937pt>
+ <./Figures/./channelcombp.png> <./Figures/./arikanflyp4.png>]
+<Figures/./pchschemep.png, id=158, 658.71094pt x 299.61937pt>
 File: Figures/./pchschemep.png Graphic file (type png)
 
 <use Figures/./pchschemep.png>
-Package pdftex.def Info: Figures/./pchschemep.png used on input line 231.
+Package pdftex.def Info: Figures/./pchschemep.png used on input line 243.
 (pdftex.def)             Requested size: 199.16928pt x 90.59056pt.
  [9
 
  <./Figures/./pchschemep.png>]
-<Figures/./pswschemep.png, id=151, 764.10469pt x 309.40594pt>
+<Figures/./pswschemep.png, id=175, 764.10469pt x 309.40594pt>
 File: Figures/./pswschemep.png Graphic file (type png)
 
 <use Figures/./pswschemep.png>
-Package pdftex.def Info: Figures/./pswschemep.png used on input line 247.
+Package pdftex.def Info: Figures/./pswschemep.png used on input line 261.
 (pdftex.def)             Requested size: 199.16928pt x 80.64665pt.
  [10
 
  <./Figures/./pswschemep.png>] [11
 
 ]
-<Figures/./relorder.png, id=175, 459.96844pt x 413.29407pt>
+<Figures/./relorder.png, id=199, 459.96844pt x 413.29407pt>
 File: Figures/./relorder.png Graphic file (type png)
 
 <use Figures/./relorder.png>
-Package pdftex.def Info: Figures/./relorder.png used on input line 286.
+Package pdftex.def Info: Figures/./relorder.png used on input line 301.
 (pdftex.def)             Requested size: 142.26378pt x 127.82974pt.
 
-Overfull \hbox (39.57416pt too wide) in paragraph at lines 286--286
+Overfull \hbox (39.57416pt too wide) in paragraph at lines 301--301
  [] 
  []
 
 [12
 
  <./Figures/./relorder.png>]
-<Figures/./ifp.png, id=186, 970.3753pt x 533.74406pt>
+<Figures/./ifp.png, id=210, 970.3753pt x 533.74406pt>
 File: Figures/./ifp.png Graphic file (type png)
  <use Figures/./ifp.png>
-Package pdftex.def Info: Figures/./ifp.png used on input line 299.
+Package pdftex.def Info: Figures/./ifp.png used on input line 316.
 (pdftex.def)             Requested size: 256.0748pt x 140.8551pt.
 
 [13
@@ -1078,78 +1110,330 @@ Package pdftex.def Info: Figures/./ifp.png used on input line 299.
 
 ] [15
 
-]
-Missing character: There is no ‚ in font cmss10!
-Missing character: There is no Ä in font cmss10!
-Missing character: There is no ú in font cmss10!
-Missing character: There is no ‚ in font cmss10!
-Missing character: There is no Ä in font cmss10!
-Missing character: There is no ù in font cmss10!
-Missing character: There is no ‚ in font cmss10!
-Missing character: There is no Ä in font cmss10!
-Missing character: There is no ú in font cmss10!
-Missing character: There is no ‚ in font cmss10!
-Missing character: There is no Ä in font cmss10!
-Missing character: There is no ù in font cmss10!
-Missing character: There is no ‚ in font cmss10!
-Missing character: There is no Ä in font cmss10!
-Missing character: There is no ú in font cmss10!
-Missing character: There is no ‚ in font cmss10!
-Missing character: There is no Ä in font cmss10!
-Missing character: There is no ù in font cmss10!
- [16
+] [16
 
 ]
-<./figures/questions.jpg, id=232, 963.6pt x 597.23125pt>
-File: ./figures/questions.jpg Graphic file (type jpg)
+<Figures/setting.png, id=259, 660.96938pt x 230.36063pt>
+File: Figures/setting.png Graphic file (type png)
 
-<use ./figures/questions.jpg>
-Package pdftex.def Info: ./figures/questions.jpg used on input line 354.
-(pdftex.def)             Requested size: 337.26506pt x 209.03406pt.
+<use Figures/setting.png>
+Package pdftex.def Info: Figures/setting.png used on input line 387.
+(pdftex.def)             Requested size: 199.16928pt x 69.41452pt.
  [17
 
- <./figures/questions.jpg>] [18
+ <./Figures/setting.png>]
+<Figures/iswrpcp1.png, id=271, 954.56625pt x 557.83406pt>
+File: Figures/iswrpcp1.png Graphic file (type png)
 
-] [19
+<use Figures/iswrpcp1.png>
+Package pdftex.def Info: Figures/iswrpcp1.png used on input line 403.
+(pdftex.def)             Requested size: 256.0748pt x 149.63834pt.
+pdfTeX warning (ext4): destination with the same identifier (name{fig:iswrpc}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.403 \end{frame}
+                 
+Overfull \vbox (0.76936pt too high) detected at line 403
+ []
 
-] [20
+[18
+
+ <./Figures/iswrpcp1.png>]
+<Figures/iswrpcp2.png, id=282, 954.56625pt x 557.83406pt>
+File: Figures/iswrpcp2.png Graphic file (type png)
+
+<use Figures/iswrpcp2.png>
+Package pdftex.def Info: Figures/iswrpcp2.png used on input line 418.
+(pdftex.def)             Requested size: 256.0748pt x 149.63834pt.
+pdfTeX warning (ext4): destination with the same identifier (name{fig:iswrpc}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.418 \end{frame}
+                  [19
+
+ <./Figures/iswrpcp2.png>]
+<Figures/iswrpcp3.png, id=294, 954.56625pt x 557.83406pt>
+File: Figures/iswrpcp3.png Graphic file (type png)
+
+<use Figures/iswrpcp3.png>
+Package pdftex.def Info: Figures/iswrpcp3.png used on input line 433.
+(pdftex.def)             Requested size: 256.0748pt x 149.63834pt.
+pdfTeX warning (ext4): destination with the same identifier (name{fig:iswrpc}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.433 \end{frame}
+                 
+Overfull \vbox (0.16104pt too high) detected at line 433
+ []
+
+[20
+
+ <./Figures/iswrpcp3.png>] [21
 
 ]
-<Figures/./fer.png, id=268, 578.16pt x 433.62pt>
+<Figures/absllr0p04.png, id=315, 578.16pt x 433.62pt>
+File: Figures/absllr0p04.png Graphic file (type png)
+
+<use Figures/absllr0p04.png>
+Package pdftex.def Info: Figures/absllr0p04.png used on input line 469.
+(pdftex.def)             Requested size: 184.9429pt x 138.70168pt.
+pdfTeX warning (ext4): destination with the same identifier (name{fig:iswrpc}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.469 \end{frame}
+                 
+Overfull \vbox (2.84897pt too high) detected at line 469
+ []
+
+[22
+
+ <./Figures/absllr0p04.png>] [23
+
+]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 502.
+
+(/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
+) [24
+
+]
+<Figures/theta0p04.png, id=348, 578.16pt x 433.62pt>
+File: Figures/theta0p04.png Graphic file (type png)
+
+<use Figures/theta0p04.png>
+Package pdftex.def Info: Figures/theta0p04.png used on input line 514.
+(pdftex.def)             Requested size: 227.62204pt x 170.71231pt.
+pdfTeX warning (ext4): destination with the same identifier (name{fig:iswrpc}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.514 \end{frame}
+                  [25
+
+ <./Figures/theta0p04.png>]
+<Figures/./theta0p15new.png, id=361, 578.16pt x 433.62pt>
+File: Figures/./theta0p15new.png Graphic file (type png)
+
+<use Figures/./theta0p15new.png>
+Package pdftex.def Info: Figures/./theta0p15new.png used on input line 540.
+(pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
+
+<Figures/./theta0p2.png, id=362, 578.16pt x 433.62pt>
+File: Figures/./theta0p2.png Graphic file (type png)
+
+<use Figures/./theta0p2.png>
+Package pdftex.def Info: Figures/./theta0p2.png used on input line 540.
+(pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
+ [26
+
+ <./Figures/./theta0p15new.png> <./Figures/./theta0p2.png>] <Figures/./FERSW_0p
+04.png, id=374, 578.16pt x 433.62pt>
+File: Figures/./FERSW_0p04.png Graphic file (type png)
+
+<use Figures/./FERSW_0p04.png>
+Package pdftex.def Info: Figures/./FERSW_0p04.png used on input line 563.
+(pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
+
+<Figures/./FERSW_0p15.png, id=375, 578.16pt x 433.62pt>
+File: Figures/./FERSW_0p15.png Graphic file (type png)
+
+<use Figures/./FERSW_0p15.png>
+Package pdftex.def Info: Figures/./FERSW_0p15.png used on input line 563.
+(pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
+
+
+Package textpos Warning: environment textblock* not in vertical mode. 
+(textpos)                Environment textblock* should not have any text
+(textpos)                or printable material appearing before it.
+(textpos)                Alignment may work out wrongly. on input line 563.
+
+[27
+
+ <./Figures/./FERSW_0p04.png> <./Figures/./FERSW_0p15.png>]
+<Figures/./FERSW_0p2.png, id=389, 578.16pt x 433.62pt>
+File: Figures/./FERSW_0p2.png Graphic file (type png)
+
+<use Figures/./FERSW_0p2.png>
+Package pdftex.def Info: Figures/./FERSW_0p2.png used on input line 584.
+(pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
+
+<Figures/./FERSW_0p25.png, id=390, 578.16pt x 433.62pt>
+File: Figures/./FERSW_0p25.png Graphic file (type png)
+
+<use Figures/./FERSW_0p25.png>
+Package pdftex.def Info: Figures/./FERSW_0p25.png used on input line 584.
+(pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
+
+
+Package textpos Warning: environment textblock* not in vertical mode. 
+(textpos)                Environment textblock* should not have any text
+(textpos)                or printable material appearing before it.
+(textpos)                Alignment may work out wrongly. on input line 584.
+
+[28
+
+ <./Figures/./FERSW_0p2.png> <./Figures/./FERSW_0p25.png>]
+<Figures/./ratelosssw.png, id=404, 578.16pt x 433.62pt>
+File: Figures/./ratelosssw.png Graphic file (type png)
+
+<use Figures/./ratelosssw.png>
+Package pdftex.def Info: Figures/./ratelosssw.png used on input line 593.
+(pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
+ [29
+
+ <./Figures/./ratelosssw.png>] [30
+
+] [31
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\translate ' on input line 637.
+
+<Figures/./rsync.png, id=434, 669.2503pt x 417.81094pt>
+File: Figures/./rsync.png Graphic file (type png)
+
+<use Figures/./rsync.png>
+Package pdftex.def Info: Figures/./rsync.png used on input line 653.
+(pdftex.def)             Requested size: 256.0748pt x 159.87273pt.
+
+
+Package textpos Warning: environment textblock* not in vertical mode. 
+(textpos)                Environment textblock* should not have any text
+(textpos)                or printable material appearing before it.
+(textpos)                Alignment may work out wrongly. on input line 653.
+
+[32
+
+ <./Figures/./rsync.png>]
+File: Figures/./arikanflyp4.png Graphic file (type png)
+ <use Figures/./arikanflyp4.png>
+Package pdftex.def Info: Figures/./arikanflyp4.png used on input line 671.
+(pdftex.def)             Requested size: 170.71652pt x 126.099pt.
+
+
+Package textpos Warning: environment textblock* not in vertical mode. 
+(textpos)                Environment textblock* should not have any text
+(textpos)                or printable material appearing before it.
+(textpos)                Alignment may work out wrongly. on input line 671.
+
+[33
+
+] <Figures/./scdecode.png, id=455, 630.85687pt x 424.58624pt>
+File: Figures/./scdecode.png Graphic file (type png)
+
+<use Figures/./scdecode.png>
+Package pdftex.def Info: Figures/./scdecode.png used on input line 686.
+(pdftex.def)             Requested size: 170.71652pt x 114.89896pt.
+ [34
+
+ <./Figures/./scdecode.png>]
+<Figures/./fer.png, id=466, 578.16pt x 433.62pt>
 File: Figures/./fer.png Graphic file (type png)
  <use Figures/./fer.png>
-Package pdftex.def Info: Figures/./fer.png used on input line 381.
+Package pdftex.def Info: Figures/./fer.png used on input line 695.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
 
-[21
+[35
 
- <./Figures/./fer.png>] <Figures/./swfer.png, id=279, 578.16pt x 433.62pt>
+ <./Figures/./fer.png>] <Figures/./swfer.png, id=477, 578.16pt x 433.62pt>
 File: Figures/./swfer.png Graphic file (type png)
 
 <use Figures/./swfer.png>
-Package pdftex.def Info: Figures/./swfer.png used on input line 390.
+Package pdftex.def Info: Figures/./swfer.png used on input line 704.
 (pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
- [22
+ [36
 
  <./Figures/./swfer.png>]
-<Figures/./selrepharq.png, id=290, 365.86688pt x 158.09062pt>
+<Figures/./selrepharq.png, id=488, 365.86688pt x 158.09062pt>
 File: Figures/./selrepharq.png Graphic file (type png)
 
 <use Figures/./selrepharq.png>
-Package pdftex.def Info: Figures/./selrepharq.png used on input line 422.
+Package pdftex.def Info: Figures/./selrepharq.png used on input line 736.
 (pdftex.def)             Requested size: 170.71652pt x 73.76707pt.
- [23
 
- <./Figures/./selrepharq.png>] [24
+
+Package textpos Warning: environment textblock* not in vertical mode. 
+(textpos)                Environment textblock* should not have any text
+(textpos)                or printable material appearing before it.
+(textpos)                Alignment may work out wrongly. on input line 736.
+
+[37
+
+ <./Figures/./selrepharq.png>] [38
 
 ]
 
 Package textpos Warning: environment textblock* not in vertical mode. 
 (textpos)                Environment textblock* should not have any text
 (textpos)                or printable material appearing before it.
-(textpos)                Alignment may work out wrongly. on input line 447.
+(textpos)                Alignment may work out wrongly. on input line 761.
 
-[25
+[39
+
+] [40
+
+] <Figures/./FER_channel0p04.png, id=528, 578.16pt x 433.62pt>
+File: Figures/./FER_channel0p04.png Graphic file (type png)
+
+<use Figures/./FER_channel0p04.png>
+Package pdftex.def Info: Figures/./FER_channel0p04.png used on input line 794.
+(pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
+
+<Figures/./FER_channel0p15.png, id=529, 578.16pt x 433.62pt>
+File: Figures/./FER_channel0p15.png Graphic file (type png)
+
+<use Figures/./FER_channel0p15.png>
+Package pdftex.def Info: Figures/./FER_channel0p15.png used on input line 794.
+(pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
+
+
+Package textpos Warning: environment textblock* not in vertical mode. 
+(textpos)                Environment textblock* should not have any text
+(textpos)                or printable material appearing before it.
+(textpos)                Alignment may work out wrongly. on input line 794.
+
+[41
+
+ <./Figures/./FER_channel0p04.png> <./Figures/./FER_channel0p15.png>]
+<Figures/./FER_channel0p2.png, id=541, 578.16pt x 433.62pt>
+File: Figures/./FER_channel0p2.png Graphic file (type png)
+
+<use Figures/./FER_channel0p2.png>
+Package pdftex.def Info: Figures/./FER_channel0p2.png used on input line 815.
+(pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
+
+<Figures/./FER_channel0p25.png, id=542, 578.16pt x 433.62pt>
+File: Figures/./FER_channel0p25.png Graphic file (type png)
+
+<use Figures/./FER_channel0p25.png>
+Package pdftex.def Info: Figures/./FER_channel0p25.png used on input line 815.
+(pdftex.def)             Requested size: 170.71652pt x 128.03589pt.
+
+
+Package textpos Warning: environment textblock* not in vertical mode. 
+(textpos)                Environment textblock* should not have any text
+(textpos)                or printable material appearing before it.
+(textpos)                Alignment may work out wrongly. on input line 815.
+
+[42
+
+ <./Figures/./FER_channel0p2.png> <./Figures/./FER_channel0p25.png>]
+<Figures/./rateloss_channel.png, id=554, 578.16pt x 433.62pt>
+File: Figures/./rateloss_channel.png Graphic file (type png)
+
+<use Figures/./rateloss_channel.png>
+Package pdftex.def Info: Figures/./rateloss_channel.png used on input line 824.
+
+(pdftex.def)             Requested size: 256.0748pt x 192.05052pt.
+ [43
+
+ <./Figures/./rateloss_channel.png>]
+[44
 
 ]
 \tf@nav=\write6
@@ -1161,13 +1445,13 @@ Package textpos Warning: environment textblock* not in vertical mode.
 \tf@snm=\write8
 \openout8 = `polarmidppt.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 449.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 449.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 840.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 840.
  (./polarmidppt.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 449.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 449.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 840.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 840.
 Package rerunfilecheck Info: File `polarmidppt.out' has not changed.
-(rerunfilecheck)             Checksum: 86C3307D8CF93EB552BA668F3BC0F79C;173.
+(rerunfilecheck)             Checksum: 68AB7D6A78EBEA8079A80EB482D61D64;420.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1176,35 +1460,41 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 449.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 840.
  ) 
 Here is how much of TeX's memory you used:
- 17519 strings out of 493029
- 337985 string characters out of 6136234
- 407304 words of memory out of 5000000
- 20520 multiletter control sequences out of 15000+600000
- 17207 words of font info for 62 fonts, out of 8000000 for 9000
+ 18022 strings out of 493029
+ 347065 string characters out of 6136234
+ 422740 words of memory out of 5000000
+ 20903 multiletter control sequences out of 15000+600000
+ 18437 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,16n,56p,436b,766s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on polarmidppt.pdf (25 pages, 667062 bytes).
+ 56i,21n,56p,436b,766s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/smart/.texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/symbols/msam7.pfb>
+Output written on polarmidppt.pdf (44 pages, 2034543 bytes).
 PDF statistics:
- 399 PDF objects out of 1000 (max. 8388607)
- 317 compressed objects within 4 object streams
- 97 named destinations out of 1000 (max. 500000)
- 176 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 682 PDF objects out of 1000 (max. 8388607)
+ 533 compressed objects within 6 object streams
+ 181 named destinations out of 1000 (max. 500000)
+ 316 words of extra memory for PDF output out of 10000 (max. 10000000)
 

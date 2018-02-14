@@ -63,10 +63,23 @@ BCOR5mm, % Binding correction
 %	ABSTRACT
 %----------------------------------------------------------------------------------------
 
-\section*{Overview}
-Multiple parties observing correlated data seek to exchange their data using minimum communication. In case the underlying joint distribution is known to the encoder a rate optimal solution to this problem is offered by Slepian-Wolf compression. In absence of this knowledge iterative and interactive communication is necessary to attain universal optimality. The \emph{Data-Exchange} problem  encompasses the latter scenario. \\In both the cases joint decoding using type classes is of exponential complexity. However, Slepian-Wolf compression can be implemented using structured channel codes. We have considered implementation of the iterative Slepian-Wolf compression for two parties as a recursive data-exchange protocol (RDE)  using Rateless Polar Codes where data exchange happens incrementally till completion. \\In this setting, interaction based on retransmission criterion offered by higher layers is not feasible.
-Hence, we have  proposed a PHY-layer error detection scheme based on soft outputs of the Successive Cancellation decoder. We have presented simulation results that exhibit the performance of the considered methods.
-Besides offering a solution to our problem, this scheme provides a CRC-free Rateless Polar Code which promises rate gain for short packet length communication.
+\section*{Abstract}
+Multiple parties observing correlated data seek to exchange their data using minimum
+amount of communication. In case the underlying joint distribution is known, a rate optimal solution to this problem
+is offered by Slepian-Wolf compression. In absence of this knowledge, interactive
+communication is necessary to attain universal optimality. In both the cases, decoding
+is of exponential complexity. However, Slepian-Wolf compression can be implemented
+using structured channel codes. In this project, we design rateless Polar codes to enable universal Slepian-Wolf compression and data exchange, when the underlying distribution generating the data is unknown.
+ 
+A key observation driving our project is the similarity between the interactive Slepian-
+Wolf compression and the design of an Hybrid ARQ protocol for communication over a
+network. Unlike H-ARQ, in our setting, the error-detection capability offered by higher layers
+is not available. Hence, we propose a PHY-layer error-detection scheme based
+on soft outputs of the Successive Cancellation decoder of Polar codes. We present simulation
+results that exhibit the performance of the considered methods. Besides offering a
+solution to our problem, this scheme provides a CRC-free Rateless Polar Code which
+promises rate gains for short packet length communication and may be of independent
+interest.
 
 %----------------------------------------------------------------------------------------
 %	PROPOSED SOLUTION
@@ -163,18 +176,17 @@ Let $K$ be the number of bit-channels assumed to be good at the first iteration.
 % CONCLUSION AND FUTURE WORK
 %--------------------------------------------------------------------------
 \section*{Conclusion and Future work}\label{future}
-\begin{itemize}
-\item The scheme reduces the communication among nodes.
-\item The CRC-free universal polar code promises considerable rate gain for communication using short packet lengths. 
-\end{itemize}
+The proposed scheme is an implementable solution to the \emph{Data-Exchange} problem.
+It reduces the communication among nodes.
+The CRC-free universal polar code promises considerable rate gain for communication using short packet lengths. 
+There are few channels which are good for use during the entire transmission. Communicating critical data over these channel ensure high reliability and availability . 
 \begin{itemize}
 \item Future work.
 \begin{itemize}
-\item Extensive performance analysis and theoretical analysis of proposed error detection scheme. 
+\item Extensive performance analysis and theoretical analysis of proposed error detection scheme as a RB-HARQ for Polar Codes.
 \item Implementation of the scheme for multiparty data exchange.
 \end{itemize}
 \end{itemize}
-
 
 
 

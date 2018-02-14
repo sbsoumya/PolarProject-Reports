@@ -91,9 +91,22 @@ January 2018
 %----------------------------------------------------------------------------------------
 \newpage
 \section*{Abstract}
-Multiple parties observing correlated data seek to exchange their data using minimum communication. A practical method to achieve this has been proposed. \\In case the underlying joint distribution is known to the encoder a rate optimal solution to this problem is offered by Slepian-Wolf compression. In absence of this knowledge iterative and interactive communication is necessary to attain universal optimality. In both the cases joint decoding using type classes is of exponential complexity. However, Slepian-Wolf compression can be implemented using structured channel codes. We have considered implementation of the iterative Slepian-Wolf compression for two parties using Rateless Polar Codes where data exchange happens incrementally till completion. \\In this setting, interaction based on retransmission criterion offered by higher layers is not feasible.
-Hence, we have  proposed a PHY-layer error detection scheme based on soft outputs of the Successive Cancellation decoder. We have presented simulation results that exhibit the performance of the considered methods.
-Besides offering a solution to our problem, this scheme provides a CRC-free Rateless Polar Code which promises rate gain for short packet length communication.\footnote{This Project was supported by Robert Bosch Center for Cyber Physical Systems}
+Multiple parties observing correlated data seek to exchange their data using minimum
+amount of communication. In case the underlying joint distribution is known, a rate optimal solution to this problem
+is offered by Slepian-Wolf compression. In absence of this knowledge, interactive
+communication is necessary to attain universal optimality. In both the cases, decoding
+is of exponential complexity. However, Slepian-Wolf compression can be implemented
+using structured channel codes. In this project, we design rateless Polar codes to enable universal Slepian-Wolf compression and data exchange, when the underlying distribution generating the data is unknown.
+ 
+A key observation driving our project is the similarity between the interactive Slepian-
+Wolf compression and the design of an Hybrid ARQ protocol for communication over a
+network. Unlike H-ARQ, in our setting, the error-detection capability offered by higher layers
+is not available. Hence, we propose a PHY-layer error-detection scheme based
+on soft outputs of the Successive Cancellation decoder of Polar codes. We present simulation
+results that exhibit the performance of the considered methods. Besides offering a
+solution to our problem, this scheme provides a CRC-free Rateless Polar Code which
+promises rate gains for short packet length communication and may be of independent
+interest.\footnote{This project is supported by Robert Bosch Center for Cyber Physical Systems}
  
 %----------------------------------------------------------------------------------------
 %	INTRODUCTION
@@ -101,7 +114,7 @@ Besides offering a solution to our problem, this scheme provides a CRC-free Rate
 \newpage
 \section{Introduction}\label{intro}
 %----------Paper intro
-Random correlated data (X,Y) is distributed between two parties with first observing X and second observing Y. The two parties seek to recover each others data. The \emph{Data-Exchange} problem essentially encompasses this scenario,  depicted in figure \ref{fig:dataex}. This project seeks to device a practical protocol which achieves this with minimal communication under a setting where the joint distribution of X and Y is unknown.\\
+Random correlated data (X,Y) is distributed between two parties with the first observing X and the second observing Y. The two parties seek to recover each others data. The \emph{Data-Exchange} problem depicted in figure \ref{fig:dataex}, encompasses this scenario. This project seeks to device a practical protocol which achieves this with minimal communication under a setting where the joint distribution of X and Y is unknown.\\
 \begin{wrapfigure}{r}{0.5\textwidth}
   \begin{center}
     \includegraphics[width=0.4\textwidth]{dataex.png}
@@ -109,8 +122,7 @@ Random correlated data (X,Y) is distributed between two parties with first obser
   \caption{The Data-Exchange problem}
   \label{fig:dataex}
 \end{wrapfigure}
-A working solution to this problem is r-sync protocol, as described in   \cite{rsync}. The algorithm identifies parts of the source file which are identical to some part of the destination file, and only sends those parts which cannot be matched in this way. Though this protocol is fast and has low complexity, it does not exploit the correlation of the data to the best extent possible. In fact, we can view r-sync as an algorithm which uses only one guess,  thus ends up using more communication.\\
-In \cite{sw}, David Slepian and Jack Wolf had shown that the optimal solution to this problem is Slepian-Wolf (SW) compression. 
+A working solution to this problem is the r-sync protocol, as described in   \cite{rsync}. The algorithm identifies parts of the source file which are identical to some part of the destination file, and only sends those parts which cannot be matched in this way. Though this protocol is fast and has low complexity, it does not exploit the correlation of the data to the best extent possible. In fact, we can view r-sync as an algorithm which guesses the source and the destination to be same and then communicates to confirm the guess.\\ More generally, the destination may form a list of guesses and the source may communicate to resolve the guess. This is precisely captured by Slepian-Wolf compression in \cite{sw}, which offers a rate optimal solution to the problem. 
 \begin{wrapfigure}{r}{0.4\textwidth}
   \begin{center}
     \includegraphics[width=0.4\textwidth]{swcomp.png}
@@ -118,32 +130,34 @@ In \cite{sw}, David Slepian and Jack Wolf had shown that the optimal solution to
   \caption{The Slepian-Wolf compression}
   \label{fig:swcomp}
 \end{wrapfigure}
-\paragraph{Slepian-Wolf coding theorem:}It states that under joint decoding of X and Y a total rate H(X,Y) is sufficient for exchange of data.\\
-As described in \cite{discus}, consider first the problem where X and Y are correlated discrete-alphabet memoryless sources, we have to compress X losslessly, with Y (side information) being known at the decoder and \emph{not} at the encoder. If Y were known at both ends one can compress X at a theoretical rate of $H(X|Y)$. But if Y were known only at decoder the same can be achieved by just knowing $P_{X|Y}$ at encoder without explicit information of Y, this has been depicted in figure \ref{fig:swcomp}. 
-%goja
+\paragraph{Slepian-Wolf compression:}As described in \cite{discus}, consider first the problem where X and Y are correlated discrete-alphabet memoryless sources, we have to compress X losslessly, with Y (side information) being known at the decoder and \emph{not} at the encoder. If Y were known at both ends one can compress X at a theoretical rate of $H(X|Y)$. But if Y were known only at decoder the same can be achieved by just knowing $P_{X|Y}$ at encoder without explicit information of Y, this has been depicted in figure \ref{fig:swcomp}. Thus for communicating X to the second party a rate of  $H(X|Y)$ is sufficient.
 \clearpage
 A practical implementation of Slepian-Wolf compression faces the following difficulties.
 \begin{itemize}
 \item Search is over an exponential list in decoding.
-\item Knowledge of $P_{X|Y}$ is required at encoder.
+\item Knowledge of $P_{X|Y}$ is required.
 \end{itemize} 
 
-Using structured channel codes as indicated in \cite{discus}, particularly Polar Codes as shown in \cite{pslep}, alongwith \emph{recursive data exchange} protocol  mentioned in \cite{htsw} for SW compression eases the aforementioned implementation. 
+In this project we circumvent this difficulty by implementing Slepian-Wolf compression using structured channel codes such as Polar Codes as shown in \cite{discus},\cite{pslep}. We use the \emph{recursive data exchange} (RDE) protocol  mentioned in \cite{htsw} for the case the where underlying joint distribution is unknown. Note that in \cite{htsw} the decoders suggested for the protocol are theoretical constructs and are not practically implementable. We use Rateless Polar Codes for the implementation of RDE. 
 
-\subsection{Suggested Approach for Solving The Data-Exchange Problem}\label{suggapp}
+\subsection*{Suggested Approach for Solving The Data-Exchange Problem}\label{suggapp}
 In accordance with the above discussion the suggested approach towards solving the \emph{Data-Exchange} problem may be briefed as follows.
 \begin{itemize}
 \item{Implement SW Compression using Polar Codes.}
 \item{Achieve universality using \emph{recursive data exchange} protocol (RDE).}
-\item{Realise RDE using Rateless Polar Codes with physical layer error detection.}
+\item{Realize RDE using Rateless Polar Codes with physical layer error detection.}
 \end{itemize}
-
-The following subsections discuss the artefacts needed for this implementation in brief. Section \ref{propsol}, consolidates and elaborates the proposed scheme. 
-
-\subsection{Recursive Data Exchange Protocol}
-The data exchange protocol is based on an interactive version of the SW protocol where the length of communication is increased in steps until the second party decodes the data of the first. After each transmission second party sends ACK-NACK feedback signal, the protocol stops when ACK is recieved or some fixed number of bits have been transmitted \cite{htsw}. Note, this protocol is universal as it does not rely on knowledge of the joint distribution, instead uses an iterative variable length approach to reach rate optimality universally. The decoders suggested in \cite{htsw} are theoritical constructs which use type classes to form a list of guesses for data of other parties and thus has exponential complexity.\\ In \cite{pslep}, SW compression is approached with Polar Codes, in this work we use Rateless Polar Codes to implement RDE with a similar ideology.
-%goja
+Interestingly, this approach is closely related to the construction of an Hybrid ARQ with error detection in the PHY layer.
+\\In section \ref{bg} we provide the background required to build our proposal.  Section \ref{propsol}, consolidates and elaborates the proposed scheme. Performance analysis of the scheme is presented in section \ref{perfana}. We conclude with final remark and future work in section \ref{future}.
+%----------------------------------------------------------------------------------------
+%	Background
+%----------------------------------------------------------------------------------------
 \clearpage
+\section{Background}\label{bg}
+In this section we discuss the the artifacts needed for the suggested implementation in brief.
+\subsection{Recursive Data Exchange Protocol}
+The data exchange protocol is based on an interactive version of the SW protocol where the length of communication is increased in steps until the second party decodes the data of the first. After each transmission second party sends ACK-NACK feedback signal, the protocol stops when ACK is received or some fixed number of bits have been transmitted \cite{htsw}. Note, this protocol is universal as it does not rely on knowledge of the joint distribution, instead uses an iterative variable length approach to reach rate optimality universally. The decoders suggested in \cite{htsw} are theoretical constructs which use type classes to form a list of guesses for data of other parties and thus has exponential complexity.\\ In \cite{pslep}, SW compression is approached with Polar Codes, in this work we use Rateless Polar Codes to implement RDE with a similar ideology.
+%goja
 \subsection{Brief Introduction to Polar Codes}
 \begin{wrapfigure}{r}{0.5\textwidth}
   \begin{center}
@@ -174,13 +188,14 @@ In figure \ref{fig:pchscheme}, $U_N$ is a uniform message vector, $T$ is a linea
 In figure \ref{fig:pchscheme}, $U_N$ is a uniform message vector, $T$ is a linear transform equivalent to the butterfly in figure \ref{fig:arikanfly} for a block length of $N$. $W_N$ is analogous to $W_{vec}$. It is useful to note here that $T=T^{-1}$.
 \begin{figure}[h!]
   \begin{center}
-    \includegraphics[width=0.6\textwidth]{fer.png}
+    \includegraphics[width=1\textwidth]{fer.png}
   \end{center}
   \caption{FER vs Rate for Polar Coding with SC-decoding}
   \label{fig:fer}
 \end{figure}
-For our purpose, we shall be using Succesive Cancellation (SC) decoding. Each independent channel will considered as BSC(p). The Polar Code construction indicated in \cite{zhang} has been employed for simplicity. A performance analysis of implementation of the scheme in figure \ref{fig:pchscheme} is presented in figure \ref{fig:fer}.   
-
+For our purpose, we shall be using Successive Cancellation (SC) decoding. Each independent channel will considered as BSC(p). The Polar Code construction indicated in \cite{zhang} has been employed for simplicity. A performance analysis of implementation of the scheme in figure \ref{fig:pchscheme} is presented in figure \ref{fig:fer}.   
+%goja
+\clearpage
 \subsection{Implementation of SW Compression using Polar Codes}\label{psw}
 In \cite{discus}, the use of structured codes for SW compression has been discussed. Further, in \cite{pslep} a specific scheme using Polar Codes has been illustrated, as shown in figure \ref{fig:pswscheme}.
 \begin{figure}[h!]
@@ -285,7 +300,7 @@ if the word error probability does not meet the requirements the bits with highe
 %----------------------------------------------------------------------------------------
 \newpage
 \section{Proposed implementation of Recursive Data Exchange} \label{propsol}
-As indicated in section \ref{intro} and \ref{suggapp}, our approach towards implementation of a solution to the \emph{Data-Exchange} problem using RDE and Polar Codes can be summarised as below, 
+As indicated in section \ref{intro}, our approach towards implementation of a solution to the \emph{Data-Exchange} problem using RDE and Polar Codes can be summarised as below, 
 \begin{itemize}
 \item{Use Rateless Polar Codes with Incremental Freezing to implement RDE.}
 \item{Use a PHY layer error detection as retransmission criterion in Incremental Freezing.}
@@ -301,7 +316,7 @@ The RDE, which is essentially iterative SW compression, can be constructed using
   \caption{Example of Iterative SW compression with Incremental Freezing.}
   \label{fig:iswrpc}
 \end{figure} 
-Here, a compund BSC channel $\mathcal{C}=\{ p_1 \leq p_2 \leq p_3 \leq p_4\}$ is considered, where $p_i$ is the flipover probability of channel $i$. It is assumed that the rates supported by the channels are $\{ R_1=R, R_2= R/2,R_3= R/3,R_4= R/4\}$. The actual channel in the example is BSC($p_3$), henceforth, we shall denote this as BSC($p_{channel}$). The vector channel is manufactured by polarization of $N$ such BSC($p_{channel}$) channels.
+Here, a compound BSC channel $\mathcal{C}=\{ p_1 \leq p_2 \leq p_3 \leq p_4\}$ is considered, where $p_i$ is the flipover probability of channel $i$. It is assumed that the rates supported by the channels are $\{ R_1=R, R_2= R/2,R_3= R/3,R_4= R/4\}$. The actual channel in the example is BSC($p_3$), henceforth, we shall denote this as BSC($p_{channel}$). The vector channel is manufactured by polarization of $N$ such BSC($p_{channel}$) channels.
 \paragraph{First Iteration:} In the first iteration, the SW compression with Polar Coding scheme suggested in figure \ref{fig:pswscheme} is followed. Additionally, the soft outputs (LLRs) generated from the decoder block are passed through an error-detection (ED) block. In case error is present, receiver replies with a NACK and further iterations are commenced. The decoder \emph{guesses} the channel to be BSC($p_1$) greedily and computes LLR accordingly. Henceforth, we shall denote this as BSC($p_{guess}$). Note, in this case the frozen bits are non-zero, and are communicated error-free to receiver, unlike in the channel coding scenario in figure \ref{fig:if}.
 \paragraph{Subsequent Iterations:}In the subsequent iterations, the decoder makes greedy guesses about the channel from a subset of the compound channel which does not include previous guesses. In other words, in second iteration $p_{guess}=p_2$, in third $p_{guess}=p_3$. Iterations continue as long as the ED does not declare error-free transmission, which is communicated as ACK by the receiver.\\
 The error-free transmission in these iterations consist of information bits which are suspected to be sent unreliably in previous iterations under impression that present $p_{guess}$ is correct. 
@@ -384,7 +399,7 @@ From figure \ref{fig:theta1}, the detection error probabilities for the first  i
 \end{figure}
 
 \clearpage
-\subsection{Performance Evaluation}
+\section{Performance Evaluation}\label{perfana}
 %-------------------------------SW
 Simulation results for the scheme in figure \ref{fig:iswrpc} used for iterative SW compression with Inc-Frz and PHY-ED are presented in figure \ref{fig:fersw1}, \ref{fig:fersw2}, \ref{fig:fersw3} and \ref{fig:fersw4}.
 Each plot corresponds to a fixed channel with $p_{channel} \in \mathcal{C}$. The performance of Polar Codes designed for the specific $p_{channel}$ has been given for comparison. Figure \ref{fig:perfch} shows similar results for Rateless Polar Coding with Inc-Frz and PHY-ED.\\
@@ -466,12 +481,10 @@ Let $K$ be the number of bit-channels assumed to be good at the first iteration.
 %--------------------------------------------------------------------------
 \clearpage
 \section{Conclusion and Future work}\label{future}
-\begin{itemize}
-\item The proposed scheme is an implementable solution to the \emph{Data-Exchange} problem.
-\item It reduces the communication among nodes.
-\item The CRC-free universal polar code promises considerable rate gain for communication using short packet lengths. 
-\item There are few channels which are good for use during the entire transmission. Communicating critical data over these channel ensure high reliability and availability . 
-\end{itemize}
+The proposed scheme is an implementable solution to the \emph{Data-Exchange} problem.
+It reduces the communication among nodes.
+The CRC-free universal polar code promises considerable rate gain for communication using short packet lengths. 
+There are few channels which are good for use during the entire transmission. Communicating critical data over these channel ensure high reliability and availability . 
 \begin{itemize}
 \item Future work.
 \begin{itemize}

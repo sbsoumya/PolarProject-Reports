@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: conference_poster_2.aux
+The style file: unsrt.bst
+Database file #1: conference_poster_2.bib
+Warning--empty author in PCSW
+Warning--empty journal in PCSW
+Warning--empty year in PCSW
+Warning--empty author in HTRDE
+Warning--empty journal in HTRDE
+Warning--empty year in HTRDE
+Warning--empty author in KC
+Warning--empty journal in KC
+Warning--empty year in KC
+You've used 3 entries,
+            1791 wiz_defined-function locations,
+            453 strings with 3899 characters,
+and the built_in function-call counts, 332 in all, are:
+= -- 18
+> -- 3
+< -- 0
++ -- 3
+- -- 0
+* -- 29
+:= -- 42
+add.period$ -- 3
+call.type$ -- 3
+change.case$ -- 3
+chr.to.int$ -- 0
+cite$ -- 12
+duplicate$ -- 24
+empty$ -- 43
+format.name$ -- 0
+if$ -- 67
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 3
+newline$ -- 12
+num.names$ -- 0
+pop$ -- 21
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 12
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 9
+while$ -- 0
+width$ -- 4
+write$ -- 17
+(There were 9 warnings)

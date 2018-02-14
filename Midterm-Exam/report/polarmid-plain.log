@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  21 JAN 2018 19:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  23 JAN 2018 11:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -732,12 +732,12 @@ LaTeX Font Info:    Try loading font information for T1+cmss on input line 85.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) (./polarmid-plain.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+LaTeX Font Info:    Try loading font information for U+msa on input line 4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+LaTeX Font Info:    Try loading font information for U+msb on input line 4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -756,60 +756,52 @@ Overfull \hbox (0.30774pt too wide) in paragraph at lines 21--21
 \tf@lof=\write4
 \openout4 = `polarmid-plain.lof'.
 
- [3] [4] <Figures/dataex.png, id=30, 448.67625pt x 332.74312pt>
+ [3]
+Overfull \hbox (1.74292pt too wide) in paragraph at lines 101--110
+[]\T1/cmr/m/n/10.95 A key ob-ser-va-tion driv-ing our project is the sim-i-lar-
+ity be-tween the in-ter-ac-tive Slepian-
+ []
+
+[4] <Figures/dataex.png, id=30, 448.67625pt x 332.74312pt>
 File: Figures/dataex.png Graphic file (type png)
 
 <use Figures/dataex.png>
-Package pdftex.def Info: Figures/dataex.png used on input line 107.
+Package pdftex.def Info: Figures/dataex.png used on input line 120.
 (pdftex.def)             Requested size: 163.31635pt x 121.11766pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--111
+Underfull \hbox (badness 10000) in paragraph at lines 117--124
 
  []
 
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-114.
+126.
 
 <Figures/swcomp.png, id=32, 471.26062pt x 314.67563pt>
 File: Figures/swcomp.png Graphic file (type png)
 
 <use Figures/swcomp.png>
-Package pdftex.def Info: Figures/swcomp.png used on input line 116.
+Package pdftex.def Info: Figures/swcomp.png used on input line 128.
 (pdftex.def)             Requested size: 163.31635pt x 109.05296pt.
 
-Underfull \hbox (badness 2351) in paragraph at lines 111--120
-\T1/cmr/m/n/10.95 r-sync pro-to-col, as de-scribed in [[]].
+Underfull \hbox (badness 2368) in paragraph at lines 124--132
+\T1/cmr/m/n/10.95 com-mu-ni-cate to re-solve the guess. This is pre-cisely cap-
+tured by Slepian-
  []
 
 
-Underfull \hbox (badness 1242) in paragraph at lines 111--120
-\T1/cmr/m/n/10.95 The al-go-rithm iden-ti-fies parts of the
- []
-
-
-Underfull \hbox (badness 3826) in paragraph at lines 111--120
-\T1/cmr/m/n/10.95 sends those parts which can-not be
- []
-
-
-Underfull \hbox (badness 1721) in paragraph at lines 111--120
-\T1/cmr/m/n/10.95 matched in this way. Though this
- []
-
-
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 12
-0.
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 13
+2.
 
 [5 <./Figures/dataex.png> <./Figures/swcomp.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 127.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 137.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 127.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 137.
  [6
 
 ]
@@ -817,274 +809,273 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 File: Figures/channelcomb.png Graphic file (type png)
 
 <use Figures/channelcomb.png>
-Package pdftex.def Info: Figures/channelcomb.png used on input line 150.
+Package pdftex.def Info: Figures/channelcomb.png used on input line 164.
 (pdftex.def)             Requested size: 163.31635pt x 123.64867pt.
 
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-156.
+170.
 
 <Figures/arikanfly.png, id=45, 288.3272pt x 199.49532pt>
 File: Figures/arikanfly.png Graphic file (type png)
 
 <use Figures/arikanfly.png>
-Package pdftex.def Info: Figures/arikanfly.png used on input line 158.
+Package pdftex.def Info: Figures/arikanfly.png used on input line 172.
 (pdftex.def)             Requested size: 163.31635pt x 113.00423pt.
 
-Underfull \hbox (badness 1259) in paragraph at lines 155--162
+Underfull \hbox (badness 1259) in paragraph at lines 169--176
 []\T1/cmr/m/n/10.95 In 2008, E. Arikan in his pa-per [[]]
  []
 
 
-Underfull \hbox (badness 1596) in paragraph at lines 155--162
+Underfull \hbox (badness 1596) in paragraph at lines 169--176
 \T1/cmr/m/n/10.95 in-tro-duced Po-lar Codes, which prov-
  []
 
 
-Underfull \hbox (badness 6510) in paragraph at lines 155--162
+Underfull \hbox (badness 6510) in paragraph at lines 169--176
 \T1/cmr/m/n/10.95 ably achieves ca-pac-ity on sym-met-
  []
 
 
-Underfull \hbox (badness 2277) in paragraph at lines 155--162
+Underfull \hbox (badness 2277) in paragraph at lines 169--176
 \T1/cmr/m/n/10.95 ric chan-nels. Po-lar Codes rely on
  []
 
 
-Underfull \hbox (badness 1635) in paragraph at lines 155--162
+Underfull \hbox (badness 1635) in paragraph at lines 169--176
 \T1/cmr/m/n/10.95 the phe-nomenon of chan-nel po-lar-iza-
  []
 
 
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 16
-2.
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 17
+6.
 
 
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 16
-3.
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 17
+7.
 
-<Figures/pchscheme.png, id=46, 636.87938pt x 299.61937pt>
+[7
+
+ <./Figures/channelcomb.png>]
+<Figures/pchscheme.png, id=51, 636.87938pt x 299.61937pt>
 File: Figures/pchscheme.png Graphic file (type png)
 
 <use Figures/pchscheme.png>
-Package pdftex.def Info: Figures/pchscheme.png used on input line 169.
+Package pdftex.def Info: Figures/pchscheme.png used on input line 183.
 (pdftex.def)             Requested size: 244.98074pt x 115.25095pt.
- <Figures/fer.png, id=47, 578.16pt x 433.62pt>
+ <Figures/fer.png, id=52, 578.16pt x 433.62pt>
 File: Figures/fer.png Graphic file (type png)
 
 <use Figures/fer.png>
-Package pdftex.def Info: Figures/fer.png used on input line 177.
-(pdftex.def)             Requested size: 244.98074pt x 183.73358pt.
+Package pdftex.def Info: Figures/fer.png used on input line 191.
+(pdftex.def)             Requested size: 408.2971pt x 306.21823pt.
 
-Underfull \hbox (badness 1571) in paragraph at lines 165--183
+Underfull \hbox (badness 1571) in paragraph at lines 179--198
 \T1/cmr/m/n/10.95 The en-cod-ing pro-cess sends data on
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[7
-
- <./Figures/channelcomb.png> <./Figures/arikanfly.png>]
-<Figures/pswscheme.png, id=53, 764.10469pt x 309.40594pt>
+[8 <./Figures/arikanfly.png> <./Figures/pchscheme.png>] [9 <./Figures/fer.png>]
+<Figures/pswscheme.png, id=61, 764.10469pt x 309.40594pt>
 File: Figures/pswscheme.png Graphic file (type png)
 
 <use Figures/pswscheme.png>
-Package pdftex.def Info: Figures/pswscheme.png used on input line 188.
+Package pdftex.def Info: Figures/pswscheme.png used on input line 203.
 (pdftex.def)             Requested size: 244.98074pt x 99.19604pt.
- <Figures/swfer.png, id=54, 578.16pt x 433.62pt>
+ <Figures/swfer.png, id=62, 578.16pt x 433.62pt>
 File: Figures/swfer.png Graphic file (type png)
 
 <use Figures/swfer.png>
-Package pdftex.def Info: Figures/swfer.png used on input line 195.
+Package pdftex.def Info: Figures/swfer.png used on input line 210.
 (pdftex.def)             Requested size: 244.98074pt x 183.73358pt.
 
-Overfull \hbox (40.8322pt too wide) in paragraph at lines 195--196
+Overfull \hbox (40.8322pt too wide) in paragraph at lines 210--211
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--199
+Underfull \hbox (badness 10000) in paragraph at lines 200--214
 
- []
-
-[8 <./Figures/pchscheme.png> <./Figures/fer.png>] [9 <./Figures/pswscheme.png> 
-<./Figures/swfer.png>]
-<Figures/relorder.png, id=65, 459.96844pt x 413.29407pt>
-File: Figures/relorder.png Graphic file (type png)
-
-<use Figures/relorder.png>
-Package pdftex.def Info: Figures/relorder.png used on input line 210.
-(pdftex.def)             Requested size: 204.14854pt x 183.43283pt.
-
-Underfull \hbox (badness 4899) in paragraph at lines 216--218
- \T1/cmss/bx/n/10.95 Nest-ing Prop-erty:[] \T1/cmr/m/n/10.95 Po-lar-iza-tion su
-g-
  []
 
 [10
 
- <./Figures/relorder.png>]
-<Figures/if2.png, id=71, 970.3753pt x 533.74406pt>
-File: Figures/if2.png Graphic file (type png)
- <use Figures/if2.png>
-Package pdftex.def Info: Figures/if2.png used on input line 224.
-(pdftex.def)             Requested size: 408.2971pt x 224.57819pt.
+ <./Figures/pswscheme.png> <./Figures/swfer.png>]
+<Figures/relorder.png, id=68, 459.96844pt x 413.29407pt>
+File: Figures/relorder.png Graphic file (type png)
+
+<use Figures/relorder.png>
+Package pdftex.def Info: Figures/relorder.png used on input line 225.
+(pdftex.def)             Requested size: 204.14854pt x 183.43283pt.
+
+Underfull \hbox (badness 4899) in paragraph at lines 231--233
+ \T1/cmss/bx/n/10.95 Nest-ing Prop-erty:[] \T1/cmr/m/n/10.95 Po-lar-iza-tion su
+g-
+ []
 
 [11
 
- <./Figures/if2.png>] [12]
-<Figures/selrepharq.png, id=79, 365.86688pt x 158.09062pt>
+ <./Figures/relorder.png>]
+<Figures/if2.png, id=74, 970.3753pt x 533.74406pt>
+File: Figures/if2.png Graphic file (type png)
+ <use Figures/if2.png>
+Package pdftex.def Info: Figures/if2.png used on input line 239.
+(pdftex.def)             Requested size: 408.2971pt x 224.57819pt.
+
+[12
+
+ <./Figures/if2.png>] [13]
+<Figures/selrepharq.png, id=83, 365.86688pt x 158.09062pt>
 File: Figures/selrepharq.png Graphic file (type png)
 
 <use Figures/selrepharq.png>
-Package pdftex.def Info: Figures/selrepharq.png used on input line 245.
+Package pdftex.def Info: Figures/selrepharq.png used on input line 260.
 (pdftex.def)             Requested size: 204.14854pt x 88.21172pt.
 
-Underfull \hbox (badness 4954) in paragraph at lines 250--251
+Underfull \hbox (badness 4954) in paragraph at lines 265--266
 []\T1/cmr/m/n/10.95 In [[]], a HARQ scheme for Po-
  []
 
 
-Underfull \hbox (badness 3199) in paragraph at lines 250--251
+Underfull \hbox (badness 3199) in paragraph at lines 265--266
 \T1/cmr/m/n/10.95 lar codes based on se-lec-tive rep-e-ti-
  []
 
 
-Underfull \hbox (badness 1975) in paragraph at lines 250--251
+Underfull \hbox (badness 1975) in paragraph at lines 265--266
 \T1/cmr/m/n/10.95 tion has been stud-ied. The In-cre-
  []
 
 
-Underfull \hbox (badness 2277) in paragraph at lines 250--251
+Underfull \hbox (badness 2277) in paragraph at lines 265--266
 \T1/cmr/m/n/10.95 men-tal Freez-ing scheme de-scribed in
  []
 
 
-Underfull \hbox (badness 1715) in paragraph at lines 250--251
+Underfull \hbox (badness 1715) in paragraph at lines 265--266
 \T1/cmr/m/n/10.95 [[]] and [[]] can be clas-si-fied as a
  []
 
 
-Underfull \hbox (badness 2990) in paragraph at lines 250--251
+Underfull \hbox (badness 2990) in paragraph at lines 265--266
 \T1/cmr/m/n/10.95 is de-scribed along with per-for-mance
  []
 
 
-Underfull \hbox (badness 3471) in paragraph at lines 250--251
+Underfull \hbox (badness 3471) in paragraph at lines 265--266
 \T1/cmr/m/n/10.95 com-par-i-son with the other schemes.
  []
 
 
-Underfull \hbox (badness 1946) in paragraph at lines 250--251
+Underfull \hbox (badness 1946) in paragraph at lines 265--266
 \T1/cmr/m/n/10.95 Here these schemes are dis-cussed in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 250--251
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
 
  []
 
 
-Underfull \hbox (badness 2846) in paragraph at lines 252--263
+Underfull \hbox (badness 2846) in paragraph at lines 267--278
  \T1/cmss/bx/n/10.95 Se-lec-tive Rep-e-ti-tion:[] \T1/cmr/m/n/10.95 As the ini-
 tial
  []
 
-[13 <./Figures/selrepharq.png>] [14]
-<Figures/iswrpc.png, id=89, 954.56625pt x 557.83406pt>
+[14 <./Figures/selrepharq.png>] [15]
+<Figures/iswrpc.png, id=92, 954.56625pt x 557.83406pt>
 File: Figures/iswrpc.png Graphic file (type png)
 
 <use Figures/iswrpc.png>
-Package pdftex.def Info: Figures/iswrpc.png used on input line 299.
+Package pdftex.def Info: Figures/iswrpc.png used on input line 314.
 (pdftex.def)             Requested size: 408.2971pt x 238.5957pt.
- [15 <./Figures/iswrpc.png>]
-Overfull \hbox (4.0878pt too wide) in paragraph at lines 306--308
+ [16 <./Figures/iswrpc.png>]
+Overfull \hbox (4.0878pt too wide) in paragraph at lines 321--323
  \T1/cmss/bx/n/10.95 Sub-se-quent It-er-a-tions:[] \T1/cmr/m/n/10.95 In the sub
 -se-quent it-er-a-tions, the de-coder makes greedy guesses
  []
 
-[16] <Figures/absllr0p04.png, id=97, 578.16pt x 433.62pt>
+[17] <Figures/absllr0p04.png, id=100, 578.16pt x 433.62pt>
 File: Figures/absllr0p04.png Graphic file (type png)
 
 <use Figures/absllr0p04.png>
-Package pdftex.def Info: Figures/absllr0p04.png used on input line 328.
+Package pdftex.def Info: Figures/absllr0p04.png used on input line 343.
 (pdftex.def)             Requested size: 408.2971pt x 306.21823pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[17] [18 <./Figures/absllr0p04.png>]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 358.
+[18] [19 <./Figures/absllr0p04.png>]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 373.
 
 (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
-<Figures/theta0p04.png, id=105, 578.16pt x 433.62pt>
+<Figures/theta0p04.png, id=109, 578.16pt x 433.62pt>
 File: Figures/theta0p04.png Graphic file (type png)
 
 <use Figures/theta0p04.png>
-Package pdftex.def Info: Figures/theta0p04.png used on input line 362.
+Package pdftex.def Info: Figures/theta0p04.png used on input line 377.
 (pdftex.def)             Requested size: 408.2971pt x 306.21823pt.
 
-<Figures/theta0p15new.png, id=106, 578.16pt x 433.62pt>
+<Figures/theta0p15new.png, id=110, 578.16pt x 433.62pt>
 File: Figures/theta0p15new.png Graphic file (type png)
 
 <use Figures/theta0p15new.png>
-Package pdftex.def Info: Figures/theta0p15new.png used on input line 372.
+Package pdftex.def Info: Figures/theta0p15new.png used on input line 387.
 (pdftex.def)             Requested size: 224.56464pt x 168.423pt.
 
-Overfull \hbox (20.41609pt too wide) in paragraph at lines 372--373
+Overfull \hbox (20.41609pt too wide) in paragraph at lines 387--388
  [][] 
  []
 
-<Figures/theta0p2.png, id=107, 578.16pt x 433.62pt>
+<Figures/theta0p2.png, id=111, 578.16pt x 433.62pt>
 File: Figures/theta0p2.png Graphic file (type png)
  <use Figures/theta0p2.png>
-Package pdftex.def Info: Figures/theta0p2.png used on input line 378.
+Package pdftex.def Info: Figures/theta0p2.png used on input line 393.
 (pdftex.def)             Requested size: 224.56464pt x 168.423pt.
 
-Overfull \hbox (20.41609pt too wide) in paragraph at lines 378--379
+Overfull \hbox (20.41609pt too wide) in paragraph at lines 393--394
  [][] 
  []
 
-[19 <./Figures/theta0p04.png>] [20 <./Figures/theta0p15new.png> <./Figures/thet
-a0p2.png>] <Figures/FERSW_0p04.png, id=121, 578.16pt x 433.62pt>
+[20 <./Figures/theta0p04.png>] [21 <./Figures/theta0p15new.png> <./Figures/thet
+a0p2.png>] <Figures/FERSW_0p04.png, id=124, 578.16pt x 433.62pt>
 File: Figures/FERSW_0p04.png Graphic file (type png)
 
 <use Figures/FERSW_0p04.png>
-Package pdftex.def Info: Figures/FERSW_0p04.png used on input line 394.
+Package pdftex.def Info: Figures/FERSW_0p04.png used on input line 409.
 (pdftex.def)             Requested size: 285.80672pt x 214.35474pt.
 
-<Figures/FERSW_0p15.png, id=122, 578.16pt x 433.62pt>
+<Figures/FERSW_0p15.png, id=125, 578.16pt x 433.62pt>
 File: Figures/FERSW_0p15.png Graphic file (type png)
 
 <use Figures/FERSW_0p15.png>
-Package pdftex.def Info: Figures/FERSW_0p15.png used on input line 401.
+Package pdftex.def Info: Figures/FERSW_0p15.png used on input line 416.
 (pdftex.def)             Requested size: 285.80672pt x 214.35474pt.
 
-<Figures/FERSW_0p2.png, id=123, 578.16pt x 433.62pt>
+<Figures/FERSW_0p2.png, id=126, 578.16pt x 433.62pt>
 File: Figures/FERSW_0p2.png Graphic file (type png)
 
 <use Figures/FERSW_0p2.png>
-Package pdftex.def Info: Figures/FERSW_0p2.png used on input line 408.
+Package pdftex.def Info: Figures/FERSW_0p2.png used on input line 423.
 (pdftex.def)             Requested size: 285.80672pt x 214.35474pt.
 
-<Figures/FERSW_0p25.png, id=124, 578.16pt x 433.62pt>
+<Figures/FERSW_0p25.png, id=127, 578.16pt x 433.62pt>
 File: Figures/FERSW_0p25.png Graphic file (type png)
 
 <use Figures/FERSW_0p25.png>
-Package pdftex.def Info: Figures/FERSW_0p25.png used on input line 415.
+Package pdftex.def Info: Figures/FERSW_0p25.png used on input line 430.
 (pdftex.def)             Requested size: 285.80672pt x 214.35474pt.
 
-<Figures/ratelosssw.png, id=125, 578.16pt x 433.62pt>
+<Figures/ratelosssw.png, id=128, 578.16pt x 433.62pt>
 File: Figures/ratelosssw.png Graphic file (type png)
 
 <use Figures/ratelosssw.png>
-Package pdftex.def Info: Figures/ratelosssw.png used on input line 422.
+Package pdftex.def Info: Figures/ratelosssw.png used on input line 437.
 (pdftex.def)             Requested size: 285.80672pt x 214.35474pt.
 
 
@@ -1099,74 +1090,74 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[21
+[22
 
- <./Figures/FERSW_0p04.png>] [22 <./Figures/FERSW_0p15.png> <./Figures/FERSW_0p
-2.png>] [23 <./Figures/FERSW_0p25.png> <./Figures/ratelosssw.png>]
-<Figures/FER_channel0p04.png, id=140, 578.16pt x 433.62pt>
+ <./Figures/FERSW_0p04.png>] [23 <./Figures/FERSW_0p15.png> <./Figures/FERSW_0p
+2.png>] [24 <./Figures/FERSW_0p25.png> <./Figures/ratelosssw.png>]
+<Figures/FER_channel0p04.png, id=143, 578.16pt x 433.62pt>
 File: Figures/FER_channel0p04.png Graphic file (type png)
 
 <use Figures/FER_channel0p04.png>
-Package pdftex.def Info: Figures/FER_channel0p04.png used on input line 433.
+Package pdftex.def Info: Figures/FER_channel0p04.png used on input line 448.
 (pdftex.def)             Requested size: 224.56464pt x 168.423pt.
 
-Overfull \hbox (20.41609pt too wide) in paragraph at lines 433--434
+Overfull \hbox (20.41609pt too wide) in paragraph at lines 448--449
  [][] 
  []
 
-<Figures/FER_channel0p15.png, id=141, 578.16pt x 433.62pt>
+<Figures/FER_channel0p15.png, id=144, 578.16pt x 433.62pt>
 File: Figures/FER_channel0p15.png Graphic file (type png)
 
 <use Figures/FER_channel0p15.png>
-Package pdftex.def Info: Figures/FER_channel0p15.png used on input line 439.
+Package pdftex.def Info: Figures/FER_channel0p15.png used on input line 454.
 (pdftex.def)             Requested size: 224.56464pt x 168.423pt.
 
-Overfull \hbox (20.41609pt too wide) in paragraph at lines 439--440
+Overfull \hbox (20.41609pt too wide) in paragraph at lines 454--455
  [][] 
  []
 
-<Figures/FER_channel0p2.png, id=142, 578.16pt x 433.62pt>
+<Figures/FER_channel0p2.png, id=145, 578.16pt x 433.62pt>
 File: Figures/FER_channel0p2.png Graphic file (type png)
 
 <use Figures/FER_channel0p2.png>
-Package pdftex.def Info: Figures/FER_channel0p2.png used on input line 445.
+Package pdftex.def Info: Figures/FER_channel0p2.png used on input line 460.
 (pdftex.def)             Requested size: 224.56464pt x 168.423pt.
 
-Overfull \hbox (20.41609pt too wide) in paragraph at lines 445--446
+Overfull \hbox (20.41609pt too wide) in paragraph at lines 460--461
  [][] 
  []
 
-<Figures/FER_channel0p25.png, id=143, 578.16pt x 433.62pt>
+<Figures/FER_channel0p25.png, id=146, 578.16pt x 433.62pt>
 File: Figures/FER_channel0p25.png Graphic file (type png)
 
 <use Figures/FER_channel0p25.png>
-Package pdftex.def Info: Figures/FER_channel0p25.png used on input line 451.
+Package pdftex.def Info: Figures/FER_channel0p25.png used on input line 466.
 (pdftex.def)             Requested size: 224.56464pt x 168.423pt.
 
-Overfull \hbox (20.41609pt too wide) in paragraph at lines 451--452
+Overfull \hbox (20.41609pt too wide) in paragraph at lines 466--467
  [][] 
  []
 
-<Figures/rateloss_channel.png, id=144, 578.16pt x 433.62pt>
+<Figures/rateloss_channel.png, id=147, 578.16pt x 433.62pt>
 File: Figures/rateloss_channel.png Graphic file (type png)
 
 <use Figures/rateloss_channel.png>
-Package pdftex.def Info: Figures/rateloss_channel.png used on input line 457.
+Package pdftex.def Info: Figures/rateloss_channel.png used on input line 472.
 (pdftex.def)             Requested size: 224.56464pt x 168.423pt.
 
-Overfull \hbox (20.41609pt too wide) in paragraph at lines 457--458
+Overfull \hbox (20.41609pt too wide) in paragraph at lines 472--473
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 84.26878pt on input line 463.
+LaTeX Warning: Float too large for page by 84.26878pt on input line 478.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[24 <./Figures/FER_channel0p04.png> <./Figures/FER_channel0p15.png> <./Figures/
+[25 <./Figures/FER_channel0p04.png> <./Figures/FER_channel0p15.png> <./Figures/
 FER_channel0p2.png> <./Figures/FER_channel0p25.png> <./Figures/rateloss_channel
-.png>] [25
+.png>] [26
 
 
 ] (./polarmid-plain.bbl
@@ -1175,14 +1166,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--24
 -ing.
  []
 
-[26
+[27
 
-]) [27] (./polarmid-plain.aux) ) 
+]) [28] (./polarmid-plain.aux) ) 
 Here is how much of TeX's memory you used:
- 6677 strings out of 493029
- 101396 string characters out of 6136234
- 322372 words of memory out of 5000000
- 10048 multiletter control sequences out of 15000+600000
+ 6679 strings out of 493029
+ 101409 string characters out of 6136234
+ 321390 words of memory out of 5000000
+ 10050 multiletter control sequences out of 15000+600000
  25173 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,16n,51p,1288b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1208,10 +1199,10 @@ e1/public/cm-super/sfsx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
 fsx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti0900.pfb></usr/sh
 are/texmf/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type
 1/public/cm-super/sfti1200.pfb>
-Output written on polarmid-plain.pdf (27 pages, 1859341 bytes).
+Output written on polarmid-plain.pdf (28 pages, 1926154 bytes).
 PDF statistics:
- 245 PDF objects out of 1000 (max. 8388607)
- 139 compressed objects within 2 object streams
+ 248 PDF objects out of 1000 (max. 8388607)
+ 141 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
