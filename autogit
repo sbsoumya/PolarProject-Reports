@@ -1,9 +1,6 @@
 git add .
-sleep 2
+sleep 3
 git commit -m "autogit"
-sleep 2
+sleep 3
 git push origin master 
 sleep 1
-<<sbsoumya
-sleep 1
-<<buroshib22
