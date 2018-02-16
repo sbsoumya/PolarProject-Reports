@@ -4,6 +4,6 @@ git commit -m "autogit"
 sleep 2
 git push origin master 
 sleep 1
-<sbsoumya
+<<sbsoumya
 sleep 1
-<buroshib22
+<<buroshib22
