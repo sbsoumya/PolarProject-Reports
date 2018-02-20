@@ -1,3 +1,5 @@
+cd /home/smart/Dropbox/Soumya_Banerjee/Project_Reports
+touch gitreportsync.txt
 git add .
 sleep 3
 git commit -m "daily-autogit"

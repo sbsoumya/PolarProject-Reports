@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  21 JAN 2018 20:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  16 FEB 2018 19:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**polarmid-sum.tex
-(./polarmid-sum.tex
+**"polarmid-sum (1).tex"
+(./polarmid-sum (1).tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrartcl.cls
@@ -597,8 +597,8 @@ Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
 \c@definition=\count108
 \c@theorem=\count109
 )
-(./polarmid-sum.aux)
-\openout1 = `polarmid-sum.aux'.
+(./polarmid-sum (1).aux)
+\openout1 = `"polarmid-sum (1).aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
@@ -694,94 +694,96 @@ Class scrartcl Warning: Usage of deprecated font command `\bf'!
 LaTeX Font Info:    Try loading font information for T1+cmss on input line 66.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 71.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 71.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 78.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 80.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 78.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
 
-<Figures/iswrpc.png, id=13, 954.56625pt x 557.83406pt>
+<Figures/iswrpc.png, id=19, 954.56625pt x 557.83406pt>
 File: Figures/iswrpc.png Graphic file (type png)
 
 <use Figures/iswrpc.png>
-Package pdftex.def Info: Figures/iswrpc.png used on input line 83.
+Package pdftex.def Info: Figures/iswrpc.png used on input line 85.
 (pdftex.def)             Requested size: 285.80672pt x 167.01953pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 88.
+ [2 <./Figures/iswrpc.png>]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 110.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 88.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2 <./Figures/iswrpc.png>]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 108.
- (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+(/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
-<Figures/theta0p04.png, id=25, 578.16pt x 433.62pt>
+<Figures/theta0p04.png, id=28, 578.16pt x 433.62pt>
 File: Figures/theta0p04.png Graphic file (type png)
 
 <use Figures/theta0p04.png>
-Package pdftex.def Info: Figures/theta0p04.png used on input line 112.
+Package pdftex.def Info: Figures/theta0p04.png used on input line 114.
 (pdftex.def)             Requested size: 285.80672pt x 214.35474pt.
 
-<Figures/FERSW_0p04.png, id=26, 578.16pt x 433.62pt>
+<Figures/FERSW_0p04.png, id=29, 578.16pt x 433.62pt>
 File: Figures/FERSW_0p04.png Graphic file (type png)
 
 <use Figures/FERSW_0p04.png>
-Package pdftex.def Info: Figures/FERSW_0p04.png used on input line 123.
+Package pdftex.def Info: Figures/FERSW_0p04.png used on input line 125.
 (pdftex.def)             Requested size: 224.56464pt x 168.423pt.
 
-Overfull \hbox (20.41609pt too wide) in paragraph at lines 123--124
+Overfull \hbox (20.41609pt too wide) in paragraph at lines 125--126
  [] 
  []
 
-<Figures/FERSW_0p15.png, id=27, 578.16pt x 433.62pt>
+<Figures/FERSW_0p15.png, id=30, 578.16pt x 433.62pt>
 File: Figures/FERSW_0p15.png Graphic file (type png)
 
 <use Figures/FERSW_0p15.png>
-Package pdftex.def Info: Figures/FERSW_0p15.png used on input line 130.
+Package pdftex.def Info: Figures/FERSW_0p15.png used on input line 132.
 (pdftex.def)             Requested size: 224.56464pt x 168.423pt.
 
-Overfull \hbox (20.41609pt too wide) in paragraph at lines 130--131
+Overfull \hbox (20.41609pt too wide) in paragraph at lines 132--133
  [] 
  []
 
-<Figures/FERSW_0p2.png, id=28, 578.16pt x 433.62pt>
+<Figures/FERSW_0p2.png, id=31, 578.16pt x 433.62pt>
 File: Figures/FERSW_0p2.png Graphic file (type png)
 
 <use Figures/FERSW_0p2.png>
-Package pdftex.def Info: Figures/FERSW_0p2.png used on input line 137.
+Package pdftex.def Info: Figures/FERSW_0p2.png used on input line 139.
 (pdftex.def)             Requested size: 224.56464pt x 168.423pt.
 
-Overfull \hbox (20.41609pt too wide) in paragraph at lines 137--138
+Overfull \hbox (20.41609pt too wide) in paragraph at lines 139--140
  [] 
  []
 
-<Figures/FERSW_0p25.png, id=29, 578.16pt x 433.62pt>
+<Figures/FERSW_0p25.png, id=32, 578.16pt x 433.62pt>
 File: Figures/FERSW_0p25.png Graphic file (type png)
 
 <use Figures/FERSW_0p25.png>
-Package pdftex.def Info: Figures/FERSW_0p25.png used on input line 144.
+Package pdftex.def Info: Figures/FERSW_0p25.png used on input line 146.
 (pdftex.def)             Requested size: 224.56464pt x 168.423pt.
 
-Overfull \hbox (20.41609pt too wide) in paragraph at lines 144--145
+Overfull \hbox (20.41609pt too wide) in paragraph at lines 146--147
  [] 
  []
 
 [3 <./Figures/theta0p04.png>]
-<Figures/ratelosssw.png, id=39, 578.16pt x 433.62pt>
+<Figures/ratelosssw.png, id=41, 578.16pt x 433.62pt>
 File: Figures/ratelosssw.png Graphic file (type png)
 
 <use Figures/ratelosssw.png>
-Package pdftex.def Info: Figures/ratelosssw.png used on input line 154.
+Package pdftex.def Info: Figures/ratelosssw.png used on input line 156.
 (pdftex.def)             Requested size: 285.80672pt x 214.35474pt.
 
 
@@ -789,39 +791,41 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4 <./Figures/FERSW_0p04.png> <./Figures/FERSW_0p15.png> <./Figures/FERSW_0p2.p
 ng> <./Figures/FERSW_0p25.png>] [5 <./Figures/ratelosssw.png>]
-No file polarmid-sum.bbl.
-(./polarmid-sum.aux) ) 
+No file "polarmid-sum (1)".bbl.
+(./polarmid-sum (1).aux) ) 
 Here is how much of TeX's memory you used:
  6482 strings out of 493029
- 97603 string characters out of 6136234
+ 97647 string characters out of 6136234
  321023 words of memory out of 5000000
  9887 multiletter control sequences out of 15000+600000
  22177 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,10n,51p,962b,535s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.en
-c} </home/smart/.texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
-.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/tex
-mf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/publi
-c/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.
-pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texm
-f/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public
-/cm-super/sfsx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1200.p
-fb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1440.pfb></usr/share/texmf
-/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/
-cm-super/sfti1200.pfb>
-Output written on polarmid-sum.pdf (5 pages, 548992 bytes).
+ 47i,10n,51p,968b,535s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t
+1.enc} </home/smart/.texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
+share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/ty
+pe1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/
+sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/s
+hare/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/typ
+e1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
+fsx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1200.pfb></usr/sh
+are/texmf/fonts/type1/public/cm-super/sfsx1440.pfb></usr/share/texmf/fonts/type
+1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
+ti1200.pfb>
+Output written on "polarmid-sum (1).pdf" (5 pages, 565421 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
+ 129 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
