@@ -1,0 +1,32 @@
+\contentsline {section}{\numberline {1}Introduction}{5}
+\contentsline {paragraph}{\nonumberline Slepian-Wolf compression:}{5}
+\contentsline {section}{\numberline {2}Background}{7}
+\contentsline {subsection}{\numberline {2.1}Recursive Data Exchange Protocol}{7}
+\contentsline {subsection}{\numberline {2.2}Brief Introduction to Polar Codes}{7}
+\contentsline {paragraph}{\nonumberline Channel Polarization:}{7}
+\contentsline {subsection}{\numberline {2.3}Implementation of SW Compression using Polar Codes}{10}
+\contentsline {subsection}{\numberline {2.4}Rateless Polar Codes}{11}
+\contentsline {paragraph}{\nonumberline Rateless Code:}{11}
+\contentsline {subsubsection}{\numberline {2.4.1}Degradedness and Nesting Property}{11}
+\contentsline {paragraph}{\nonumberline Degraded Channels:}{11}
+\contentsline {paragraph}{\nonumberline Nesting Property:}{11}
+\contentsline {subsubsection}{\numberline {2.4.2}Incremental Freezing}{12}
+\contentsline {subsubsection}{\numberline {2.4.3}HARQ for Polar Codes}{13}
+\contentsline {paragraph}{\nonumberline Hybrid ARQ:}{13}
+\contentsline {paragraph}{\nonumberline Rate Compatible Codes:}{14}
+\contentsline {paragraph}{\nonumberline Selective Repetition:}{14}
+\contentsline {paragraph}{\nonumberline Incremental Freezing:}{14}
+\contentsline {paragraph}{\nonumberline HARQ for Polar Codes based on Subset Polar Codes:}{15}
+\contentsline {paragraph}{\nonumberline Reliability Based HARQ:}{15}
+\contentsline {section}{\numberline {3}Proposed implementation of Recursive Data Exchange}{16}
+\contentsline {subsection}{\numberline {3.1}Adaptation of Rateless Polar Codes for RDE}{16}
+\contentsline {paragraph}{\nonumberline First Iteration:}{17}
+\contentsline {paragraph}{\nonumberline Subsequent Iterations:}{17}
+\contentsline {paragraph}{\nonumberline Final Decoding:}{17}
+\contentsline {subsection}{\numberline {3.2}PHY Layer Error Detection}{17}
+\contentsline {subsubsection}{\numberline {3.2.1}The Error Detection Test}{18}
+\contentsline {subsubsection}{\numberline {3.2.2}Proposed Tests}{18}
+\contentsline {paragraph}{\nonumberline TEST 1: All good channels are above a given threshold.}{18}
+\contentsline {paragraph}{\nonumberline TEST 2: A given fraction of good channels are above a threshold.}{20}
+\contentsline {section}{\numberline {4}Performance Evaluation}{22}
+\contentsline {section}{\numberline {5}Conclusion and Future work}{26}
