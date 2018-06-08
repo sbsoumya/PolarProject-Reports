@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  8 DEC 2017 20:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  8 JUN 2018 19:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1050,11 +1050,11 @@ Package pdftex.def Info: figures/logo.png used on input line 64.
 File: figures/multiparty.png Graphic file (type png)
 
 <use figures/multiparty.png>
-Package pdftex.def Info: figures/multiparty.png used on input line 317.
+Package pdftex.def Info: figures/multiparty.png used on input line 315.
 (pdftex.def)             Requested size: 607.54347pt x 326.4481pt.
-LaTeX Font Info:    Calculating math sizes for size <24.63> on input line 317.
+LaTeX Font Info:    Calculating math sizes for size <24.63> on input line 315.
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 317.
+line 315.
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
@@ -1062,75 +1062,60 @@ thkerncmss.
 )
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <24.63> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 317.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 315.
 
 
-<figures/slepian.png, id=16, 480.29437pt x 341.02406pt>
+LaTeX Font Info:    Calculating math sizes for size <11.88> on input line 315.
+<figures/slepian.png, id=18, 480.29437pt x 341.02406pt>
 File: figures/slepian.png Graphic file (type png)
 
 <use figures/slepian.png>
-Package pdftex.def Info: figures/slepian.png used on input line 317.
-(pdftex.def)             Requested size: 341.73958pt x 242.64912pt.
- <figures/pch.png, id=19, 636.87938pt x 299.61937pt>
-File: figures/pch.png Graphic file (type png)
+Package pdftex.def Info: figures/slepian.png used on input line 315.
+(pdftex.def)             Requested size: 303.77173pt x 215.68927pt.
 
-<use figures/pch.png>
-Package pdftex.def Info: figures/pch.png used on input line 317.
-(pdftex.def)             Requested size: 326.5478pt x 153.62221pt.
- <figures/psw.png, id=20, 764.10469pt x 309.40594pt>
-File: figures/psw.png Graphic file (type png)
-
-<use figures/psw.png>
-Package pdftex.def Info: figures/psw.png used on input line 317.
-(pdftex.def)             Requested size: 509.90428pt x 206.4747pt.
- <figures/PHYHARQ.png, id=22, 759.58781pt x 377.15906pt>
+<figures/PHYHARQ.png, id=20, 759.58781pt x 377.15906pt>
 File: figures/PHYHARQ.png Graphic file (type png)
 
 <use figures/PHYHARQ.png>
-Package pdftex.def Info: figures/PHYHARQ.png used on input line 317.
-(pdftex.def)             Requested size: 417.68686pt x 207.39784pt.
+Package pdftex.def Info: figures/PHYHARQ.png used on input line 315.
+(pdftex.def)             Requested size: 379.71323pt x 188.54454pt.
+ <figures/psw.png, id=21, 764.10469pt x 309.40594pt>
+File: figures/psw.png Graphic file (type png)
 
-Overfull \hbox (37.97363pt too wide) in paragraph at lines 317--317
- [] 
- []
-
-<figures/theta-0p4.png, id=23, 774.0117pt x 605.6226pt>
-File: figures/theta-0p4.png Graphic file (type png)
-
-<use figures/theta-0p4.png>
-Package pdftex.def Info: figures/theta-0p4.png used on input line 317.
-(pdftex.def)             Requested size: 341.73958pt x 267.38963pt.
- <figures/swfer.png, id=24, 578.16pt x 433.62pt>
+<use figures/psw.png>
+Package pdftex.def Info: figures/psw.png used on input line 315.
+(pdftex.def)             Requested size: 326.5478pt x 132.22519pt.
+ <figures/swfer.png, id=22, 578.16pt x 433.62pt>
 File: figures/swfer.png Graphic file (type png)
 
 <use figures/swfer.png>
-Package pdftex.def Info: figures/swfer.png used on input line 317.
+Package pdftex.def Info: figures/swfer.png used on input line 315.
 (pdftex.def)             Requested size: 341.73958pt x 256.30334pt.
- <figures/rateloss.png, id=25, 578.16pt x 433.62pt>
+ <figures/rateloss.png, id=23, 578.16pt x 433.62pt>
 File: figures/rateloss.png Graphic file (type png)
 
 <use figures/rateloss.png>
-Package pdftex.def Info: figures/rateloss.png used on input line 317.
+Package pdftex.def Info: figures/rateloss.png used on input line 315.
 (pdftex.def)             Requested size: 341.73958pt x 256.30334pt.
  (./conference_poster_2.bbl)
-LaTeX Font Info:    Try loading font information for OML+cmss on input line 317
+LaTeX Font Info:    Try loading font information for OML+cmss on input line 315
 .
-LaTeX Font Info:    No file OMLcmss.fd. on input line 317.
+LaTeX Font Info:    No file OMLcmss.fd. on input line 315.
 
 
 LaTeX Font Warning: Font shape `OML/cmss/bx/n' undefined
 (Font)              using `OML/cmm/m/it' instead
-(Font)              for symbol `textless' on input line 317.
+(Font)              for symbol `textless' on input line 315.
 
 File: figures/logo.png Graphic file (type png)
 <use figures/logo.png>
-Package pdftex.def Info: figures/logo.png used on input line 317.
+Package pdftex.def Info: figures/logo.png used on input line 315.
 (pdftex.def)             Requested size: 211.26169pt x 195.62944pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <./figures/logo.png> <./figures/multiparty.png> <./figures/slepian.png> <./fig
-ures/pch.png> <./figures/psw.png> <./figures/PHYHARQ.png> <./figures/theta-0p4.
-png> <./figures/swfer.png> <./figures/rateloss.png>]
+ures/PHYHARQ.png> <./figures/psw.png> <./figures/swfer.png> <./figures/rateloss
+.png>]
 \tf@nav=\write6
 \openout6 = `conference_poster_2.nav'.
 
@@ -1140,27 +1125,27 @@ png> <./figures/swfer.png> <./figures/rateloss.png>]
 \tf@snm=\write8
 \openout8 = `conference_poster_2.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 319.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 319.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 317.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 317.
  (./conference_poster_2.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 319.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 319.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 317.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 317.
 Package rerunfilecheck Info: File `conference_poster_2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 319.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 317.
  ) 
 Here is how much of TeX's memory you used:
- 18152 strings out of 493029
- 339780 string characters out of 6136234
- 504146 words of memory out of 5000000
- 21209 multiletter control sequences out of 15000+600000
- 16283 words of font info for 53 fonts, out of 8000000 for 9000
+ 18202 strings out of 493029
+ 340993 string characters out of 6136234
+ 510009 words of memory out of 5000000
+ 21252 multiletter control sequences out of 15000+600000
+ 23113 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,20n,68p,399b,1358s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,20n,68p,399b,1372s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dis
@@ -1171,10 +1156,10 @@ ublic/amsfonts/cm/cmssi17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/symbols/msam10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfso1728.p
 fb>
-Output written on conference_poster_2.pdf (1 page, 558688 bytes).
+Output written on conference_poster_2.pdf (1 page, 376316 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 81 PDF objects out of 1000 (max. 8388607)
  48 compressed objects within 1 object stream
  6 named destinations out of 1000 (max. 500000)
- 88 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 

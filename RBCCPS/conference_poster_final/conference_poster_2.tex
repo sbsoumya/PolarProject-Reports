@@ -90,22 +90,8 @@ Multiple parties observing correlated data seek to recover each other's data. Ho
 \item Uses \emph{one} guess.
 \item Does not exploit the correlation between the data.
 \item Needs more communication.
-\item Fast and low complexity.
 \end{itemize}
 \item In theory, Slepian-Wolf compression is the optimal solution.
-\end{itemize}
-
-\end{block}
-
-
-%----------------------------------------------------------------------------------------
-%	Implementation of Slepian wolf
-%----------------------------------------------------------------------------------------
-
-\begin{block}{Implementation of Slepian-Wolf Compression }
-
-\begin{columns} % Subdivide the first main column
-\begin{column}{.5\textwidth} % The first subdivided column within the first main column
 \begin{itemize}
 \item Difficulties in implementation of SW coding.
 \begin{itemize}
@@ -113,66 +99,78 @@ Multiple parties observing correlated data seek to recover each other's data. Ho
 \item Knowledge of $P_{X|Y}$ required. 
 \end{itemize}
 \end{itemize}
-\end{column}
-
-\begin{column}{.5\textwidth} % The second subdivided column within the first main column
-\centering
-\begin{figure}
-\includegraphics[width=0.9\linewidth]{slepian.png}
-\caption{Slepian-Wolf Compression.}
-\end{figure}
-\end{column}
-\end{columns} % End of the subdivision
-
+\end{itemize}
+\begin{columns} % Subdivide the first main column
+\begin{column}{.5\textwidth} % The first subdivided column within the first 
 \begin{itemize}
 \item Suggested approach.
 \begin{itemize}
-\item Use of structured channel codes, in particular \emph{Polar codes}, for implementation of SW compression \cite{PCSW}.
+\item Use structured channel codes, in particular \emph{Polar codes}, for implementation of SW compression \cite{PCSW}.
 \item Achieve universality using a \emph{Recursive Data Exchange protocol} (RDE)   
  \cite{HTRDE}.
 \item Realise the RDE using H-ARQ based on polar codes. 
 \end{itemize}
 \end{itemize}
+\end{column}
+\begin{column}{.5\textwidth} % The second subdivided column within the first main column
+\centering
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{slepian.png}
+\caption{Slepian-Wolf Compression.}
+\end{figure}
+\end{column}
+\end{columns} % End of the subdivision
+
 
 \end{block}
 %----------------------------------------------------------------------------------------
 %	Polar codes 
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Polar Codes for Data Exchange}
-\vspace{0.5cm}
-\begin{columns} % Subdivide the first main column
-\begin{column}{.5\textwidth} % The first subdivided column within the first main column
-
+\begin{block}{HARQ based on Polar Codes}
 \begin{itemize}
 \item Polar Codes for error control.
+N indentical and independent channels W are converted to a second set of channels which have probability of error tending to 0 or 1. Information is sent over the channels which have high reliability. Other channels are \emph{frozen} with known bits.
+\item Hybrid-ARQ is instrumental when underlying channel W is unknown.
 \begin{itemize}
-\item N indentical and independent channels W are converted to a second set of channels which have probility of error either 0 or 1.
-\item Low complexity.
+\item In H-ARQ, initially \emph{MSG+ Error Detection Code} is sent to receiver. On unsuccessful recovery, \emph{Error Correction Code (FEC)} is communicated iteratively.
+\end{itemize}
+\end{itemize}
+
+\begin{columns} % Subdivide the first main column
+ % The first subdivided column within the first main column
+\begin{column}{.5\textwidth}
+\begin{itemize}
+\item Incremental freezing HARQ~\cite{KC}.
+\begin{itemize}
+\item Initiates assuming a high reliability channel.
+\item Decoding failure is detected after each iteration at the decoder.
+\item In case of failure more unreliable bits are frozen by retransmission.
 \end{itemize}
 \end{itemize}
 \end{column}
-
-\begin{column}{.43\textwidth} % The second subdivided column within the first main column
-\centering
+\begin{column}{.5\textwidth}
 \begin{figure}
-\includegraphics[width=1\linewidth]{pch.png}
-\caption{Polar Coding.}
+\includegraphics[width=1\linewidth]{PHYHARQ.png}
+\caption{Incremental Freezing.}
 \end{figure}
 \end{column}
-\end{columns} % End of the subdivision
+\end{columns}
+\end{block}
 
+\begin{block}{Decoding failure Detection}
 \begin{itemize}
-\item Polar Codes for SW Compression.
-\begin{figure}
-\includegraphics[width=0.7\linewidth]{psw.png}
-\caption{Polar Coding for SW Compression.}
-\end{figure}
+\item Repeat-Top Polar Code (RT-Polar)
 \begin{itemize}
-\item Here, $X_{N}$ and $Y_{N}$ are correlated. The bits that are to be sent for estimation of $X_{N}$ from $Y_{N}$ are decided by inverse Arikan transform, '$T^{-1}$', and are communicated error-free.
+\item The scheme retransmits the $t$ message bits sent over the most reliable
+polarized good channels over the least reliable good channels.
+\item These two $t$-bit strings are decoded and compared to detect an error. 
+\end{itemize}
+\item Loglikelihood Threshold Polar (LT-Polar)
+\begin{itemize}
+\item In a successful transmission a high percentage of the Log-Likehood Ratios (LLR) of the bit-channels clear the threshold with high probability.
 \end{itemize}
 \end{itemize}
-
 \end{block}
 
 %----------------------------------------------------------------------------------------
@@ -198,49 +196,29 @@ Multiple parties observing correlated data seek to recover each other's data. Ho
 %	RECURSIVE DATA EXCHANGE
 %----------------------------------------------------------------------------------------
             
-\begin{block}{Iterative SW Compression using Incremental Freezing }
+\begin{block}{Iterative SW Compression using }
+\begin{columns} % Subdivide the first main column
+\begin{column}{.5\textwidth} % The first subdivided column within the first main column
+\begin{itemize}
+\item Polar Codes for SW Compression.
+\begin{itemize}
+\item Here, $X_{N}$ and $Y_{N}$ are correlated. The bits that are to be sent for estimation of $X_{N}$ from $Y_{N}$ are decided by inverse Arikan transform, '$T^{-1}$', and are communicated error-free.
+\end{itemize}
+\end{itemize}
+\end{column}
+\begin{column}{.43\textwidth} 
+\begin{figure}
+\includegraphics[width=1\linewidth]{psw.png}
+\caption{Polar Coding for SW Compression.}
+\end{figure}
+\end{column}
+\end{columns} % End of the subdivision
 \begin{itemize}
 \item The RDE scheme iteratively communicates in steps until the data exchange is completed. This can be practically implemented by Hybrid ARQ.
-\item In H-ARQ, initially \emph{MSG+ Error Detection Code} is sent to receiver. On unsuccessful recovery, \emph{Error Correction Code (FEC)} is communicated incrementally. 
+\item Error detection using CRC is not feasible in SW compression.
+
 \end{itemize}
 
-\begin{columns} % Subdivide the first main column
- % The first subdivided column within the first main column
-\begin{column}{.5\textwidth}
-\begin{itemize}
-\item Adaptation of H-ARQ for RDE.
-\begin{itemize}
-\item In Incremental Freezing, unreliable channels are chosen and information present in these channels are commmunicated \cite{KC} incrementally.
-\item Error detection using CRC is not feasible in SW compression.Hence a PHY layer error detection scheme is proposed.
-\end{itemize}
-\end{itemize}
-\end{column}
-\begin{column}{.5\textwidth}
-\begin{figure}
-\includegraphics[width=1.1\linewidth]{PHYHARQ.png}
-\caption{H-ARQ for RDE.}
-\end{figure}
-\end{column}
-\end{columns}
-\begin{columns}
-\begin{column}{.5\textwidth}
-\begin{itemize}
-\item PHY layer Error Detection for Incremental freezing.
-\begin{itemize}
-\item Incremental freezing initiates assuming a high reliability channel.
-\item Log-Likehood Ratios (LLR) of the bit-channels are compared to a threshold.
-\item In a successful transmission a high percentage of the LLRs clear the threshold with high probability.
-\item Otherwise more unreliable bits are frozen.
-\end{itemize}
-\end{itemize}
-\end{column}
-\begin{column}{.5\textwidth}
-\begin{figure}
-\includegraphics[width=0.9\linewidth]{theta-0p4.png}
-\caption{Choice of threshold for BSC.}
-\end{figure}
-\end{column}
-\end{columns}
 \end{block}
 
 %----------------------------------------------------------------------------------------
@@ -266,6 +244,26 @@ Multiple parties observing correlated data seek to recover each other's data. Ho
 \end{column}
 \end{columns}
 \end{block}
+%----------------------------------------------------------------------------------------
+%	ANALYTIC t
+%----------------------------------------------------------------------------------------
+%\setbeamercolor{block title}{fg=black,bg=orange!70}
+\begin{block}{Analytic t}
+\begin{itemize}
+\color{tacream}
+\item The proposed scheme reduces communication among nodes.
+\item The CRC-free universal polar code promises considerable rate gain for communication using short packet lengths.
+\end{itemize}
+\begin{itemize}
+\item Future work.
+\begin{itemize}
+\item Extensive performance analysis and theoritical analysis of proposed error detection scheme as a RB-HARQ for polar codes.
+\item Implementation of the scheme for multiparty data exchange.
+\end{itemize}
+\end{itemize}
+%\color{tacream}$$\frac{1}{K_{ITER}}\sum_{i=1}^{K_{ITER}} \mathbbm{1} _{\{|LLR|_i>%\lambda_{ITER}\}} > \Theta_{ITER}$$
+\end{block}
+
 
 %----------------------------------------------------------------------------------------
 %	CONCLUSION
